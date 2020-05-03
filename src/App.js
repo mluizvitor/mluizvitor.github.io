@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import WhoIam from './pages/WhoIam';
-import Skills from './pages/Habilidades';
+import Skills from './pages/Skills';
 
 function App() {
 
