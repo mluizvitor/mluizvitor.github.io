@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import WhoIam from './pages/WhoIam';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <button href={'teste'}>Portfólio</button>
         <button href={'teste'}>Contato</button>
       </Navbar>
+      <WhoIam/>
     </div>
   );
 }
