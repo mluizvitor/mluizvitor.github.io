@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css'
 
-export default function Container({type, backgroundImage, children}) {
+export function Container({type, backgroundImage, id, children}) {
   return (
-    <div className={type ? type : 'container'} style={{backgroundImage: `url(${backgroundImage})`}}>
+    <div id={id} className={type ? type : 'container'} style={{backgroundImage: `url(${backgroundImage})`}}>
       {children}
     </div>
   )

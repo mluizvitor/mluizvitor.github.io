@@ -1,7 +1,5 @@
 import React from 'react';
-import Container from '../components/Container';
-import Gallery from '../components/Gallery';
-import GalleryItem from '../components/Gallery/GalleryItem';
+import {Container} from '../components/Container';
 
 import imgHtml from '../assets/skills/dev/html5.svg';
 import imgCss from '../assets/skills/dev/css3.svg';
@@ -15,9 +13,9 @@ import imgUxpin from '../assets/skills/design/uxpin.svg';
 import imgMaterial from '../assets/skills/design/material.svg';
 import imgInkscape from '../assets/skills/design/inkscape.svg';
 
-export default function Skills() {
+export default function Skills({id}) {
   return (
-    <Container type={'container'}>
+    <Container id={id} type={'container'}>
       <h2>Habilidades</h2>
 
       <Gallery title={'Desenvolvimento'}>
