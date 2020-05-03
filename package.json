@@ -1,5 +1,6 @@
 {
   "name": "mvitor.dev",
+  "homepage": "https://mluizvitor.gitlab.io/mvitor.dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
