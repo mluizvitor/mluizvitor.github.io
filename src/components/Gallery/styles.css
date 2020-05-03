@@ -1,0 +1,21 @@
+div.gallery {
+  margin-top: 64px;
+}
+
+div.galleryGrid {
+  margin: 16px -16px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.galleryGrid > img {
+  width: calc(100% / 6 - 32px);
+  margin: 16px;
+}
+
+@media (max-width: 650px) {
+  div.galleryGrid > img {
+    width: calc(100% / 3 - 32px);
+  }
+}
+
