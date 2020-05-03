@@ -1,0 +1,45 @@
+stages:
+  - code_quality
+  - test
+  - build
+  - deploy
+  
+# eslint:
+#   image: node:12
+#   stage: code_quality
+#   before_script:
+#     - npm install -g eslint
+#   script:
+#     - eslint src --ext .js
+
+# unity_test:
+#   image: node:12
+#   stage: test
+#   before_script:
+#     - npm install
+#   script:
+#     - npm test
+
+react_built:
+  image: node:12
+  stage: build
+  before_script:
+    - npm install
+  script:
+    - npm run-script build
+
+pages:
+  image: node:12
+  stage: deploy
+  before_script:
+    - npm install
+  script:
+    - npm run-script build
+    - rm -r public/
+    - mv build/ public/ 
+
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
