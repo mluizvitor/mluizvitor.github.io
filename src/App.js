@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
+
+  const App = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={App}>
+      <Navbar>
+        <button className={"active"} href={'teste'}>Quem é Vitor?</button>
+        <button href={'teste'}>Habilidades</button>
+        <button href={'teste'}>Portfólio</button>
+        <button href={'teste'}>Contato</button>
+      </Navbar>
     </div>
   );
 }
