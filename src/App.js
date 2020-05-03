@@ -4,6 +4,7 @@ import {Link} from 'react-scroll';
 import Navbar from './components/Navbar';
 import WhoIam from './pages/WhoIam';
 import Skills from './pages/Skills';
+import Footer from './pages/Footer';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       </Navbar>
       <WhoIam id="who-i-am"/>
       <Skills id="skills"/>
+      <Footer/>
     </div>
   );
 }

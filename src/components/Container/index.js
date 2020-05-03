@@ -8,3 +8,11 @@ export function Container({type, backgroundImage, id, children}) {
     </div>
   )
 }
+
+export function FooterContainer({id, children}) {
+  return(
+    <footer id={id} className={'container footer'}>
+      {children}
+    </footer>
+  )
+}

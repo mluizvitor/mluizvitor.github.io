@@ -58,3 +58,20 @@
     grid-column: 1 / 4;
   }
 }
+
+.footer {
+  background-color: #171717;
+  padding: 144px 32px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container.footer .container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
