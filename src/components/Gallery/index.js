@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css'
 
-export default function Gallery({title, children}){
+export function Gallery({title, children}){
   return (
     <div className={'gallery'}>
       <h3 className={'section'}>{title}</h3>
@@ -9,5 +9,11 @@ export default function Gallery({title, children}){
         {children}
       </div>
     </div>
+  )
+}
+
+export function GalleryItem({title, imgSource}){
+  return (
+    <img src={imgSource} alt={title}/>
   )
 }

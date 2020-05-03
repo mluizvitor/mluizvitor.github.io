@@ -1,5 +1,6 @@
 import React from 'react';
 import {Container} from '../components/Container';
+import {Gallery, GalleryItem} from '../components/Gallery';
 
 import imgHtml from '../assets/skills/dev/html5.svg';
 import imgCss from '../assets/skills/dev/css3.svg';
