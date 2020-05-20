@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import WhoIam from './pages/WhoIam';
 import Skills from './pages/Skills';
 import Footer from './pages/Footer';
+import Portfolio from './pages/Portfolio';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
       </Navbar>
       <WhoIam id="who-i-am"/>
       <Skills id="skills"/>
+      <Portfolio id="portfolio"/>
       <Footer/>
     </div>
   );
