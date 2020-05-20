@@ -3,19 +3,19 @@ div.gallery {
 }
 
 div.galleryGrid {
-  margin: 16px -16px 0;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 32px;
 }
 
 div.galleryGrid > img {
-  width: calc(100% / 6 - 32px);
-  margin: 16px;
+  width: 100%;
 }
 
 @media (max-width: 650px) {
-  div.galleryGrid > img {
-    width: calc(100% / 3 - 32px);
+  div.galleryGrid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
