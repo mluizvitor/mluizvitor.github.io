@@ -92,6 +92,12 @@
   display: flex;
   justify-content: center;
   background-size: auto;
-  background-position: 0%;
-  background-repeat: repeat-y;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+@media (max-width: 650px) {
+  .contEnhanced {
+    background-position: 0;
+  }
 }
