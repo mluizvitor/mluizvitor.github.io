@@ -6,6 +6,7 @@ import WhoIam from './pages/WhoIam';
 import Skills from './pages/Skills';
 import Footer from './pages/Footer';
 import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <WhoIam id="who-i-am"/>
       <Skills id="skills"/>
       <Portfolio id="portfolio"/>
+      <Contact id="contact"/>
       <Footer/>
     </div>
   );
