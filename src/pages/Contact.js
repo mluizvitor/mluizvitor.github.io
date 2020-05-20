@@ -12,6 +12,10 @@ export default function Contact({id}){
         <TextInput id="name" label="Nome" placeholder="João da Silva" required/>
         <TextInput id="email" label="Email" placeholder="joao@mail.com" required/>
         <TextAreaInput id="message" label="Mensagem" placeholder="Olá, Vitor..." required/>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LcKxtEUAAAAADJpiahRzDjvgNGywQlrtTi-6gj5"
+        ></div>
         <Button title="Enviar"/>
       </Form>
     </ContainerEnhanced>
