@@ -1,10 +1,28 @@
 import React from 'react';
 import './styles.css'
 
-export function Container({type, backgroundImage, id, children}) {
+export function Container({type, id, children}) {
   return (
-    <div id={id} className={type ? type : 'container'} style={{backgroundImage: `url(${backgroundImage})`}}>
+    <div id={id} className={`container ${type}`}>
       {children}
+    </div>
+  )
+}
+
+export function Banner({id, backgroundImage, children}){
+  return(
+    <div id={id} className="banner" style={{backgroundImage: `url(${backgroundImage})`}}>
+      {children}
+    </div>
+  )
+}
+
+export function ContainerEnhanced({id, backgroundImage, children}){
+  return (
+    <div id={id} className="contEnhanced" style={{backgroundImage: `url(${backgroundImage})`}}>
+      <div className="container">
+        {children}
+      </div>
     </div>
   )
 }
