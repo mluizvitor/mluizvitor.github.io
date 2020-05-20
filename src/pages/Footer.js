@@ -1,11 +1,10 @@
 import React from 'react';
-import { FooterContainer, Container } from '../components/Container';
+import { FooterContainer } from '../components/Container';
 
 export default function Footer() {
   
   return(
     <FooterContainer>
-      <Container>
         <a href="mailto:mluizvitor@gmail.com">mluizvitor@gmail.com</a>
         <ul className={'links'}>
           <li>
@@ -20,7 +19,6 @@ export default function Footer() {
         </ul>
         <hr/>
         <p className={"subtitle"} style={{opacity: 0.7}}>Todos os direitos são reservados a Luiz Vitor Monteiro da Silva Portela</p>
-      </Container>
     </FooterContainer>
   )
 }
