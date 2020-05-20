@@ -8,7 +8,7 @@ export default function WhoIam({id}){
   return (
     <>
     <Banner backgroundImage={bgImg}>
-      <img className={'profilePhoto'} src={profile} alt={'Fotogragia do rosto de Vitor.'}/>
+      <img className={'profilePhoto'} src={profile} alt=""/>
       <p>Prazer, me chamo</p>
       <h1>Vitor Monteiro</h1>
       <p>UI-Designer e Desenvolvedor Front-End</p>
