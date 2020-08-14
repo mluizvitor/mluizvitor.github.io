@@ -1,36 +1,3 @@
-.textInput {
-  display: grid;
-  grid-column: 1 / 3;
-  gap: 16px;
-}
-
-.textInput input,
-.textInput textarea {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(14px + 0.1vw);
-  /* font-weight: 400; */
-  letter-spacing: calc((14px + 0.1vw) * -0.04);
-  line-height: 125%;
-  height: 48px;
-  border: 1px solid #FFF;
-  border-radius: 0;
-  background-color: transparent;
-  color: #FFF;
-  padding: 8px;
-}
-
-.textInput input::placeholder,
-.textInput textarea::placeholder {
-  color: rgba(255,255,255,0.4)
-}
-
-.textInput textarea {
-  min-height: calc(48px * 3);
-  max-height: calc(48px * 3);
-  min-width: 100%;
-}
-
 .formStyle {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -50,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-variation-settings: "wght" 500;
+  font-variation-settings: 'wght' 500;
   animation: appearAnimation 500ms;
 }
 
@@ -66,9 +33,9 @@
 }
 
 .formStatus.success {
-  color: hsl(100,60%,65%);
+  color: hsl(100, 60%, 65%);
 }
 
 .formStatus.error {
-  color: hsl(10,90%,75%);
+  color: hsl(10, 90%, 75%);
 }
