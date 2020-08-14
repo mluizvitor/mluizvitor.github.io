@@ -1,12 +1,7 @@
 import React from 'react';
-import './styles.css';
+import { Container } from './styles';
+import Icon from 'react-icons/md';
 
-export default function Button({type, onClick, title}){
-  return (
-    <button type={type} onClick={onClick} className="button btnform">
-      <span>
-        {title}
-      </span>
-    </button>
-  )
+export default function Button({ type, children }) {
+  return <Container type={type}>{children}</Container>;
 }
