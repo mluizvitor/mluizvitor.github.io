@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -8,16 +7,15 @@ export const Container = styled.div`
 
   & input,
   & textarea {
-    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: calc(14px + 0.1vw);
-    /* font-weight: 400; */
+    font-weight: 400;
     letter-spacing: calc((14px + 0.1vw) * -0.04);
     line-height: 125%;
     height: 48px;
     border: 2px solid #fff9;
     border-radius: 0;
-    background-color: transparent;
+    background-color: #0e081e;
     color: #fff;
     padding: 8px;
 
@@ -35,5 +33,45 @@ export const Container = styled.div`
   & textarea:focus {
     border-color: #fff;
     background-color: #0003;
+  }
+`;
+
+export const FormContainer = styled.form`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 64px;
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
+
+  &.formStatus {
+    height: 48px;
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    animation: appearAnimation 500ms;
+  }
+
+  @keyframes appearAnimation {
+    from {
+      scale: 0;
+      height: 0;
+    }
+    to {
+      scale: 1;
+      height: 48px;
+    }
+  }
+
+  &.formStatus.success {
+    color: hsl(100, 60%, 65%);
+  }
+
+  &.formStatus.error {
+    color: hsl(10, 90%, 75%);
   }
 `;

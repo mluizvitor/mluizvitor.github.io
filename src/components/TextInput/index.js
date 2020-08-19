@@ -1,6 +1,5 @@
 import React from 'react';
-import './styles.css';
-import { Container } from './styles';
+import { Container, FormContainer } from './styles';
 
 export function TextInput({ id, label, placeholder, type, required }) {
   return (
@@ -37,13 +36,13 @@ export function TextAreaInput({ id, label, placeholder, required }) {
 
 export function Form({ method, action, onSubmit, children }) {
   return (
-    <form
+    <FormContainer
       className="formStyle"
       onSubmit={onSubmit}
       method={method}
       action={action}
     >
       {children}
-    </form>
+    </FormContainer>
   );
 }
