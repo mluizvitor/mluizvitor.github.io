@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container } from './styles';
-import Icon from 'react-icons/md';
 
-export default function Button({ type, children }) {
-  return <Container type={type}>{children}</Container>;
+export default function Button({ type, btnStyle, children, ...rest }) {
+  return (
+    <Container type={type} btnStyle={btnStyle} {...rest}>
+      {children}
+    </Container>
+  );
 }
