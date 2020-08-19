@@ -3,7 +3,6 @@ import { ContainerEnhanced } from '../components/Container';
 import { TextInput, TextAreaInput, Form } from '../components/TextInput';
 import contactBg from '../assets/backgroundContacts.svg';
 import Button from '../components/Button';
-import { MdSend } from 'react-icons/md';
 
 export default function Contact({ id }) {
   const [status, setStatus] = useState();
@@ -66,9 +65,8 @@ export default function Contact({ id }) {
             Mensagem enviada. Obrigado!
           </p>
         )}
-        <Button icon="add" title="Enviar" type="submit">
+        <Button btnStyle="color" title="Enviar" type="submit">
           Enviar
-          <MdSend size={24} />
         </Button>
       </Form>
     </ContainerEnhanced>
