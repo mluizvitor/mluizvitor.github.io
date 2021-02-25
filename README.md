@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[goto site](mluizvitor.gitlab.io/mvitor.dev/)
+[goto site](https://mluizvitor.gitlab.io/mvitor.dev/)
 
 ## Available Scripts
 
