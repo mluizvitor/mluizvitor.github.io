@@ -14,6 +14,9 @@ export function Gallery({title, children}){
 
 export function GalleryItem({title, imgSource}){
   return (
-    <img src={imgSource} alt={title}/>
+    <figure>
+      <img src={imgSource} alt={title}/>
+      <figcaption>{title}</figcaption>
+    </figure>
   )
 }

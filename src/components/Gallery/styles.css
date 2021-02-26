@@ -9,13 +9,23 @@ div.galleryGrid {
   gap: 32px;
 }
 
-div.galleryGrid > img {
+div.galleryGrid > figure {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px
+}
+
+figure figcaption {
+  font-size: calc(12px + 0.15vw);
+  line-height: 145%;
+  letter-spacing: calc((12px + 0.1vw) * 0.015);
 }
 
 @media (max-width: 650px) {
   div.galleryGrid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 }
 
