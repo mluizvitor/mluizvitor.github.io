@@ -19,9 +19,14 @@ export const Container = styled.div`
     background-color: ${theme.t001.f};
     color: ${theme.t006};
     padding: 8px;
+    transition: border 500ms;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: calc(16px + 0.15vw);
+      line-height: 145%;
+      letter-spacing: calc((16px + 0.1vw) * 0.015);
+      font-weight: 400,
     }
   }
 

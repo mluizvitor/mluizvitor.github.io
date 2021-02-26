@@ -6,7 +6,7 @@ export const Container = styled.button.attrs((props) => ({
   btnStyle: props.btnStyle || 'transparent',
 }))`
   font-family: 'Work Sans', sans-serif;
-  font-size: calc(14px + 0.1vw);
+  font-size: calc(16px + 0.1vw);
   font-weight: 800;
   line-height: 24px;
   letter-spacing: calc((14px + 0.1vw) * 0.02);
@@ -16,7 +16,7 @@ export const Container = styled.button.attrs((props) => ({
   background: ${(props) =>
     props.btnStyle === 'color' ? '#DE6896' : 'transparent'};
 
-  height: 40px;
+  height: 48px;
   padding: 0 16px;
   border: 0;
 
