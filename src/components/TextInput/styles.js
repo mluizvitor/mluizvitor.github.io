@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {theme} from '../../styles/colors'
 
 export const Container = styled.div`
   display: grid;
@@ -13,10 +14,10 @@ export const Container = styled.div`
     letter-spacing: calc((14px + 0.1vw) * -0.04);
     line-height: 125%;
     height: 48px;
-    border: 2px solid #fff9;
+    border: 2px solid ${theme.t003};
     border-radius: 0;
-    background-color: #0e081e;
-    color: #fff;
+    background-color: ${theme.t001.f};
+    color: ${theme.t006};
     padding: 8px;
 
     &::placeholder {
@@ -31,8 +32,7 @@ export const Container = styled.div`
 
   & input:focus,
   & textarea:focus {
-    border-color: #fff;
-    background-color: #0003;
+    border-color: ${theme.t005};
   }
 `;
 
@@ -58,7 +58,7 @@ export const FormContainer = styled.form`
 
   @keyframes appearAnimation {
     from {
-      scale: 0;
+      scale: 0.5;
       height: 0;
     }
     to {

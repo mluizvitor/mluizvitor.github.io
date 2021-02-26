@@ -1,5 +1,6 @@
 import { shade } from 'polished';
 import styled from 'styled-components';
+import {theme} from '../../styles/colors'
 
 export const Container = styled.button.attrs((props) => ({
   btnStyle: props.btnStyle || 'transparent',
@@ -11,9 +12,9 @@ export const Container = styled.button.attrs((props) => ({
   letter-spacing: calc((14px + 0.1vw) * 0.02);
   text-transform: uppercase;
 
-  color: #fff;
+  color: ${theme.t006};
   background: ${(props) =>
-    props.btnStyle === 'color' ? '#CC3D94' : 'transparent'};
+    props.btnStyle === 'color' ? '#DE6896' : 'transparent'};
 
   height: 40px;
   padding: 0 16px;
@@ -33,7 +34,7 @@ export const Container = styled.button.attrs((props) => ({
   &:hover {
     background-color: ${(props) =>
       props.btnStyle === 'color'
-        ? shade(0.2, '#CC3D94')
+        ? shade(0.2, '#DE6896')
         : 'rgba(255,255,255,0.1)'};
   }
 `;

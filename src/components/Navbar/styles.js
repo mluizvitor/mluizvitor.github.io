@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {theme} from '../../styles/colors'
 
 export const Container = styled.nav`
   position: fixed;
@@ -7,9 +8,8 @@ export const Container = styled.nav`
   width: 100vw;
   background: linear-gradient(
     180deg,
-    #212121 0%,
-    rgba(33, 33, 33, 0.8) 50%,
-    rgba(33, 33, 33, 0) 100%
+    ${theme.t001.f} 0%,
+    ${theme.t001.a} 75%
   );
   height: 64px;
   overflow: hidden;
