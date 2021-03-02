@@ -1,22 +1,28 @@
 import React from 'react';
-import './styles.css';
+import {MdArrowForward} from 'react-icons/md';
+
+import {Container, CardImg, CardContainer, CardBody, SeeMore} from './styles'
 
 export function Card({imageSrc, title, description}){
   return(
-    <div className="card">
-      <div className="cardImg" style={{backgroundImage: `url(${imageSrc})`}}/>
-      <div className="cardBody">
+    <CardContainer>
+      <CardImg style={{backgroundImage: `url(${imageSrc})`}}/>
+      <CardBody>
         <h4>{title}</h4>
         <p className="subtitle">{description}</p>
-      </div>
-    </div>
+        <SeeMore>
+          <span>ver mais</span>
+          <MdArrowForward size={24}/>
+        </SeeMore>
+      </CardBody>
+    </CardContainer>
   )
 }
 
 export function CardBox({children}) {
   return (
-    <div className="cardBox">
+    <Container>
       {children}
-    </div>
+    </Container>
   )
 }

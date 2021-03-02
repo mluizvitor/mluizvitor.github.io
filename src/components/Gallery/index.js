@@ -1,22 +1,20 @@
 import React from 'react';
-import './styles.css'
+import { Container, Figure, Grid } from './styles';
 
-export function Gallery({title, children}){
+export function Gallery({ title, children }) {
   return (
-    <div className={'gallery'}>
+    <Container>
       <h3 className={'section'}>{title}</h3>
-      <div className={'galleryGrid'}>
-        {children}
-      </div>
-    </div>
-  )
+      <Grid>{children}</Grid>
+    </Container>
+  );
 }
 
-export function GalleryItem({title, imgSource}){
+export function GalleryItem({ title, imgSource, imgSourceHover }) {
   return (
-    <figure>
-      <img src={imgSource} alt={title}/>
+    <Figure>
+      <img src={imgSource} alt={title} />
       <figcaption>{title}</figcaption>
-    </figure>
-  )
+    </Figure>
+  );
 }
