@@ -1,21 +1,35 @@
 import React from 'react';
-import {Container} from '../components/Container';
-import {Card, CardBox} from '../components/Card';
-import fbCover from '../assets/portfolio/fbcover.png'
+import { ContainerEnhanced } from '../components/Container';
+import { Card, CardBox } from '../components/Card';
+import fbCover from '../assets/portfolio/fbcover.svg';
+import { theme } from '../styles/colors';
 
-export default function Portfolio({id}){
+export default function Portfolio({ id }) {
   return (
-    <Container id={id} type="container">
+    <ContainerEnhanced id={id} type="container" bgColor={theme.t003}>
       <h2>Portfólio</h2>
       <CardBox>
-
         <Card
           imageSrc={fbCover}
           title="Facebook Cover Preview"
           description="Aplicação simples que permite testar posição da capa de Facebook em visualização em desktop e mobile"
-          />       
-      
+        />
+        <Card
+          imageSrc={fbCover}
+          title="Facebook Cover Preview"
+          description="Aplicação simples que permite testar posição da capa de Facebook em visualização em desktop e mobile"
+        />
+        <Card
+          imageSrc={fbCover}
+          title="Facebook Cover Preview"
+          description="Aplicação simples que permite testar posição da capa de Facebook em visualização em desktop e mobile"
+        />
+        <Card
+          imageSrc={fbCover}
+          title="Facebook Cover Preview"
+          description="Aplicação simples que permite testar posição da capa de Facebook em visualização em desktop e mobile"
+        />
       </CardBox>
-    </Container>
-  )
+    </ContainerEnhanced>
+  );
 }

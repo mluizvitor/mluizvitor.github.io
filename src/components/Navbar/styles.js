@@ -17,7 +17,7 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 4;
+  z-index: 16;
 
   & > a > button {
     padding: 0 8px;

@@ -3,7 +3,7 @@ import {lighten} from 'polished';
 export const theme = {
   t001: {
     f: "#1A1C28ff",
-    a: "#1A1C2800",
+    a: "#1A1C2888",
   },
   t002: {
     f: "#5C3472ff",

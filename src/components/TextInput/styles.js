@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {theme} from '../../styles/colors'
+import { theme } from '../../styles/colors';
 
 export const Container = styled.div`
   display: grid;
@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   & input,
   & textarea {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: calc(14px + 0.1vw);
     font-weight: 400;
     letter-spacing: calc((14px + 0.1vw) * -0.04);
@@ -23,10 +23,9 @@ export const Container = styled.div`
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.7);
-      font-size: calc(16px + 0.15vw);
-      line-height: 145%;
+      font-size: calc(16px + 0.2vw);
       letter-spacing: calc((16px + 0.1vw) * 0.015);
-      font-weight: 400,
+      font-weight: 400;
     }
   }
 

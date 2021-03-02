@@ -29,7 +29,7 @@ export default function Contact({ id }) {
   }
 
   return (
-    <ContainerEnhanced id={id} type="container" backgroundImage={contactBg}>
+    <ContainerEnhanced id={id} type="container" bgImage={contactBg}>
       <h2>Contato</h2>
       <Form
         method="POST"

@@ -17,9 +17,9 @@ export function Banner({id, backgroundImage, children}){
   )
 }
 
-export function ContainerEnhanced({id, backgroundImage, children}){
+export function ContainerEnhanced({id, bgImage, bgColor, children}){
   return (
-    <div id={id} className="contEnhanced" style={{backgroundImage: `url(${backgroundImage})`}}>
+    <div id={id} className="contEnhanced" style={{backgroundImage: `url(${bgImage})`, backgroundColor: bgColor}}>
       <div className="container">
         {children}
       </div>

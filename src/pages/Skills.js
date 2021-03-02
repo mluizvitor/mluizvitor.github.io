@@ -1,6 +1,6 @@
 import React from 'react';
-import {Container} from '../components/Container';
-import {Gallery, GalleryItem} from '../components/Gallery';
+import { Container } from '../components/Container';
+import { Gallery, GalleryItem } from '../components/Gallery';
 
 import imgHtml from '../assets/skills/dev/html5.svg';
 import imgCss from '../assets/skills/dev/css3.svg';
@@ -14,27 +14,26 @@ import imgUxpin from '../assets/skills/design/uxpin.svg';
 import imgMaterial from '../assets/skills/design/material.svg';
 import imgInkscape from '../assets/skills/design/inkscape.svg';
 
-export default function Skills({id}) {
+export default function Skills({ id }) {
   return (
     <Container id={id} type={'container'}>
       <h2>Habilidades</h2>
 
       <Gallery title={'Desenvolvimento'}>
-        <GalleryItem title={'HTML5'} imgSource={imgHtml}/>
-        <GalleryItem title={'CSS3'} imgSource={imgCss}/>
-        <GalleryItem title={'Javascript'} imgSource={imgJs}/>
-        <GalleryItem title={'NodeJS'} imgSource={imgNode}/>
-        <GalleryItem title={'ReactJS e React Native'} imgSource={imgReact}/>
-        <GalleryItem title={'Git'} imgSource={imgGit}/>
-      </Gallery>
-      
-      <Gallery title={'Design'}>
-        <GalleryItem title={'Figma'} imgSource={imgFigma}/>
-        <GalleryItem title={'UXPin'} imgSource={imgUxpin}/>
-        <GalleryItem title={'Material Design'} imgSource={imgMaterial}/>
-        <GalleryItem title={'Inkscape'} imgSource={imgInkscape}/>
+        <GalleryItem title={'HTML5'} imgSource={imgHtml} />
+        <GalleryItem title={'CSS3'} imgSource={imgCss} />
+        <GalleryItem title={'Javascript'} imgSource={imgJs} />
+        <GalleryItem title={'NodeJS'} imgSource={imgNode} />
+        <GalleryItem title={'ReactJS e React Native'} imgSource={imgReact} />
+        <GalleryItem title={'Git'} imgSource={imgGit} />
       </Gallery>
 
+      <Gallery title={'Design'}>
+        <GalleryItem title={'Figma'} imgSource={imgFigma} />
+        <GalleryItem title={'UXPin'} imgSource={imgUxpin} />
+        <GalleryItem title={'Material Design'} imgSource={imgMaterial} />
+        <GalleryItem title={'Inkscape'} imgSource={imgInkscape} />
+      </Gallery>
     </Container>
-  )
+  );
 }
