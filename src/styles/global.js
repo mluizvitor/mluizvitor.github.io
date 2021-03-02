@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import {theme} from '../styles/colors'
+import { theme } from '../styles/colors';
 
 export default createGlobalStyle`
   * {
@@ -7,7 +7,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: "Work Sans", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   #root {
@@ -31,7 +31,7 @@ export default createGlobalStyle`
   body {
     font-size: calc(16px + 0.15vw);
     line-height: 155%;
-    letter-spacing: calc(((16px + 0.1vw) * 0.020) * -1);
+    letter-spacing: calc((16px + 0.1vw) * 0.020);
     font-weight: 400,
   }
 
@@ -53,12 +53,12 @@ export default createGlobalStyle`
       bottom: 0;
       left: 0;
       width:100%;
-      height: 50%;
+      height: 45%;
       z-index: -1;
 
       transform: translateX(16px);
 
-      background-color: ${theme.t002};
+      background-color: ${theme.t002.f};
     }
   }
 
@@ -69,6 +69,8 @@ export default createGlobalStyle`
     letter-spacing: calc(68px * -0.02);
     font-weight: 600;
     position: relative;
+
+    text-shadow: 0 4px 24px ${theme.t001.a};
   }
 
   h2 {
@@ -113,8 +115,8 @@ export default createGlobalStyle`
   }
 
   .profilePhoto {
-    width: 128px;
-    height: 128px;
+    width: calc(128px + 5vw);
+    height: calc(128px + 5vw);
     margin-bottom: 24px;
   }
 

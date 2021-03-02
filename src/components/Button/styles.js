@@ -1,11 +1,11 @@
 import { shade } from 'polished';
 import styled from 'styled-components';
-import {theme} from '../../styles/colors'
+import { theme } from '../../styles/colors';
 
 export const Container = styled.button.attrs((props) => ({
   btnStyle: props.btnStyle || 'transparent',
 }))`
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: calc(16px + 0.1vw);
   font-weight: 800;
   line-height: 24px;
@@ -14,7 +14,7 @@ export const Container = styled.button.attrs((props) => ({
 
   color: ${theme.t006};
   background: ${(props) =>
-    props.btnStyle === 'color' ? '#DE6896' : 'transparent'};
+    props.btnStyle === 'color' ? theme.t004 : 'transparent'};
 
   height: 48px;
   padding: 0 16px;
@@ -33,8 +33,6 @@ export const Container = styled.button.attrs((props) => ({
 
   &:hover {
     background-color: ${(props) =>
-      props.btnStyle === 'color'
-        ? shade(0.2, '#DE6896')
-        : 'rgba(255,255,255,0.1)'};
+      props.btnStyle === 'color' ? shade(0.25, theme.t004) : theme.t002.f};
   }
 `;
