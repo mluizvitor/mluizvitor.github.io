@@ -126,7 +126,7 @@ export default createGlobalStyle`
     margin: 16px 0;
   }
   ul.links li {
-    margin: 0 16px 16px 0;
+    margin: 0 32px 16px 0;
     display: inline;
   }
 
@@ -150,17 +150,23 @@ export default createGlobalStyle`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 16px;
     opacity: 0.95;
 
-    & h1::after {
-      content: none;
+    & h1 {
+      margin-bottom: 16px;
+      
+      &::after {
+        content: none;
+      }
     }
 
     & div {
       display: flex;
-      gap: 32px;
       margin-top: 32px;
+
+      & a + a {
+        margin-left: 32px;
+      }
     }
   }
 `;
