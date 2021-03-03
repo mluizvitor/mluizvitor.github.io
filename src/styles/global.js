@@ -136,4 +136,31 @@ export default createGlobalStyle`
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin-bottom: 16px;
   }
+
+  .wip {
+    position: absolute;
+    background-color: ${theme.t002.f};
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    opacity: 0.95;
+
+    & h1::after {
+      content: none;
+    }
+
+    & div {
+      display: flex;
+      gap: 32px;
+      margin-top: 32px;
+    }
+  }
 `;

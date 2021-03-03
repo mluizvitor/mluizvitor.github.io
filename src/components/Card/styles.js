@@ -6,10 +6,12 @@ export const CardContainer = styled.div`
   width: 100%;
   background-color: ${lighten(0.05, theme.t001.f)};
   box-shadow: 0 2px 8px -8px ${theme.t001.f};
+  display: flex;
+  flex-direction: column;
   transition: 500ms;
   cursor: pointer;
   z-index: 1;
-  
+
   &:hover {
     box-shadow: 0 16px 48px -16px ${theme.t001.f};
     transform: translateY(-8px);
@@ -32,6 +34,9 @@ export const CardImg = styled.div`
 
 export const CardBody = styled.div`
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   & h4 {
     margin-bottom: 8px;
@@ -43,6 +48,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
+  position: relative;
 
   @media (max-width: 650px) {
     grid-template-columns: 1fr 1fr;
@@ -60,6 +66,7 @@ export const SeeMore = styled.div`
   justify-content: flex-end;
   color: ${theme.t005};
   gap: 16px;
-  margin-top: 8px;
+  padding-top: 16px;
+  margin-top: auto;
   margin-left: auto;
 `;

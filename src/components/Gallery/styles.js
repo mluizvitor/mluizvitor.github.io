@@ -26,6 +26,11 @@ export const Figure = styled.figure`
   flex-direction: column;
   gap: 4px;
 
+  & img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
   & figcaption {
     font-size: calc(12px + 0.15vw);
     line-height: 145%;
