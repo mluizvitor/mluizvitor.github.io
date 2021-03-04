@@ -138,35 +138,61 @@ export default createGlobalStyle`
   }
 
   .wip {
-    position: absolute;
-    background-color: ${theme.t002.f};
-    z-index: 4;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(16px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0.95;
 
-    & h1 {
+    & img {
+      width: calc(224px + 24vw);
+      display: block;
+      margin: 64px auto;
+    }
+
+    & img + h2 {
       margin-bottom: 16px;
+      text-align: center;
+      display: block;
       
       &::after {
         content: none;
       }
     }
 
+    & h2::after {
+      background-color: ${theme.t003};
+    }
+
+    & .section {
+      text-align: center;
+    }
+
     & div {
-      display: flex;
+      text-align: center;
       margin-top: 32px;
+      margin-bottom: 128px;
 
       & a + a {
         margin-left: 32px;
       }
+    }
+  }
+
+  .text {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+
+    & > p {
+      grid-column: 1 / 3;
+      margin-bottom: calc(22px + 0.1vw);
+      @media (max-width: 650px) {
+        grid-column: 1 / 4;
+      }
+    }
+  }
+
+  @keyframes grayscaleAnim {
+    from {
+      filter: grayscale(1) opacity(20%);
+    }
+    to {
+      filter: grayscale(0);
     }
   }
 `;
