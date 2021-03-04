@@ -1,36 +1,40 @@
 import React from 'react';
-import './styles.css'
+import { ContEnhanced, ContContainer, ContBanner, ContFooter } from './styles';
 
-export function Container({type, id, children}) {
+export function Container({ id, children, ...rest }) {
   return (
-    <div id={id} className={`container ${type}`}>
+    <ContContainer id={id} className={rest.className}>
       {children}
-    </div>
-  )
+    </ContContainer>
+  );
 }
 
-export function Banner({id, backgroundImage, children}){
-  return(
-    <div id={id} className="banner" style={{backgroundImage: `url(${backgroundImage})`}}>
-      {children}
-    </div>
-  )
-}
-
-export function ContainerEnhanced({id, bgImage, bgColor, children}){
+export function Banner({ id, backgroundImage, children }) {
   return (
-    <div id={id} className="contEnhanced" style={{backgroundImage: `url(${bgImage})`, backgroundColor: bgColor}}>
-      <div className="container">
-        {children}
-      </div>
-    </div>
-  )
+    <ContBanner id={id} style={{ backgroundImage: `url(${backgroundImage})` }}>
+      {children}
+    </ContBanner>
+  );
 }
 
-export function FooterContainer({id, children}) {
-  return(
-    <footer id={id} className={'container footer'}>
-      {children}
-    </footer>
-  )
+export function ContainerEnhanced({ id, bgImage, bgColor, children, ...rest }) {
+  return (
+    <ContEnhanced
+      id={id}
+      style={{
+        backgroundImage: bgImage ? `url(${bgImage})` : '',
+        backgroundColor: bgColor ? bgColor : '',
+      }}
+    >
+      <ContContainer className={rest.className}>{children}</ContContainer>
+    </ContEnhanced>
+  );
+}
+
+export function FooterContainer({ id, children }) {
+  return (
+    <ContFooter id={id}>
+      <ContContainer>{children}</ContContainer>
+    </ContFooter>
+  );
 }
