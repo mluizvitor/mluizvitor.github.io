@@ -15,7 +15,7 @@ export const Container = styled.div`
     line-height: 125%;
     height: 48px;
     border: 2px solid ${theme.t003};
-    border-radius: 0;
+    border-radius: 4px;
     background-color: ${theme.t001.f};
     color: ${theme.t006};
     padding: 8px;

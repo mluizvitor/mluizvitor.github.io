@@ -17,6 +17,7 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-gap: 8px;
   z-index: 16;
 
   & > a > button {

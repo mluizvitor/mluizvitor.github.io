@@ -19,6 +19,7 @@ export const Container = styled.button.attrs((props) => ({
   height: 48px;
   padding: 0 16px;
   border: 0;
+  border-radius: 4px;
 
   display: flex;
   grid-column: 1 / 3;

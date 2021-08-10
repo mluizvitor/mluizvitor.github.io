@@ -40,6 +40,7 @@ export default createGlobalStyle`
     color: ${theme.t006};
     background-color: transparent;
     transition: background-color 500ms;
+    border-radius: 4px;
   }
 
   h2, h3 {
@@ -55,6 +56,7 @@ export default createGlobalStyle`
       width:100%;
       height: 45%;
       z-index: -1;
+      border-radius: 32px;
 
       transform: translateX(16px);
 
@@ -112,12 +114,14 @@ export default createGlobalStyle`
 
   .activeBtn {
     background-color: ${theme.t004};
+    border-radius: 4px;
   }
 
   .profilePhoto {
     width: calc(128px + 5vw);
     height: calc(128px + 5vw);
     margin-bottom: 24px;
+    border-radius:50%;
   }
 
   ul.links {

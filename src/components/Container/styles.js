@@ -40,7 +40,7 @@ export const ContBanner = styled.div`
   animation: grayscaleAnim 1000ms;
 
   @media (max-width: 650px) {
-    background-position: 25% bottom;
+    background-position: 82.5% bottom;
     background-size: cover;
     background-repeat: no-repeat;
     align-items: flex-start;
