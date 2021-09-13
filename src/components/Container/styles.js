@@ -62,7 +62,12 @@ export const ContEnhanced = styled.div`
 `;
 
 export const ContFooter = styled.footer`
+  min-height: calc(160px + 200px);
+  height: 100vh;
   background-color: #171717;
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
   padding: calc(144px - 64px) 0;
   width: 100%;
   display: flex;

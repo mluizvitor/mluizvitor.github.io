@@ -125,6 +125,7 @@ export default createGlobalStyle`
   }
 
   ul.links {
+    display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin: 16px 0;
@@ -137,7 +138,7 @@ export default createGlobalStyle`
   hr {
     width: 100%;
     border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 16px;
   }
 
