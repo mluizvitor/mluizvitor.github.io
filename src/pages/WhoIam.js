@@ -6,7 +6,7 @@ import bgImg from '../assets/backgroundHeader.svg';
 export default function WhoIam({ id }) {
   return (
     <>
-      <Banner backgroundImage={bgImg}>
+      <Banner bgImage={bgImg}>
         <img className={'profilePhoto'} src={profile} alt="" />
         <p>Prazer, me chamo</p>
         <h1>Vitor Monteiro</h1>

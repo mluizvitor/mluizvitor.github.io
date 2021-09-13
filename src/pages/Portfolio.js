@@ -5,7 +5,6 @@ import fbCover from '../assets/portfolio/fbcover.svg';
 import estore from '../assets/portfolio/esquelestore.png';
 
 import { theme } from '../styles/colors';
-import { MdOpenInNew } from 'react-icons/md';
 
 export default function Portfolio({ id }) {
   return (
@@ -22,30 +21,15 @@ export default function Portfolio({ id }) {
           title="EsqueleStore"
           description='"Esqieleto" de um aplicativo para lojas, altamente escalável e personalizável'
         />
+        <Card
+          title="Desembarque Digital"
+          description="Aplicação desenvolvida para coleta de dados pesqueiros em Santarém e região"
+        />
+        <Card
+          title="eLegumes"
+          description="Projeto de Marketplace agregadora de frutarias. Deu sugimento ao EsqueleStore"
+        />
       </CardBox>
-      <div className={'wip'}>
-        <h1>Em construção</h1>
-        <p className="section">
-          Enquanto isso, você pode ver meus projetos no Gitlab e Github
-        </p>
-
-        <div>
-          <a
-            href={'https://gitlab.com/mluizvitor'}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Gitlab <MdOpenInNew size={16} />
-          </a>
-          <a
-            href={'https://github.com/mluizvitor'}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github <MdOpenInNew size={16} />
-          </a>
-        </div>
-      </div>
     </ContainerEnhanced>
   );
 }

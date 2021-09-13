@@ -34,6 +34,7 @@ export const ContBanner = styled.div`
   gap: 8px;
   z-index: 1;
 
+  background-image: ${(props) => `url(` + props.bgImage + `)` || ''};
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,6 +52,8 @@ export const ContEnhanced = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  background-image: ${(props) => 'url(' + props.bgImage + ')' || ''};
+  background-color: ${(props) => props.bgColor || 'inherit'};
   background-size: auto;
   background-position: center;
   background-repeat: repeat;
@@ -74,6 +77,8 @@ export const ContFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: ${(props) => 'url(' + props.bgImage + ')' || ''};
+  background-color: ${(props) => props.bgColor || 'inherit'};
 
   & div {
     margin: 0;

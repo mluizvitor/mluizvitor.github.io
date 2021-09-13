@@ -9,9 +9,9 @@ export function Container({ id, children, ...rest }) {
   );
 }
 
-export function Banner({ id, backgroundImage, children }) {
+export function Banner({ id, bgImage, children }) {
   return (
-    <ContBanner id={id} style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <ContBanner id={id} bgImage={bgImage}>
       {children}
     </ContBanner>
   );
@@ -19,13 +19,7 @@ export function Banner({ id, backgroundImage, children }) {
 
 export function ContainerEnhanced({ id, bgImage, bgColor, children, ...rest }) {
   return (
-    <ContEnhanced
-      id={id}
-      style={{
-        backgroundImage: bgImage ? `url(${bgImage})` : '',
-        backgroundColor: bgColor ? bgColor : '',
-      }}
-    >
+    <ContEnhanced id={id} bgImage={bgImage} bgColor={bgColor}>
       <ContContainer className={rest.className}>{children}</ContContainer>
     </ContEnhanced>
   );
@@ -33,13 +27,7 @@ export function ContainerEnhanced({ id, bgImage, bgColor, children, ...rest }) {
 
 export function FooterContainer({ id, bgImage, bgColor, children, ...rest }) {
   return (
-    <ContFooter
-      id={id}
-      style={{
-        backgroundImage: bgImage ? `url(${bgImage})` : '',
-        backgroundColor: bgColor ? bgColor : '',
-      }}
-    >
+    <ContFooter id={id} bgImage={bgImage} bgColor={bgColor}>
       <ContContainer>{children}</ContContainer>
     </ContFooter>
   );

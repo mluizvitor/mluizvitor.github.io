@@ -51,7 +51,7 @@ export default function Footer({ id }) {
         </li>
       </ul>
       <hr />
-      <p className={'subtitle'} style={{ opacity: 0.7 }}>
+      <p className={'subtitle'}>
         © Todos os direitos são reservados a Luiz Vitor Monteiro da Silva
         Portela
       </p>

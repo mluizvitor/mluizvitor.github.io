@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
   transition: 500ms;
   cursor: pointer;
   z-index: 1;
+  order: ${(props) => props.order || 0};
 
   &:hover {
     box-shadow: 0 16px 48px -16px ${theme.t001.f};
@@ -26,6 +27,7 @@ export const CardImg = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: ${(props) => `url(` + props.imageSrc + `)` || ''};
 
   @media (max-width: 450px) {
     padding-bottom: calc(100% / 5 * 4);
