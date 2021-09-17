@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/colors';
 
 export const ContContainer = styled.div`
   max-width: 1220px;
@@ -24,9 +25,9 @@ export const ContContainer = styled.div`
 export const ContBanner = styled.div`
   width: 100vw;
   max-width: 100%;
-  height: 80vh;
+  height: ${(props) => (props.type === 'error' ? '100vh' : '80vh')};
   min-height: 600px;
-  padding: 32px;
+  padding: ${(props) => (props.type === 'error' ? '32px 30%' : '32px')};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +40,24 @@ export const ContBanner = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   animation: grayscaleAnim 1000ms;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: ${(props) =>
+      props.type === 'error'
+        ? theme.t001.f
+        : props.type === 'portfolio'
+        ? theme.t002.f
+        : ''};
+
+    opacity: ${(props) =>
+      props.type === 'error' ? 0.5 : props.type === 'portfolio' ? 0.8 : 0};
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+  }
 
   @media (max-width: 650px) {
     background-position: 82.5% bottom;
@@ -84,5 +103,22 @@ export const ContFooter = styled.footer`
     margin: 0;
     display: flex;
     flex-direction: column;
+  }
+`;
+
+export const ContH2 = styled.h2`
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    z-index: -1;
+    border-radius: 32px;
+
+    transform: translateX(16px);
+
+    background-color: ${(props) => props.titleBg || ''};
   }
 `;

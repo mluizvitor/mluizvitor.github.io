@@ -1,26 +1,44 @@
 import React from 'react';
-import { ContEnhanced, ContContainer, ContBanner, ContFooter } from './styles';
+import {
+  ContEnhanced,
+  ContContainer,
+  ContBanner,
+  ContFooter,
+  ContH2,
+} from './styles';
 
-export function Container({ id, children, ...rest }) {
+export function Container({ id, title, titleBg, children, ...rest }) {
   return (
     <ContContainer id={id} className={rest.className}>
+      <ContH2 titleBg={titleBg}>{title}</ContH2>
       {children}
     </ContContainer>
   );
 }
 
-export function Banner({ id, bgImage, children }) {
+export function Banner({ id, bgImage, children, type }) {
   return (
-    <ContBanner id={id} bgImage={bgImage}>
+    <ContBanner id={id} bgImage={bgImage} type={type}>
       {children}
     </ContBanner>
   );
 }
 
-export function ContainerEnhanced({ id, bgImage, bgColor, children, ...rest }) {
+export function ContainerEnhanced({
+  id,
+  bgImage,
+  bgColor,
+  children,
+  title,
+  titleBg,
+  ...rest
+}) {
   return (
     <ContEnhanced id={id} bgImage={bgImage} bgColor={bgColor}>
-      <ContContainer className={rest.className}>{children}</ContContainer>
+      <ContContainer className={rest.className}>
+        <ContH2 titleBg={titleBg}>{title}</ContH2>
+        {children}
+      </ContContainer>
     </ContEnhanced>
   );
 }
