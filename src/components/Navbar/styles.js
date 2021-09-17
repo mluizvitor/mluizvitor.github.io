@@ -12,8 +12,9 @@ export const Container = styled.nav`
   overflow-x: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${(props) => props.position || 'center'};
   grid-gap: 8px;
+  padding: 8px;
   z-index: 16;
 
   @media (max-width: 470px) {
@@ -21,11 +22,11 @@ export const Container = styled.nav`
   }
 
   & > a > button {
-    padding: 0 8px;
     font-size: calc(14px + 0.1vw);
 
     @media (max-width: 470px) {
       height: 32px;
+      padding: 0 8px;
     }
   }
 
