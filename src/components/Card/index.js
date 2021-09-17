@@ -3,9 +3,9 @@ import { MdArrowForward } from 'react-icons/md';
 
 import { Container, CardImg, CardContainer, CardBody, SeeMore } from './styles';
 
-export function Card({ imageSrc, title, description, order }) {
+export function Card({ imageSrc, title, description, order, ...rest }) {
   return (
-    <CardContainer order={order}>
+    <CardContainer order={order} {...rest}>
       <CardImg imageSrc={imageSrc} />
       <CardBody>
         <h4>{title}</h4>

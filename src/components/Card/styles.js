@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 import { theme } from '../../styles/colors';
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.a`
+  text-decoration: none;
   width: 100%;
   background-color: ${lighten(0.05, theme.t001.f)};
   box-shadow: 0 2px 8px -8px ${theme.t001.f};
@@ -15,7 +16,7 @@ export const CardContainer = styled.div`
 
   &:hover {
     box-shadow: 0 16px 48px -16px ${theme.t001.f};
-    transform: translateY(-8px);
+    transform: scale(1.05);
     z-index: 4;
   }
 `;
@@ -23,15 +24,11 @@ export const CardContainer = styled.div`
 export const CardImg = styled.div`
   width: 100%;
   height: auto;
-  padding-bottom: calc(100% / 1 * 1);
+  padding-bottom: calc(100% / 3 * 2);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: ${(props) => `url(` + props.imageSrc + `)` || ''};
-
-  @media (max-width: 450px) {
-    padding-bottom: calc(100% / 5 * 4);
-  }
 `;
 
 export const CardBody = styled.div`
@@ -48,7 +45,7 @@ export const CardBody = styled.div`
 export const Container = styled.div`
   margin-top: 64px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   position: relative;
 
