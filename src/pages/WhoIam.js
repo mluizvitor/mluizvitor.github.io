@@ -12,7 +12,7 @@ export default function WhoIam({ id }) {
         <h1>Vitor Monteiro</h1>
         <p>UI-Designer e Desenvolvedor Front-End</p>
       </Banner>
-      <Container id={id} className={'text'}>
+      <Container id={id} className={'abstract'}>
         <p>
           Sou estudante de Ciência da Computação na Universidade Federal do
           Oeste do Pará e durante o curso descobri a incrível área de Interação

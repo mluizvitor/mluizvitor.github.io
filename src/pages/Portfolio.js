@@ -2,14 +2,22 @@ import React from 'react';
 import { ContainerEnhanced } from '../components/Container';
 import { Card, CardBox } from '../components/Card';
 import fbCover from '../assets/portfolio/fbcover.svg';
-import estore from '../assets/portfolio/esquelestore.png';
+import estore from '../assets/portfolio/esquelestore.jpg';
+import desembarque from '../assets/portfolio/desembarque.jpg';
+import elegumes from '../assets/portfolio/elegumes.jpg';
+import poraque from '../assets/portfolio/poraque.jpg';
 
 import { theme } from '../styles/colors';
 
 export default function Portfolio({ id }) {
   return (
-    <ContainerEnhanced id={id} type="container" bgColor={theme.t003}>
-      <h2>Portfólio</h2>
+    <ContainerEnhanced
+      id={id}
+      type="container"
+      bgColor={theme.t002.f}
+      title={'Portfólio'}
+      titleBg={theme.t001.a}
+    >
       <CardBox>
         <Card
           href="NoFoundPage"

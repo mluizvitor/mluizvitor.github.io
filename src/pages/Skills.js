@@ -13,12 +13,16 @@ import imgFigma from '../assets/skills/design/figma.svg';
 import imgUxpin from '../assets/skills/design/uxpin.svg';
 import imgMaterial from '../assets/skills/design/material.svg';
 import imgInkscape from '../assets/skills/design/inkscape.svg';
+import { theme } from '../styles/colors';
 
 export default function Skills({ id }) {
   return (
-    <Container id={id} type={'container'}>
-      <h2>Habilidades</h2>
-
+    <Container
+      id={id}
+      type={'container'}
+      title={'Habilidades'}
+      titleBg={theme.t002.f}
+    >
       <Gallery title={'Desenvolvimento'}>
         <GalleryItem title={'HTML5'} imgSource={imgHtml} />
         <GalleryItem title={'CSS3'} imgSource={imgCss} />
