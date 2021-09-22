@@ -1,16 +1,10 @@
 import React from 'react';
-import {
-  ContEnhanced,
-  ContContainer,
-  ContBanner,
-  ContFooter,
-  ContH2,
-} from './styles';
+import { TypoH2 } from '../Typo';
 
 export function Container({ id, title, titleBg, children, ...rest }) {
   return (
     <ContContainer id={id} className={rest.className}>
-      <ContH2 titleBg={titleBg}>{title}</ContH2>
+      <TypoH2 titleBg={titleBg}>{title}</TypoH2>
       {children}
     </ContContainer>
   );

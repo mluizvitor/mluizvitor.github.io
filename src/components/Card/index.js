@@ -1,15 +1,16 @@
 import React from 'react';
-import { MdArrowForward } from 'react-icons/md';
+import { TypoH4 } from '../Typo';
 
-import { Container, CardImg, CardContainer, CardBody, SeeMore } from './styles';
+  CardDescription,
 
 export function Card({ imageSrc, title, description, order, ...rest }) {
   return (
     <CardContainer order={order} {...rest}>
       <CardImg imageSrc={imageSrc} />
       <CardBody>
-        <h4>{title}</h4>
-        <p className="subtitle">{description}</p>
+        <TypoH4>{title}</TypoH4>
+        <CardDescription>{description}</CardDescription>
+
         <SeeMore>
           <span>ver mais</span>
           <MdArrowForward size={24} />

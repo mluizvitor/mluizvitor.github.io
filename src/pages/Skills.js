@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container } from '../components/Container';
+import { ContainerEnhanced } from '../components/Container';
 import { Gallery, GalleryItem } from '../components/Gallery';
+import { TypoH2 } from '../components/Typo';
 
 import imgHtml from '../assets/skills/dev/html5.svg';
 import imgCss from '../assets/skills/dev/css3.svg';
@@ -17,12 +18,10 @@ import { theme } from '../styles/colors';
 
 export default function Skills({ id }) {
   return (
-    <Container
-      id={id}
-      type={'container'}
-      title={'Habilidades'}
-      titleBg={theme.t002.f}
-    >
+    <ContainerEnhanced id={id} type={'container'}>
+      <TypoH2 titleBg={theme.t002.f} gridColumn={'span 2'}>
+        Habilidades
+      </TypoH2>
       <Gallery title={'Desenvolvimento'}>
         <GalleryItem title={'HTML5'} imgSource={imgHtml} />
         <GalleryItem title={'CSS3'} imgSource={imgCss} />
@@ -38,6 +37,6 @@ export default function Skills({ id }) {
         <GalleryItem title={'Material Design'} imgSource={imgMaterial} />
         <GalleryItem title={'Inkscape'} imgSource={imgInkscape} />
       </Gallery>
-    </Container>
+    </ContainerEnhanced>
   );
 }

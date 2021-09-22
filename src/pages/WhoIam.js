@@ -1,38 +1,37 @@
 import React from 'react';
-import { Container, Banner } from '../components/Container';
+import { ContainerEnhanced, Banner } from '../components/Container';
 import profile from '../assets/profile.jpg';
 import bgImg from '../assets/backgroundHeader.svg';
+import { TypoH1, TypoP } from '../components/Typo';
 
 export default function WhoIam({ id }) {
   return (
     <>
       <Banner bgImage={bgImg}>
         <img className={'profilePhoto'} src={profile} alt="" />
-        <p>Prazer, me chamo</p>
-        <h1>Vitor Monteiro</h1>
-        <p>UI-Designer e Desenvolvedor Front-End</p>
+        <TypoP>Prazer, me chamo</TypoP>
+        <TypoH1>Vitor Monteiro</TypoH1>
+        <TypoP>UI-Designer e Desenvolvedor Front-End</TypoP>
       </Banner>
-      <Container id={id} className={'abstract'}>
-        <p>
-          Sou estudante de Ciência da Computação na Universidade Federal do
-          Oeste do Pará e durante o curso descobri a incrível área de Interação
-          Humano-Computador, bastante ligada à Experiência de Usuário. Sempre
-          fui apaixonado por tecnologia e design, especialmente design de
-          interfaces e tenho estudado de forma autodidata desde 2019.
-        </p>
+      <ContainerEnhanced id={id}>
+        <TypoP gridColumn={'span 4'}>
+          Sou um apaixonado por tecnologia e entusiasta do mundo Linux desde
+          meus 12~13 anos, quando ganhei meu primeiro computador. Sempre fui
+          muito curioso em relação a tudo que envolvesse interação entre pessoas
+          e máquinas e foi durante o curso de Ciência da Computação na
+          Universidade Federal do Oeste do Pará que descobri a incrível área de
+          Interação Humano-Computador, bastante ligada à Experiência de Usuário.
+        </TypoP>
 
-        <p>
-          Sou do Brasil, sou do Norte, de onde tenho orgulho de ter nascido. Nas
-          horas vagas gosto muito de jogar RPG eletrônico, ouvir metal
-          sinfônico, ver memes e me aprimorar como programador e designer.
-        </p>
-
-        <p>
-          Participo de alguns projetos na universidade como programador
-          front-end e lider de design de interação e pretendo fazer carreira
-          nessa área.
-        </p>
-      </Container>
+        <TypoP gridColumn={'span 4'}>
+          Desde 2019 e tenho estudado UX e UI Design, assim como programação,
+          especialmente focado no Front-end e na ferramenta React.
+        </TypoP>
+        <TypoP gridColumn={'span 4'}>
+          Atualmente trabalho na Expertise Training Consulting, mas estou aberto
+          a novos projetos.
+        </TypoP>
+      </ContainerEnhanced>
     </>
   );
 }

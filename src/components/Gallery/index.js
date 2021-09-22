@@ -1,10 +1,11 @@
 import React from 'react';
+import { TypoH3 } from '../Typo';
 import { Container, Figure, Grid } from './styles';
 
 export function Gallery({ title, children }) {
   return (
     <Container>
-      <h3 className={'section'}>{title}</h3>
+      <TypoH3>{title}</TypoH3>
       <Grid>{children}</Grid>
     </Container>
   );
