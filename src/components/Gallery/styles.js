@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-top: 32px;
-  grid-column: 1 / 7;
+  grid-column: span 6;
+
+  @media (max-width: 650px) {
+    grid-column: span 1;
+  }
 `;
 
 export const Grid = styled.div`
@@ -16,8 +20,12 @@ export const Grid = styled.div`
     gap: 24px;
   }
   @media (max-width: 650px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: ${(props) =>
+      props.gridColumnMobile
+        ? 'repeat(' + props.gridColumnMobile + ' , 1fr)'
+        : '1fr'};
+    column-gap: 16px;
+    row-gap: 24px;
   }
 `;
 
@@ -43,7 +51,9 @@ export const Figure = styled.figure`
     text-align: center;
     margin-top: 8px;
   }
+
   @media (max-width: 650px) {
     max-width: 100vw;
+    grid-column: span 1;
   }
 `;

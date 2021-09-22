@@ -9,8 +9,11 @@ export const ContContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+  grid-template-columns: ${(props) =>
+    props.gridColumnTemplate
+      ? 'repeat(' + props.gridColumnTemplate + ', 1fr)'
+      : 'repeat( 6, 1fr)'};
 
   background-position: center bottom;
   background-size: cover;
@@ -22,7 +25,7 @@ export const ContContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     align-items: flex-start;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

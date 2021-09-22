@@ -2,11 +2,11 @@ import React from 'react';
 import { TypoH3 } from '../Typo';
 import { Container, Figure, Grid } from './styles';
 
-export function Gallery({ title, children }) {
+export function Gallery({ title, gridColumnMobile, children }) {
   return (
     <Container>
       <TypoH3>{title}</TypoH3>
-      <Grid>{children}</Grid>
+      <Grid gridColumnMobile={gridColumnMobile}>{children}</Grid>
     </Container>
   );
 }
