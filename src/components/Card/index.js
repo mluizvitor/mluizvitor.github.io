@@ -14,7 +14,7 @@ import {
 
 export function Card({ imageSrc, title, description, order, wip, ...rest }) {
   return (
-    <CardContainer order={order} {...rest}>
+    <CardContainer wip={wip} order={order} {...rest}>
       <CardImg imageSrc={imageSrc} />
       <CardBody>
         <TypoH4>{title}</TypoH4>

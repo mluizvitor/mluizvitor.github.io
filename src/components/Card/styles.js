@@ -12,15 +12,21 @@ export const CardContainer = styled(Link)`
   display: flex;
   flex-direction: column;
   transition: 500ms;
-  cursor: pointer;
+  cursor: default;
   z-index: 1;
   order: ${(props) => props.order || 0};
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0 16px 48px -16px ${theme.t001.f};
-    transform: scale(1.05);
-    z-index: 4;
+    ${(props) =>
+      props.wip
+        ? ''
+        : 'box-shadow: 0 16px 48px -16px' +
+          theme.t001.f +
+          ';' +
+          'transform: scale(1.05); ' +
+          'z-index: 4;' +
+          'cursor: pointer;'}
   }
 `;
 

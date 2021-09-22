@@ -35,11 +35,13 @@ import mobile4 from '../../assets/portfolio/desembarque/mobile4.webp';
 import mobile5 from '../../assets/portfolio/desembarque/mobile5.webp';
 
 import vitorphoto from '../../assets/profile.jpg';
+import ScrollToTop from '../../ScrollToTop';
 
 function Desembarque() {
   let history = useHistory();
   return (
     <>
+      <ScrollToTop />
       <NavBar position={'flex-start'}>
         <Button onClick={history.goBack}>
           <FiArrowLeft size={24} />
@@ -83,7 +85,6 @@ function Desembarque() {
           </TypoP>
         </PseudoCard>
       </ContainerEnhanced>
-
       <ContainerEnhanced>
         <TypoH2 gridColumn={'span 7'}>A Solução</TypoH2>
         <PseudoCard gridColumn={'span 4'}>
@@ -124,7 +125,6 @@ function Desembarque() {
           />
         </PseudoCard>
       </ContainerEnhanced>
-
       <ContainerEnhanced bgColor={theme.t002.m}>
         <TypoH2 gridColumn={'span 6'}>
           Este é o <strong>Desembarque Digital</strong>
@@ -176,7 +176,6 @@ function Desembarque() {
           />
         </Gallery>
       </ContainerEnhanced>
-
       <ContainerEnhanced bgColor={theme.t002.f}>
         <TypoH2 gridColumn={'span 7'}>Envolvidos no Projeto</TypoH2>
         <PseudoCard gridColumn={'span 3'}>
