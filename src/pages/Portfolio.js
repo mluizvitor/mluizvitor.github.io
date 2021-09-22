@@ -25,7 +25,7 @@ export default function Portfolio({ id }) {
           order={2}
         />
         <Card
-          href={'/desembarque'}
+          to={'/desembarque'}
           imageSrc={desembarque}
           title="De&shy;sem&shy;bar&shy;que Di&shy;gi&shy;tal"
           description="Aplicação desenvolvida para coleta de dados pesqueiros em Santarém e região"

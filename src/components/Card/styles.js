@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { lighten } from 'polished';
 import { theme } from '../../styles/colors';
 import { TypoP } from '../Typo';
 
-export const CardContainer = styled.a`
+export const CardContainer = styled(Link)`
   text-decoration: none;
   width: 100%;
   background-color: ${lighten(0.05, theme.t001.f)};
