@@ -3,8 +3,12 @@ import { Banner } from '../components/Container';
 import bgImg from '../assets/backgroundHeader.svg';
 import { Button, Link } from '../components/Button';
 import Logo from '../assets/logo.svg';
+import { FiArrowLeft } from 'react-icons/fi';
+
+import { useHistory } from 'react-router-dom';
 
 function Page404() {
+  let history = useHistory();
   return (
     <>
       <Banner bgImage={bgImg} type={'error'}>
@@ -22,13 +26,13 @@ function Page404() {
           }}
         >
           <Button btnStyle="color" onClick={history.goBack}>
-            <MdArrowBack size={24} />
+            <FiArrowLeft size={24} />
             Voltar
           </Button>
-        <Link btnStyle="color" to="/">
-          <img src={Logo} alt="Vitor's Portfólio" />
+          <Link btnStyle="color" to="/">
+            <img src={Logo} alt="Vitor's Portfólio" />
             Ir para o Início
-        </Link>
+          </Link>
         </div>
       </Banner>
     </>

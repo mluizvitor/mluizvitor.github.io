@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { MdArrowBack } from 'react-icons/md';
+import { FiArrowLeft } from 'react-icons/fi';
 
 import NavBar from '../../components/Navbar';
 import Footer from '../../pages/Footer';
@@ -42,7 +42,7 @@ function Desembarque() {
     <>
       <NavBar position={'flex-start'}>
         <Button onClick={history.goBack}>
-          <MdArrowBack size={24} />
+          <FiArrowLeft size={24} />
           Voltar
         </Button>
         <Link to="/">
