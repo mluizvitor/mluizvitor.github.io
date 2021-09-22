@@ -177,6 +177,85 @@ function Desembarque() {
         </Gallery>
       </ContainerEnhanced>
 
+      <ContainerEnhanced bgColor={theme.t002.f}>
+        <TypoH2 gridColumn={'span 7'}>Envolvidos no Projeto</TypoH2>
+        <PseudoCard gridColumn={'span 3'}>
+          <List>
+            <ListGroupHeader>Equipe de Design</ListGroupHeader>
+            <ItemList
+              avatar
+              avatarImg={vitorphoto}
+              title={'Vitor Monteiro'}
+              description={'Designer de Experiência de Usuário'}
+            />
+            <ItemList
+              avatar
+              title={'Alexandre Lopes de Sousa'}
+              description={'Designer de Interfaces'}
+            />
+            <ListSeparator />
+
+            <ListGroupHeader>Equipe Back-end</ListGroupHeader>
+            <ItemList
+              avatar
+              title={'Débora Cavalcanti'}
+              description={'Programadora Back-end'}
+            />
+            <ListSeparator />
+
+            <ListGroupHeader>Equipe Front-end</ListGroupHeader>
+            <ItemList
+              avatar
+              title={'Ian Brito'}
+              description={'Programador Front-end Mobile'}
+            />
+            <ItemList
+              avatar
+              title={'Leonardo Paz Amoedo'}
+              description={'Programador Front-end Mobile'}
+            />
+            <ItemList
+              avatar
+              title={'Pedro Pimentel'}
+              description={'Programador Front-end Web'}
+            />
+          </List>
+        </PseudoCard>
+        <PseudoCard gridColumn={'span 3'}>
+          <List>
+            <ListGroupHeader>Equipe FullStack</ListGroupHeader>
+            <ItemList
+              avatar
+              title={'Alecsander Matos'}
+              description={'Programador FullStack'}
+            />
+            <ItemList
+              avatar
+              title={'Wagner Wolf'}
+              description={'Programador FullStack'}
+            />
+            <ItemList
+              avatar
+              title={'Douglas Laurindo'}
+              description={'Programador FullStack'}
+            />
+
+            <ListSeparator />
+
+            <ListGroupHeader>Gerentes de Projeto</ListGroupHeader>
+            <ItemList
+              avatar
+              title={'Vânia Lourenço'}
+              description={'Scrum Master & Orientadora'}
+            />
+            <ItemList
+              avatar
+              title={'Enoque Alves'}
+              description={'Consultor Técnico & Orientador'}
+            />
+          </List>
+        </PseudoCard>
+      </ContainerEnhanced>
       <Footer />
     </>
   );
