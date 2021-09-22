@@ -1,6 +1,10 @@
 import React from 'react';
 import { TypoH3 } from '../Typo';
 import { Container, Figure, Grid } from './styles';
+import { theme } from '../../styles/colors';
+
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export function Gallery({ title, gridColumnMobile, children }) {
   return (
@@ -11,17 +15,12 @@ export function Gallery({ title, gridColumnMobile, children }) {
   );
 }
 
-export function GalleryItem({
-  title,
-  imgSource,
-  gridColumn,
-  height,
-  width,
-  ...rest
-}) {
+export function GalleryItem({ title, imgSource, gridColumn, height, ...rest }) {
   return (
     <Figure gridColumn={gridColumn} {...rest}>
-      <img src={imgSource} alt={title} height={height} width={width} />
+      <Zoom overlayBgColorEnd={theme.t001.a}>
+        <img src={imgSource} alt={title} height={height} width={'100%'} />
+      </Zoom>
       <figcaption>{title}</figcaption>
     </Figure>
   );
