@@ -18,13 +18,7 @@ export default function Portfolio({ id }) {
       </TypoH2>
       <CardBox>
         <Card
-          href="NoFoundPage"
-          imageSrc={fbCover}
-          title="Facebook Cover Preview"
-          description="Aplicação simples que permite testar posição da capa de Facebook em visualização em desktop e mobile"
-          order={999}
-        />
-        <Card
+          wip
           imageSrc={estore}
           title="Es&shy;que&shy;le&shy;Sto&shy;re"
           description='"Esqieleto" de um aplicativo para lojas, altamente escalável e personalizável'
@@ -38,12 +32,14 @@ export default function Portfolio({ id }) {
           order={0}
         />
         <Card
+          wip
           imageSrc={elegumes}
           title="e&shy;Le&shy;gu&shy;mes"
           description="Projeto de Marketplace agregadora de frutarias. Deu sugimento ao EsqueleStore"
           order={1}
         />
         <Card
+          wip
           imageSrc={poraque}
           title="Po&shy;ra&shy;qué"
           description="Vencedor do 2º Lugar no I Hackathon Tapajós. O sistema controla, monitora e diagnostica centrais de ar remotamente."

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiArrowRight, FiTool } from 'react-icons/fi';
 import { TypoH4 } from '../Typo';
 
 import {
@@ -11,7 +12,7 @@ import {
   CardDescription,
 } from './styles';
 
-export function Card({ imageSrc, title, description, order, ...rest }) {
+export function Card({ imageSrc, title, description, order, wip, ...rest }) {
   return (
     <CardContainer order={order} {...rest}>
       <CardImg imageSrc={imageSrc} />
@@ -20,8 +21,17 @@ export function Card({ imageSrc, title, description, order, ...rest }) {
         <CardDescription>{description}</CardDescription>
 
         <SeeMore>
-          <span>ver mais</span>
-          <MdArrowForward size={24} />
+          {wip ? (
+            <>
+              <span>em construção</span>
+              <FiTool size={24} />
+            </>
+          ) : (
+            <>
+              <span>ver mais</span>
+              <FiArrowRight size={24} />
+            </>
+          )}
         </SeeMore>
       </CardBody>
     </CardContainer>
