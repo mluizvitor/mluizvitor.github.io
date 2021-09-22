@@ -3,6 +3,9 @@ stages:
   - test
   - build
   - deploy
+
+variables:
+  PUBLIC_URL: "https://mvitor.dev/"
   
 # eslint:
 #   image: node:12
