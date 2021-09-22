@@ -4,7 +4,7 @@ import { Card, CardBox } from '../components/Card';
 import { TypoH2 } from '../components/Typo';
 
 import estore from '../assets/portfolio/esquelestore.jpg';
-import desembarque from '../assets/portfolio/desembarque.jpg';
+import desembarque from '../assets/portfolio/desembarque/cover.webp';
 import elegumes from '../assets/portfolio/elegumes.jpg';
 import poraque from '../assets/portfolio/poraque.jpg';
 
