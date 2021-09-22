@@ -3,20 +3,26 @@ import { opacify } from 'polished';
 
 export const Container = styled.ul`
   margin: 16px 0;
+  ${(props) => (props.type === 'bullet' ? 'margin-left: 16px' : '')}
 `;
 
 export const ContItem = styled.li`
-  display: flex;
+  display: ${(props) => (props.avatar ? 'flex' : 'list-item')};
   align-items: center;
   gap: 16px;
-  padding: 8px 16px;
+  padding: ${(props) => (props.avatar ? '8px 16px' : '0')};
   border-radius: 4px;
 
-  min-height: 48px;
+  min-height: ${(props) => (props.avatar ? '56px' : '')};
 
-  &:hover {
-    background-color: ${opacify('0.1', '#ffffff00')};
-  }
+  ${(props) =>
+    props.avatar
+      ? '&:hover {' +
+        'background-color: ' +
+        opacify('0.1', '#ffffff00') +
+        ';' +
+        '}'
+      : ''}
 `;
 
 export const ItemAvatar = styled.img`
@@ -54,5 +60,6 @@ export const ListHRTitle = styled.span`
   letter-spacing: calc((12px + 0.1vw) * 0.15);
   text-transform: uppercase;
   font-weight: 400;
-  margin-left: 16px;
+  display: block;
+  margin: 24px 0 16px;
 `;

@@ -22,17 +22,20 @@ import { theme } from '../../styles/colors';
 
 import cover from '../../assets/portfolio/desembarque/cover.webp';
 import background from '../../assets/portfolio/desembarque/background.webp';
-import dsbVideo from '../../assets/portfolio/desembarque/mobilevid.gif';
+import dsbVideo1 from '../../assets/portfolio/desembarque/mobilevid1.gif';
+import dsbVideo2 from '../../assets/portfolio/desembarque/mobilevid2.gif';
+import dsbVideo3 from '../../assets/portfolio/desembarque/mobilevid3.gif';
 
 import desktop1 from '../../assets/portfolio/desembarque/desktop1.webp';
 import desktop2 from '../../assets/portfolio/desembarque/desktop2.webp';
 import desktop3 from '../../assets/portfolio/desembarque/desktop3.webp';
 
-import mobile1 from '../../assets/portfolio/desembarque/mobile1.webp';
+import mobile0 from '../../assets/portfolio/desembarque/mobile0.webp';
 import mobile2 from '../../assets/portfolio/desembarque/mobile2.webp';
-import mobile3 from '../../assets/portfolio/desembarque/mobile3.webp';
-import mobile4 from '../../assets/portfolio/desembarque/mobile4.webp';
-import mobile5 from '../../assets/portfolio/desembarque/mobile5.webp';
+
+import docs1 from '../../assets/portfolio/desembarque/docs1.webp';
+import docs2 from '../../assets/portfolio/desembarque/docs2.webp';
+import docs3 from '../../assets/portfolio/desembarque/docs3.webp';
 
 import vitorphoto from '../../assets/profile.jpg';
 import ScrollToTop from '../../ScrollToTop';
@@ -41,7 +44,7 @@ function Desembarque() {
   let history = useHistory();
   return (
     <>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <NavBar position={'flex-start'}>
         <Button onClick={history.goBack}>
           <FiArrowLeft size={24} />
@@ -53,7 +56,7 @@ function Desembarque() {
         </Link>
       </NavBar>
       <Banner bgImage={cover} type={'portfolio'}>
-        <TypoH1 gridColumn={'span 7'}>
+        <TypoH1 gridColumn={'span 4'}>
           De&shy;sem&shy;bar&shy;que Di&shy;gi&shy;tal
         </TypoH1>
         <TypoP gridColumn={'span 4'}>
@@ -81,15 +84,16 @@ function Desembarque() {
             em papel para serem preenchidas à mão. O resultado disso?
             Inconsistências nos dados, informações importantes não eram
             preenchidas, havia muito trabalho para transcreve-los para uma
-            planilha de <i>Excel</i> e gastos com papel.
+            planilha de <i>Excel</i> e haviam gastos com papel por causa das
+            impressões.
           </TypoP>
         </PseudoCard>
       </ContainerEnhanced>
-      <ContainerEnhanced>
-        <TypoH2 gridColumn={'span 7'}>A Solução</TypoH2>
-        <PseudoCard gridColumn={'span 4'}>
+      <ContainerEnhanced gridColumnTemplate={7}>
+        <TypoH2 gridColumn={'span 4'}>A Solução</TypoH2>
+        <PseudoCard gridColumn={'span 5'}>
           <TypoP>
-            Nisso, foi proposta a criação de um sistema que pudesse ser
+            A partir disso, foi proposta a criação de um sistema que pudesse ser
             utilizado pelos bolsistas e voluntários do LAGES para que as
             informações das tabelas pudessem ser melhor organizadas e acessadas,
             evitando utilizar o <i>Excel</i> que até então já estava virando uma
@@ -99,16 +103,17 @@ function Desembarque() {
           <TypoP>
             A primeira versão do Desembarque Digital foi concebida no
             laboratório Lab Mídias por volta de 2018 e usado como projeto de TCC
-            de seu único desenvolvedor até então, Douglas Laurindo. Em 2019 eu
-            entrei como Designer de Interfaces e Programador Front-end junto com
-            Alecsander Matos e Wagner Wolf para a segunda versão do projeto, já
-            utilizando Laravel para back-end e frontend e Material Design como
+            de seu único desenvolvedor até então, Douglas Laurindo e feito
+            puramente em PHP. Em 2019 eu entrei como Designer de Interfaces e
+            Programador Front-end junto com Alecsander Matos e Wagner Wolf
+            (ambos FullStack com foco no back-end) para a segunda versão do
+            projeto, já utilizando Laravel como framework e Material Design como
             biblioteca de design.
           </TypoP>
           <TypoP>
             Mais tarde, próximo ao fim de 2019, entratam novos integrantes no
             projeto e precisamos rever algumas decisões. Chegamos ao ponto em
-            que a forma que havíamos desenvolvido até então para desktop, não
+            que a forma que havíamos desenvolvido até então para web, não
             serviria para levar o projeto para as plataformas móveis.
             Precisávamos refazer o projeto. Com o surgimento da terceira versão,
             eu atuei exclusivamente como Designer de Experiência de Usuário até
@@ -118,20 +123,45 @@ function Desembarque() {
 
         <PseudoCard gridColumn={'span 2'}>
           <GalleryItem
-            title={'Tela inicial do aplicativo móvel'}
-            imgSource={mobile1}
-            height={'548px'}
-            width={'270px'}
+            title={
+              'Primeira versão da tela inicial do aplicativo móvel. Antes do reboot do projeto.'
+            }
+            imgSource={mobile0}
           />
         </PseudoCard>
       </ContainerEnhanced>
       <ContainerEnhanced bgColor={theme.t002.m}>
-        <TypoH2 gridColumn={'span 6'}>
-          Este é o <strong>Desembarque Digital</strong>
+        <TypoH2 gridColumn={'span 4'}>
+          Este é o <strong>De&shy;sem&shy;bar&shy;que Digital</strong>
         </TypoH2>
-        <Gallery title={'Versão Desktop'}>
+
+        <Gallery title={'Versão Web'}>
+          <PseudoCard gridColumn={'span 3'}>
+            <TypoP>
+              A versão para web foi feita para o gerenciamento do sistema. Nela
+              é possível:
+            </TypoP>
+            <List type={'bullet'}>
+              <ItemList>Cadastrar novos desembarques pesqueiros;</ItemList>
+              <ItemList>Importar planilhas com dados pré-existentes;</ItemList>
+              <ItemList>
+                Cadastrar, editar e visualizar usuários, sejam agentes de campo
+                ou pescadores;
+              </ItemList>
+              <ItemList>
+                Cadastrar, editar e visualizar embarcações de pescadores;
+              </ItemList>
+              <ItemList>
+                Cadastrar, editar e visualizar entidades pesqueiras;
+              </ItemList>
+              <ItemList>
+                Gerar relatórios de nível regional a nível individual;
+              </ItemList>
+            </List>
+          </PseudoCard>
+
           <GalleryItem
-            title={'Tela de Login. Painel de Controle para Desktop'}
+            title={'Tela de Login. Painel de Controle para Web'}
             imgSource={desktop1}
             gridColumn={'span 3'}
           />
@@ -148,36 +178,100 @@ function Desembarque() {
             gridColumn={'span 3'}
           />
         </Gallery>
+
         <Gallery title={'Versão Mobile'}>
+          <PseudoCard gridColumn={'span 3'}>
+            <TypoP>
+              A versão para móvel foi pensada ser usada em campo, durante a
+              coleta de dados. Nela é possível:
+            </TypoP>
+
+            <List type={'bullet'}>
+              <ListGroupHeader>O pescador pode</ListGroupHeader>
+              <ItemList>Adicionar desembarques;</ItemList>
+              <ItemList>Cadastrar e editar embarcações;</ItemList>
+              <ItemList>Vizualizar sua produção diária e mensal.</ItemList>
+            </List>
+
+            <List type={'bullet'}>
+              <ListGroupHeader>O Agente de campo pode</ListGroupHeader>
+              <ItemList>
+                Adicionar desembarques para pescadores já cadastrados;
+              </ItemList>
+              <ItemList>Cadastrar embarcações para pescadores;</ItemList>
+              <ItemList>
+                Auxiliar pescadores com dúvidas no uso da aplicação.
+              </ItemList>
+            </List>
+          </PseudoCard>
+          <PseudoCard gridColumn={'span 1'} />
           <GalleryItem
             title={'Animação da Tela Inicial'}
-            imgSource={dsbVideo}
-            gridColumn={'span 2'}
-          />
-          <GalleryItem
-            title={'Tela das embarcações do pescador'}
-            imgSource={mobile2}
+            imgSource={dsbVideo1}
             gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Tela de detalhes da embarcação'}
-            imgSource={mobile3}
+            imgSource={dsbVideo2}
             gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Tela de edição de embarcação'}
-            imgSource={mobile4}
+            imgSource={dsbVideo3}
             gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Tela de usuário'}
-            imgSource={mobile5}
+            imgSource={mobile2}
             gridColumn={'span 2'}
+          />
+        </Gallery>
+
+        <Gallery title={'Documentação'}>
+          <PseudoCard gridColumn={'span 3'}>
+            <TypoP>
+              A versão para móvel foi pensada ser usada em campo, durante a
+              coleta de dados. Nela é possível:
+            </TypoP>
+
+            <List type={'bullet'}>
+              <ListGroupHeader>O pescador pode</ListGroupHeader>
+              <ItemList>Adicionar desembarques;</ItemList>
+              <ItemList>Cadastrar e editar embarcações;</ItemList>
+              <ItemList>Vizualizar sua produção diária e mensal.</ItemList>
+            </List>
+
+            <List type={'bullet'}>
+              <ListGroupHeader>O Agente de campo pode</ListGroupHeader>
+              <ItemList>
+                Adicionar desembarques para pescadores já cadastrados;
+              </ItemList>
+              <ItemList>Cadastrar embarcações para pescadores;</ItemList>
+              <ItemList>
+                Auxiliar pescadores com dúvidas no uso da aplicação.
+              </ItemList>
+            </List>
+          </PseudoCard>
+
+          <GalleryItem
+            title={'Definição das cores utilizadas no projeto'}
+            imgSource={docs1}
+            gridColumn={'span 3'}
+          />
+          <GalleryItem
+            title={'Definição de tipografia e tamanhos'}
+            imgSource={docs2}
+            gridColumn={'span 3'}
+          />
+          <GalleryItem
+            title={'Definição de elementos gráficos. Campo de Texto.'}
+            imgSource={docs3}
+            gridColumn={'span 3'}
           />
         </Gallery>
       </ContainerEnhanced>
       <ContainerEnhanced bgColor={theme.t002.f}>
-        <TypoH2 gridColumn={'span 7'}>Envolvidos no Projeto</TypoH2>
+        <TypoH2 gridColumn={'span 4'}>Envolvidos no Projeto</TypoH2>
         <PseudoCard gridColumn={'span 3'}>
           <List>
             <ListGroupHeader>Equipe de Design</ListGroupHeader>

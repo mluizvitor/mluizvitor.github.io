@@ -16,6 +16,7 @@ export const CardContainer = styled(Link)`
   z-index: 1;
   order: ${(props) => props.order || 0};
   overflow: hidden;
+  position: relative;
 
   &:hover {
     ${(props) =>
@@ -27,6 +28,18 @@ export const CardContainer = styled(Link)`
           'transform: scale(1.05); ' +
           'z-index: 4;' +
           'cursor: pointer;'}
+  }
+
+  &::after {
+    content: '';
+    display: ${(props) => (props.wip ? 'block' : 'none')};
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${theme.t002.f};
+    opacity: 0.5;
   }
 `;
 
@@ -66,20 +79,21 @@ export const PseudoCardBody = styled.div`
   ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
 
   @media (max-width: 650px) {
-    grid-column: 1 / 7;
+    grid-column: span 1;
   }
 `;
 
 export const Container = styled.div`
-  margin-top: 64px;
+  margin-top: 32px;
   display: grid;
-  grid-column: 1 / 7;
+  grid-column: span 6;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   position: relative;
 
   @media (max-width: 650px) {
     grid-template-columns: 1fr 1fr;
+    grid-column: span 1;
   }
 
   @media (max-width: 450px) {

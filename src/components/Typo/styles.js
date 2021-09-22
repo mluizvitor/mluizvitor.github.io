@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const CTypoH1 = styled.h1`
   ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
   ${(props) => (props.order ? 'order: ' + props.order : '')};
+
+  @media (max-width: 650px) {
+    grid-column: span 1;
+  }
 `;
 
 export const CTypoH2 = styled.h2`
@@ -23,6 +27,10 @@ export const CTypoH2 = styled.h2`
 
     background-color: ${(props) => props.titleBg || ''};
   }
+
+  @media (max-width: 650px) {
+    grid-column: span 1;
+  }
 `;
 
 export const CTypoH3 = styled.h3`
@@ -31,6 +39,10 @@ export const CTypoH3 = styled.h3`
   letter-spacing: calc((16px + 0.1vw) * 0.15);
   text-transform: uppercase;
   font-weight: 400;
+
+  @media (max-width: 650px) {
+    grid-column: span 1;
+  }
 `;
 
 export const CTypoH4 = styled.h4`
@@ -41,14 +53,24 @@ export const CTypoH4 = styled.h4`
   font-size: calc(16px * 1.5 + 0.1vw);
   letter-spacing: calc((16px * 1.5 + 0.1vw) * 0.02);
   font-weight: 800;
+
+  @media (max-width: 650px) {
+    grid-column: span 1;
+  }
 `;
 
 export const CTypoP = styled.p`
   ${(props) =>
-    props.gridColumn ? 'grid-column: ' + props.gridColumn : 'span 6'};
+    props.gridColumn
+      ? 'grid-column: ' + props.gridColumn
+      : 'grid-column: span 6'};
   ${(props) => (props.order ? 'order: ' + props.order : '')};
 
   margin: 0;
+
+  @media (max-width: 650px) {
+    grid-column: span 1;
+  }
 
   & + p {
     margin-top: 32px;

@@ -11,8 +11,12 @@ import {
 } from './styles';
 import avatarFallback from '../../assets/avatar.svg';
 
-export function List({ children, ...rest }) {
-  return <Container {...rest}>{children}</Container>;
+export function List({ type, children, ...rest }) {
+  return (
+    <Container type={type} {...rest}>
+      {children}
+    </Container>
+  );
 }
 
 export function ItemList({
@@ -24,7 +28,7 @@ export function ItemList({
   ...rest
 }) {
   return (
-    <ContItem {...rest}>
+    <ContItem {...rest} avatar={avatar}>
       {avatar === true ? (
         <ItemAvatar src={avatarImg ? avatarImg : avatarFallback} />
       ) : (
