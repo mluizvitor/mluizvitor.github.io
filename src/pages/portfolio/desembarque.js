@@ -10,12 +10,7 @@ import Logo from '../../assets/logo.svg';
 import { Button, Link } from '../../components/Button';
 import { ContainerEnhanced, Banner } from '../../components/Container';
 import { Gallery, GalleryItem } from '../../components/Gallery';
-import {
-  List,
-  ItemList,
-  ListSeparator,
-  ListGroupHeader,
-} from '../../components/List';
+import { List, ItemList, ListGroupHeader } from '../../components/List';
 import { TypoH1, TypoH2, TypoP } from '../../components/Typo';
 import { PseudoCard } from '../../components/Card';
 import { theme } from '../../styles/colors';
@@ -31,7 +26,6 @@ import desktop2 from '../../assets/portfolio/desembarque/desktop2.webp';
 import desktop3 from '../../assets/portfolio/desembarque/desktop3.webp';
 
 import mobile0 from '../../assets/portfolio/desembarque/mobile0.webp';
-import mobile2 from '../../assets/portfolio/desembarque/mobile2.webp';
 
 import docs1 from '../../assets/portfolio/desembarque/docs1.webp';
 import docs2 from '../../assets/portfolio/desembarque/docs2.webp';
@@ -48,11 +42,11 @@ function Desembarque() {
       <NavBar position={'flex-start'}>
         <Button onClick={history.goBack}>
           <FiArrowLeft size={24} />
-          Voltar
+          <span>Voltar</span>
         </Button>
         <Link to="/">
           <img src={Logo} alt="Vitor's Portfólio" />
-          Ir para o Início
+          <span>Ir para o Início</span>
         </Link>
       </NavBar>
       <Banner bgImage={cover} type={'portfolio'}>
@@ -136,7 +130,7 @@ function Desembarque() {
         </TypoH2>
 
         <Gallery title={'Versão Web'}>
-          <PseudoCard gridColumn={'span 3'}>
+          <PseudoCard gridColumn={'span 4'}>
             <TypoP>
               A versão para web foi feita para o gerenciamento do sistema. Nela
               é possível:
@@ -159,31 +153,35 @@ function Desembarque() {
               </ItemList>
             </List>
           </PseudoCard>
+          <PseudoCard gridColumn={'span 2'}></PseudoCard>
 
           <GalleryItem
             title={'Tela de Login. Painel de Controle para Web'}
             imgSource={desktop1}
-            gridColumn={'span 3'}
+            gridColumn={'span 2'}
           />
           <GalleryItem
             title={
               'Tela inicial com as principais funções que um Administrador pode realizar'
             }
             imgSource={desktop2}
-            gridColumn={'span 3'}
+            gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Tela de gerenciamento de entidades pesqueiras parceiras'}
             imgSource={desktop3}
-            gridColumn={'span 3'}
+            gridColumn={'span 2'}
           />
         </Gallery>
 
         <Gallery title={'Versão Mobile'}>
-          <PseudoCard gridColumn={'span 3'}>
+          <PseudoCard gridColumn={'span 4'}>
             <TypoP>
               A versão para móvel foi pensada ser usada em campo, durante a
-              coleta de dados. Nela é possível:
+              coleta de dados. Para isso foram considerados a hora do dia e
+              iluminação natural, condição climática recorrente na região,
+              tamanho da tela dos dispositivos e situações que possam necessitar
+              o uso com apenas uma das mãos. Nela é possível:
             </TypoP>
 
             <List type={'bullet'}>
@@ -204,7 +202,9 @@ function Desembarque() {
               </ItemList>
             </List>
           </PseudoCard>
-          <PseudoCard gridColumn={'span 1'} />
+
+          <PseudoCard gridColumn={'span 2'} />
+
           <GalleryItem
             title={'Animação da Tela Inicial'}
             imgSource={dsbVideo1}
@@ -220,134 +220,112 @@ function Desembarque() {
             imgSource={dsbVideo3}
             gridColumn={'span 2'}
           />
-          <GalleryItem
-            title={'Tela de usuário'}
-            imgSource={mobile2}
-            gridColumn={'span 2'}
-          />
         </Gallery>
 
         <Gallery title={'Documentação'}>
-          <PseudoCard gridColumn={'span 3'}>
+          <PseudoCard gridColumn={'span 4'}>
             <TypoP>
-              A versão para móvel foi pensada ser usada em campo, durante a
-              coleta de dados. Nela é possível:
+              Além da documentação de casos de uso, foi feita também a
+              documentação da linguagem visual de toda a aplicação. A linguagem
+              de design principal utilizada foi o Material Design do Google, com
+              algumas mudanças estilísticas.
             </TypoP>
-
-            <List type={'bullet'}>
-              <ListGroupHeader>O pescador pode</ListGroupHeader>
-              <ItemList>Adicionar desembarques;</ItemList>
-              <ItemList>Cadastrar e editar embarcações;</ItemList>
-              <ItemList>Vizualizar sua produção diária e mensal.</ItemList>
-            </List>
-
-            <List type={'bullet'}>
-              <ListGroupHeader>O Agente de campo pode</ListGroupHeader>
-              <ItemList>
-                Adicionar desembarques para pescadores já cadastrados;
-              </ItemList>
-              <ItemList>Cadastrar embarcações para pescadores;</ItemList>
-              <ItemList>
-                Auxiliar pescadores com dúvidas no uso da aplicação.
-              </ItemList>
-            </List>
+            <TypoP>
+              Foram definidas tipografias, tamanhos, espaçamentos, e todos estes
+              foram devidamente especificados como podem ver nas imagens abaixo.
+            </TypoP>
           </PseudoCard>
+
+          <PseudoCard gridColumn={'span 2'}></PseudoCard>
 
           <GalleryItem
             title={'Definição das cores utilizadas no projeto'}
             imgSource={docs1}
-            gridColumn={'span 3'}
+            gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Definição de tipografia e tamanhos'}
             imgSource={docs2}
-            gridColumn={'span 3'}
+            gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Definição de elementos gráficos. Campo de Texto.'}
             imgSource={docs3}
-            gridColumn={'span 3'}
+            gridColumn={'span 2'}
           />
         </Gallery>
       </ContainerEnhanced>
       <ContainerEnhanced bgColor={theme.t002.f}>
         <TypoH2 gridColumn={'span 4'}>Envolvidos no Projeto</TypoH2>
-        <PseudoCard gridColumn={'span 3'}>
-          <List>
-            <ListGroupHeader>Equipe de Design</ListGroupHeader>
-            <ItemList
-              avatar
-              avatarImg={vitorphoto}
-              title={'Vitor Monteiro'}
-              description={'Designer de Experiência de Usuário'}
-            />
-            <ItemList
-              avatar
-              title={'Alexandre Lopes de Sousa'}
-              description={'Designer de Interfaces'}
-            />
-            <ListSeparator />
+        <List gridColumn={'span 3'}>
+          <ListGroupHeader>Equipe de Design</ListGroupHeader>
+          <ItemList
+            avatar
+            avatarImg={vitorphoto}
+            title={'Vitor Monteiro'}
+            description={'Designer de Experiência de Usuário'}
+          />
+          <ItemList
+            avatar
+            title={'Alexandre Lopes de Sousa'}
+            description={'Designer de Interfaces'}
+          />
 
-            <ListGroupHeader>Equipe Back-end</ListGroupHeader>
-            <ItemList
-              avatar
-              title={'Débora Cavalcanti'}
-              description={'Programadora Back-end'}
-            />
-            <ListSeparator />
+          <ListGroupHeader>Equipe Back-end</ListGroupHeader>
+          <ItemList
+            avatar
+            title={'Débora Cavalcanti'}
+            description={'Programadora Back-end'}
+          />
 
-            <ListGroupHeader>Equipe Front-end</ListGroupHeader>
-            <ItemList
-              avatar
-              title={'Ian Brito'}
-              description={'Programador Front-end Mobile'}
-            />
-            <ItemList
-              avatar
-              title={'Leonardo Paz Amoedo'}
-              description={'Programador Front-end Mobile'}
-            />
-            <ItemList
-              avatar
-              title={'Pedro Pimentel'}
-              description={'Programador Front-end Web'}
-            />
-          </List>
-        </PseudoCard>
-        <PseudoCard gridColumn={'span 3'}>
-          <List>
-            <ListGroupHeader>Equipe FullStack</ListGroupHeader>
-            <ItemList
-              avatar
-              title={'Alecsander Matos'}
-              description={'Programador FullStack'}
-            />
-            <ItemList
-              avatar
-              title={'Wagner Wolf'}
-              description={'Programador FullStack'}
-            />
-            <ItemList
-              avatar
-              title={'Douglas Laurindo'}
-              description={'Programador FullStack'}
-            />
+          <ListGroupHeader>Equipe Front-end</ListGroupHeader>
+          <ItemList
+            avatar
+            title={'Ian Brito'}
+            description={'Programador Front-end Mobile'}
+          />
+          <ItemList
+            avatar
+            title={'Leonardo Paz Amoedo'}
+            description={'Programador Front-end Mobile'}
+          />
+          <ItemList
+            avatar
+            title={'Pedro Pimentel'}
+            description={'Programador Front-end Web'}
+          />
+        </List>
 
-            <ListSeparator />
+        <List gridColumn={'span 3'}>
+          <ListGroupHeader>Equipe FullStack</ListGroupHeader>
+          <ItemList
+            avatar
+            title={'Alecsander Matos'}
+            description={'Programador FullStack'}
+          />
+          <ItemList
+            avatar
+            title={'Wagner Wolf'}
+            description={'Programador FullStack'}
+          />
+          <ItemList
+            avatar
+            title={'Douglas Laurindo'}
+            description={'Programador FullStack'}
+          />
 
-            <ListGroupHeader>Gerentes de Projeto</ListGroupHeader>
-            <ItemList
-              avatar
-              title={'Vânia Lourenço'}
-              description={'Scrum Master & Orientadora'}
-            />
-            <ItemList
-              avatar
-              title={'Enoque Alves'}
-              description={'Consultor Técnico & Orientador'}
-            />
-          </List>
-        </PseudoCard>
+          <ListGroupHeader>Gerentes de Projeto</ListGroupHeader>
+          <ItemList
+            avatar
+            title={'Vânia Lourenço'}
+            description={'Scrum Master & Orientadora'}
+          />
+          <ItemList
+            avatar
+            title={'Enoque Alves'}
+            description={'Consultor Técnico & Orientador'}
+          />
+        </List>
       </ContainerEnhanced>
       <Footer />
     </>

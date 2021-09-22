@@ -28,7 +28,9 @@ function Home() {
           offset={-64}
           duration={500}
         >
-          <Button title="Ir para informações de Vitor">Vitor?</Button>
+          <Button title="Ir para informações de Vitor">
+            <span>Vitor?</span>
+          </Button>
         </Link>
         <Link
           to="skills"
@@ -38,7 +40,9 @@ function Home() {
           offset={-64}
           duration={500}
         >
-          <Button title="Ir para Habilidades">Skills</Button>
+          <Button title="Ir para Habilidades">
+            <span>Skills</span>
+          </Button>
         </Link>
         <Link
           to="portfolio"
@@ -48,7 +52,9 @@ function Home() {
           offset={-64}
           duration={500}
         >
-          <Button title="Ir para Portifílio">Portfólio</Button>
+          <Button title="Ir para Portifílio">
+            <span>Portfólio</span>
+          </Button>
         </Link>
         <Link
           to="contact"
@@ -57,7 +63,9 @@ function Home() {
           smooth={true}
           duration={500}
         >
-          <Button title="Ir para Contatos">Contato</Button>
+          <Button title="Ir para Contatos">
+            <span>Contato</span>
+          </Button>
         </Link>
       </Navbar>
       <WhoIam id="who-i-am" />

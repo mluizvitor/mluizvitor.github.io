@@ -11,9 +11,9 @@ import {
 } from './styles';
 import avatarFallback from '../../assets/avatar.svg';
 
-export function List({ type, children, ...rest }) {
+export function List({ type, gridColumn, children, ...rest }) {
   return (
-    <Container type={type} {...rest}>
+    <Container type={type} gridColumn={gridColumn} {...rest}>
       {children}
     </Container>
   );

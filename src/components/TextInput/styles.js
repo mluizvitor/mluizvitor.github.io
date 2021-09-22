@@ -46,7 +46,7 @@ export const FormContainer = styled.form`
   gap: 32px;
   margin-top: 64px;
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     grid-template-columns: 1fr;
   }
 

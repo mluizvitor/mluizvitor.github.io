@@ -27,7 +27,6 @@ export const Container = styled.button.attrs((props) => ({
   border-radius: 4px;
 
   display: flex;
-  grid-column: 1 / 3;
   position: relative;
 
   justify-content: center;
@@ -37,9 +36,9 @@ export const Container = styled.button.attrs((props) => ({
   transition: 1s;
   cursor: pointer;
 
-  & svg,
-  & img {
-    margin-right: 8px;
+  & svg + span,
+  & img + span {
+    margin-left: 8px;
   }
 
   &:hover {

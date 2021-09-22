@@ -20,7 +20,7 @@ export const ContContainer = styled.div`
   background-repeat: no-repeat;
   animation: grayscaleAnim 1000ms;
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     background-position: 25% bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,6 +36,7 @@ export const ContBanner = styled.div`
   min-height: 600px;
   padding: ${(props) =>
     props.type === 'error' || props.type === 'portfolio' ? '32px 30%' : '32px'};
+  padding-top: 64px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,7 @@ export const ContBanner = styled.div`
     z-index: -999;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     background-position: ${(props) =>
       props.type === 'portfolio' ? 'center' : '82.5% bottom'};
     background-size: cover;

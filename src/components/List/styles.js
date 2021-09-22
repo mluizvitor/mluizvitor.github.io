@@ -2,8 +2,19 @@ import styled from 'styled-components';
 import { opacify } from 'polished';
 
 export const Container = styled.ul`
-  margin: 16px 0;
-  ${(props) => (props.type === 'bullet' ? 'margin-left: 16px' : '')}
+  margin: 0;
+  ${(props) => (props.type === 'bullet' ? 'margin: 16px 0 16px 16px' : '')}
+  ${(props) =>
+    props.gridColumn
+      ? 'grid-column: ' + props.gridColumn
+      : 'grid-column: span 6'};
+
+  @media (max-width: 850px) {
+    grid-column: span 2;
+  }
+  @media (max-width: 450px) {
+    grid-column: span 1;
+  }
 `;
 
 export const ContItem = styled.li`
@@ -13,7 +24,7 @@ export const ContItem = styled.li`
   padding: ${(props) => (props.avatar ? '8px 16px' : '0')};
   border-radius: 4px;
 
-  min-height: ${(props) => (props.avatar ? '56px' : '')};
+  min-height: ${(props) => (props.avatar ? '64px' : '')};
 
   ${(props) =>
     props.avatar
@@ -40,6 +51,7 @@ export const ItemDescription = styled.span`
   display: block;
   font-size: calc(12px + 0.1vw);
   line-height: 110%;
+  margin-top: 4px;
   opacity: 0.7;
 `;
 

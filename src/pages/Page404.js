@@ -27,11 +27,11 @@ function Page404() {
         >
           <Button btnStyle="color" onClick={history.goBack}>
             <FiArrowLeft size={24} />
-            Voltar
+            <span>Voltar</span>
           </Button>
           <Link btnStyle="color" to="/">
             <img src={Logo} alt="Vitor's Portfólio" />
-            Ir para o Início
+            <span>Ir para o Início</span>
           </Link>
         </div>
       </Banner>

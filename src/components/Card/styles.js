@@ -78,7 +78,10 @@ export const PseudoCardBody = styled.div`
   flex-direction: column;
   ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
+    grid-column: span 2;
+  }
+  @media (max-width: 450px) {
     grid-column: span 1;
   }
 `;
@@ -91,9 +94,9 @@ export const Container = styled.div`
   gap: 32px;
   position: relative;
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     grid-template-columns: 1fr 1fr;
-    grid-column: span 1;
+    grid-column: span 4;
   }
 
   @media (max-width: 450px) {

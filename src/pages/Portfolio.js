@@ -42,7 +42,7 @@ export default function Portfolio({ id }) {
           wip
           imageSrc={poraque}
           title="Po&shy;ra&shy;qué"
-          description="Vencedor do 2º Lugar no I Hackathon Tapajós. O sistema controla, monitora e diagnostica centrais de ar remotamente."
+          description="Vencedor do 2º Lugar no I Hackathon Inova Tapajós. O sistema controla, monitora e diagnostica centrais de ar remotamente"
           order={3}
         />
       </CardBox>

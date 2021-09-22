@@ -17,21 +17,16 @@ export const Container = styled.nav`
   padding: 8px;
   z-index: 16;
 
-  @media (max-width: 470px) {
-    height: 48px;
-  }
-
   & > a > button,
   & > button {
     font-size: calc(14px + 0.1vw);
 
-    @media (max-width: 470px) {
-      height: 32px;
+    @media (max-width: 450px) {
       padding: 0 8px;
     }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     justify-content: flex-start;
   }
 `;

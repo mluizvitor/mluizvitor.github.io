@@ -50,24 +50,8 @@ export default createGlobalStyle`
     z-index: 4;
   }
 
-  h1 {
-    font-size: calc(14px * 4 + 0.1vw);
-    line-height: 100%;
-    margin: 16px 0;
-    letter-spacing: calc(68px * -0.02);
-    font-weight: 600;
-    position: relative;
-    hyphens: manual; 
-
-    text-shadow: 0 4px 24px ${theme.t001.a};
-  }
-
   h2 {
-    font-size: calc(16px * 2.5 + 0.1vw);
-    line-height: 100%;
-    letter-spacing: calc((16px * 2.5 + 0.1vw) * -0.02);
-    font-weight: 600;
-    margin: 32px 0 16px 0;
+    
   }
 
   caption {
