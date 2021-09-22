@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container } from '../components/Container';
+import { ContainerEnhanced } from '../components/Container';
 import { Gallery, GalleryItem } from '../components/Gallery';
+import { TypoH2 } from '../components/Typo';
 
 import imgHtml from '../assets/skills/dev/html5.svg';
 import imgCss from '../assets/skills/dev/css3.svg';
@@ -13,12 +14,14 @@ import imgFigma from '../assets/skills/design/figma.svg';
 import imgUxpin from '../assets/skills/design/uxpin.svg';
 import imgMaterial from '../assets/skills/design/material.svg';
 import imgInkscape from '../assets/skills/design/inkscape.svg';
+import { theme } from '../styles/colors';
 
 export default function Skills({ id }) {
   return (
-    <Container id={id} type={'container'}>
-      <h2>Habilidades</h2>
-
+    <ContainerEnhanced id={id} type={'container'}>
+      <TypoH2 titleBg={theme.t002.f} gridColumn={'span 2'}>
+        Habilidades
+      </TypoH2>
       <Gallery title={'Desenvolvimento'}>
         <GalleryItem title={'HTML5'} imgSource={imgHtml} />
         <GalleryItem title={'CSS3'} imgSource={imgCss} />
@@ -34,6 +37,6 @@ export default function Skills({ id }) {
         <GalleryItem title={'Material Design'} imgSource={imgMaterial} />
         <GalleryItem title={'Inkscape'} imgSource={imgInkscape} />
       </Gallery>
-    </Container>
+    </ContainerEnhanced>
   );
 }

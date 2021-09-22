@@ -1,10 +1,20 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, ContLink } from './styles';
 
-export default function Button({ type, btnStyle, children, ...rest }) {
+export function Button({ type, btnStyle, children, ...rest }) {
   return (
     <Container type={type} btnStyle={btnStyle} {...rest}>
       {children}
     </Container>
+  );
+}
+
+export function Link({ type, btnStyle, children, ...rest }) {
+  return (
+    <ContLink {...rest}>
+      <Container type={type} btnStyle={btnStyle} {...rest}>
+        {children}
+      </Container>
+    </ContLink>
   );
 }

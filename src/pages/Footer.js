@@ -2,7 +2,7 @@ import React from 'react';
 import { FooterContainer } from '../components/Container';
 import contactBg from '../assets/backgroundContacts.svg';
 
-import { MdOpenInNew } from 'react-icons/md';
+import { FiExternalLink } from 'react-icons/fi';
 
 export default function Footer({ id }) {
   return (
@@ -16,7 +16,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Telegram
-            <MdOpenInNew size={16} />
+            <FiExternalLink size={16} />
           </a>
         </li>
         <li>
@@ -26,7 +26,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Twitter
-            <MdOpenInNew size={16} />
+            <FiExternalLink size={16} />
           </a>
         </li>
         <li>
@@ -36,7 +36,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Gitlab
-            <MdOpenInNew size={16} />
+            <FiExternalLink size={16} />
           </a>
         </li>
         <li>
@@ -46,12 +46,12 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Github
-            <MdOpenInNew size={16} />
+            <FiExternalLink size={16} />
           </a>
         </li>
       </ul>
       <hr />
-      <p className={'subtitle'} style={{ opacity: 0.7 }}>
+      <p className={'subtitle'}>
         © Todos os direitos são reservados a Luiz Vitor Monteiro da Silva
         Portela
       </p>

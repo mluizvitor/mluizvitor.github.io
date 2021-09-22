@@ -1,6 +1,11 @@
 import { shade } from 'polished';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../styles/colors';
+
+export const ContLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export const Container = styled.button.attrs((props) => ({
   btnStyle: props.btnStyle || 'transparent',
@@ -14,7 +19,7 @@ export const Container = styled.button.attrs((props) => ({
 
   color: ${theme.t006};
   background: ${(props) =>
-    props.btnStyle === 'color' ? theme.t004 : 'transparent'};
+    props.btnStyle === 'color' ? theme.t003 : 'transparent'};
 
   height: 48px;
   padding: 0 16px;
@@ -31,6 +36,11 @@ export const Container = styled.button.attrs((props) => ({
   white-space: nowrap;
   transition: 1s;
   cursor: pointer;
+
+  & svg,
+  & img {
+    margin-right: 8px;
+  }
 
   &:hover {
     background-color: ${(props) =>

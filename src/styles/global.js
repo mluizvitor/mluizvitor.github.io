@@ -8,6 +8,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    font-feature-settings: "ss04"
   }
 
   #root {
@@ -29,9 +30,9 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: calc(16px + 0.15vw);
+    font-size: calc(16px + 0.125vw);
     line-height: 155%;
-    letter-spacing: calc((16px + 0.1vw) * 0.020);
+    letter-spacing: calc((16px + 0.125vw) * 0.020);
     font-weight: 400,
   }
 
@@ -47,56 +48,26 @@ export default createGlobalStyle`
     position: relative;
     display: inline;
     z-index: 4;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width:100%;
-      height: 45%;
-      z-index: -1;
-      border-radius: 32px;
-
-      transform: translateX(16px);
-
-      background-color: ${theme.t002.f};
-    }
   }
 
   h1 {
-    font-size: calc(16px * 4 + 0.1vw);
-    line-height: 80%;
-    margin: 4px 0;
+    font-size: calc(14px * 4 + 0.1vw);
+    line-height: 100%;
+    margin: 16px 0;
     letter-spacing: calc(68px * -0.02);
     font-weight: 600;
     position: relative;
+    hyphens: manual; 
 
     text-shadow: 0 4px 24px ${theme.t001.a};
   }
 
   h2 {
-    /* font-weight: 600; */
     font-size: calc(16px * 2.5 + 0.1vw);
     line-height: 100%;
     letter-spacing: calc((16px * 2.5 + 0.1vw) * -0.02);
     font-weight: 600;
-  }
-
-  h3,
-  .section {
-    font-size: calc(16px + 0.1vw);
-    line-height: 115%;
-    letter-spacing: calc((16px + 0.1vw) * 0.15);
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
-  h4 {
-    line-height: 110%;
-    font-size: calc(16px * 1.5 + 0.1vw);
-    letter-spacing: calc((16px * 1.5 + 0.1vw) * 0.02);
-    font-weight: 800;
+    margin: 32px 0 16px 0;
   }
 
   caption {
@@ -108,12 +79,12 @@ export default createGlobalStyle`
   .subtitle {
     font-size: calc(16px + 0.1vw);
     letter-spacing: calc((16px + 0.1vw) * -0.02);
-    line-height: 125%;
+    line-height: 135%;
     font-weight: 400;
   }
 
   .activeBtn {
-    background-color: ${theme.t004};
+    background-color: ${theme.t003};
     border-radius: 4px;
   }
 
@@ -142,55 +113,6 @@ export default createGlobalStyle`
     margin-bottom: 16px;
   }
 
-  .wip {
-
-    & img {
-      width: calc(224px + 24vw);
-      display: block;
-      margin: 64px auto;
-    }
-
-    & img + h2 {
-      margin-bottom: 16px;
-      text-align: center;
-      display: block;
-      
-      &::after {
-        content: none;
-      }
-    }
-
-    & h2::after {
-      background-color: ${theme.t003};
-    }
-
-    & .section {
-      text-align: center;
-    }
-
-    & div {
-      text-align: center;
-      margin-top: 32px;
-      margin-bottom: 128px;
-
-      & a + a {
-        margin-left: 32px;
-      }
-    }
-  }
-
-  .text {
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-
-    & > p {
-      grid-column: 1 / 3;
-      margin-bottom: calc(22px + 0.1vw);
-      @media (max-width: 650px) {
-        grid-column: 1 / 4;
-      }
-    }
-  }
 
   @keyframes grayscaleAnim {
     from {

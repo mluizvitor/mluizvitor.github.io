@@ -1,28 +1,59 @@
 import React from 'react';
-import {MdArrowForward} from 'react-icons/md';
+import { FiArrowRight, FiTool } from 'react-icons/fi';
+import { TypoH4 } from '../Typo';
 
-import {Container, CardImg, CardContainer, CardBody, SeeMore} from './styles'
+import {
+  Container,
+  CardImg,
+  CardContainer,
+  CardBody,
+  SeeMore,
+  PseudoCardBody,
+  CardDescription,
+} from './styles';
 
-export function Card({imageSrc, title, description}){
-  return(
-    <CardContainer>
-      <CardImg style={{backgroundImage: `url(${imageSrc})`}}/>
+export function Card({ imageSrc, title, description, order, wip, ...rest }) {
+  return (
+    <CardContainer order={order} {...rest}>
+      <CardImg imageSrc={imageSrc} />
       <CardBody>
-        <h4>{title}</h4>
-        <p className="subtitle">{description}</p>
+        <TypoH4>{title}</TypoH4>
+        <CardDescription>{description}</CardDescription>
+
         <SeeMore>
-          <span>ver mais</span>
-          <MdArrowForward size={24}/>
+          {wip ? (
+            <>
+              <span>em construção</span>
+              <FiTool size={24} />
+            </>
+          ) : (
+            <>
+              <span>ver mais</span>
+              <FiArrowRight size={24} />
+            </>
+          )}
         </SeeMore>
       </CardBody>
     </CardContainer>
-  )
+  );
 }
 
-export function CardBox({children}) {
+export function PseudoCard({
+  imageSrc,
+  title,
+  description,
+  order,
+  gridColumn,
+  children,
+  ...rest
+}) {
   return (
-    <Container>
+    <PseudoCardBody order={order} gridColumn={gridColumn} {...rest}>
       {children}
-    </Container>
-  )
+    </PseudoCardBody>
+  );
+}
+
+export function CardBox({ children }) {
+  return <Container>{children}</Container>;
 }

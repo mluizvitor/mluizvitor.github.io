@@ -1,19 +1,27 @@
 import React from 'react';
+import { TypoH3 } from '../Typo';
 import { Container, Figure, Grid } from './styles';
 
 export function Gallery({ title, children }) {
   return (
     <Container>
-      <h3 className={'section'}>{title}</h3>
+      <TypoH3>{title}</TypoH3>
       <Grid>{children}</Grid>
     </Container>
   );
 }
 
-export function GalleryItem({ title, imgSource, imgSourceHover }) {
+export function GalleryItem({
+  title,
+  imgSource,
+  gridColumn,
+  height,
+  width,
+  ...rest
+}) {
   return (
-    <Figure>
-      <img src={imgSource} alt={title} />
+    <Figure gridColumn={gridColumn} {...rest}>
+      <img src={imgSource} alt={title} height={height} width={width} />
       <figcaption>{title}</figcaption>
     </Figure>
   );
