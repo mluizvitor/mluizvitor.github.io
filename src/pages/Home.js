@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link, animateScroll } from 'react-scroll';
-import Button from '../components/Button';
+import { Button } from '../components/Button';
 
 import Logo from '../assets/logo.svg';
 

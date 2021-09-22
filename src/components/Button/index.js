@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, ContLink } from './styles';
 
-export default function Button({ type, btnStyle, children, ...rest }) {
+export function Button({ type, btnStyle, children, ...rest }) {
   return (
     <Container type={type} btnStyle={btnStyle} {...rest}>
       {children}

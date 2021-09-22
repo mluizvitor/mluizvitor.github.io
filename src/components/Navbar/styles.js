@@ -21,7 +21,8 @@ export const Container = styled.nav`
     height: 48px;
   }
 
-  & > a > button {
+  & > a > button,
+  & > button {
     font-size: calc(14px + 0.1vw);
 
     @media (max-width: 470px) {
