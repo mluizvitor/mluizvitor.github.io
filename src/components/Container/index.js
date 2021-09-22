@@ -31,9 +31,15 @@ export function ContainerEnhanced({ id, bgImage, bgColor, children, ...rest }) {
   );
 }
 
-export function FooterContainer({ id, children }) {
+export function FooterContainer({ id, bgImage, bgColor, children, ...rest }) {
   return (
-    <ContFooter id={id}>
+    <ContFooter
+      id={id}
+      style={{
+        backgroundImage: bgImage ? `url(${bgImage})` : '',
+        backgroundColor: bgColor ? bgColor : '',
+      }}
+    >
       <ContContainer>{children}</ContContainer>
     </ContFooter>
   );

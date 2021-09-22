@@ -10,7 +10,7 @@ export default function Navbar({ children }) {
   return (
     <Container>
       <Link to="" onClick={animateScroll.scrollToTop}>
-        <Button>
+        <Button title="Ir para o início">
           <img src={Logo} alt="Vitor's Portfólio" />
         </Button>
       </Link>
@@ -22,7 +22,7 @@ export default function Navbar({ children }) {
         offset={-64}
         duration={500}
       >
-        <Button btnStyle="transparent">Vitor?</Button>
+        <Button title="Ir para informações de Vitor">Vitor?</Button>
       </Link>
       <Link
         to="skills"
@@ -32,7 +32,7 @@ export default function Navbar({ children }) {
         offset={-64}
         duration={500}
       >
-        <Button btnStyle="transparent">Skills</Button>
+        <Button title="Ir para Habilidades">Skills</Button>
       </Link>
       <Link
         to="portfolio"
@@ -42,17 +42,16 @@ export default function Navbar({ children }) {
         offset={-64}
         duration={500}
       >
-        <Button btnStyle="transparent">Portfólio</Button>
+        <Button title="Ir para Portifílio">Portfólio</Button>
       </Link>
       <Link
         to="contact"
         activeClass="activeBtn"
         spy={true}
         smooth={true}
-        offset={-64}
         duration={500}
       >
-        <Button btnStyle="transparent">Contato</Button>
+        <Button title="Ir para Contatos">Contato</Button>
       </Link>
     </Container>
   );
