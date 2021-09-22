@@ -1,7 +1,8 @@
 import React from 'react';
 import { ContainerEnhanced } from '../components/Container';
 import { Card, CardBox } from '../components/Card';
-import fbCover from '../assets/portfolio/fbcover.svg';
+import { TypoH2 } from '../components/Typo';
+
 import estore from '../assets/portfolio/esquelestore.jpg';
 import desembarque from '../assets/portfolio/desembarque.jpg';
 import elegumes from '../assets/portfolio/elegumes.jpg';

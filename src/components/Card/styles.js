@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 import { theme } from '../../styles/colors';
+import { TypoP } from '../Typo';
 
 export const CardContainer = styled.a`
   text-decoration: none;
@@ -13,6 +14,7 @@ export const CardContainer = styled.a`
   cursor: pointer;
   z-index: 1;
   order: ${(props) => props.order || 0};
+  overflow: hidden;
 
   &:hover {
     box-shadow: 0 16px 48px -16px ${theme.t001.f};
@@ -39,13 +41,33 @@ export const CardBody = styled.div`
 
   & h4 {
     margin-bottom: 8px;
+    text-align: justify;
+    hyphens: manual;
+  }
+`;
+
+export const CardDescription = styled(TypoP)`
+  font-size: calc(14px + 0.125vw);
+  letter-spacing: calc((14px + 0.125vw) * 0.02);
+  line-height: 140%;
+`;
+
+export const PseudoCardBody = styled.div`
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
+
+  @media (max-width: 650px) {
+    grid-column: 1 / 7;
   }
 `;
 
 export const Container = styled.div`
   margin-top: 64px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / 7;
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   position: relative;
 

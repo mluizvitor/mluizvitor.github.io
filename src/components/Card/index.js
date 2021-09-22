@@ -1,7 +1,15 @@
 import React from 'react';
 import { TypoH4 } from '../Typo';
 
+import {
+  Container,
+  CardImg,
+  CardContainer,
+  CardBody,
+  SeeMore,
+  PseudoCardBody,
   CardDescription,
+} from './styles';
 
 export function Card({ imageSrc, title, description, order, ...rest }) {
   return (
@@ -17,6 +25,22 @@ export function Card({ imageSrc, title, description, order, ...rest }) {
         </SeeMore>
       </CardBody>
     </CardContainer>
+  );
+}
+
+export function PseudoCard({
+  imageSrc,
+  title,
+  description,
+  order,
+  gridColumn,
+  children,
+  ...rest
+}) {
+  return (
+    <PseudoCardBody order={order} gridColumn={gridColumn} {...rest}>
+      {children}
+    </PseudoCardBody>
   );
 }
 
