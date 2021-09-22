@@ -38,7 +38,7 @@ function Desembarque() {
   let history = useHistory();
   return (
     <>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <NavBar position={'flex-start'}>
         <Button onClick={history.goBack}>
           <FiArrowLeft size={24} />
