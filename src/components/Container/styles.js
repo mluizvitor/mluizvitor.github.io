@@ -8,6 +8,9 @@ export const ContContainer = styled.div`
   padding-bottom: 64px;
   width: 100%;
   box-sizing: border-box;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
 
   background-position: center bottom;
   background-size: cover;
@@ -19,6 +22,7 @@ export const ContContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     align-items: flex-start;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -27,7 +31,9 @@ export const ContBanner = styled.div`
   max-width: 100%;
   height: ${(props) => (props.type === 'error' ? '100vh' : '80vh')};
   min-height: 600px;
-  padding: ${(props) => (props.type === 'error' ? '32px 30%' : '32px')};
+  padding: ${(props) =>
+    props.type === 'error' || props.type === 'portfolio' ? '32px 30%' : '32px'};
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +42,8 @@ export const ContBanner = styled.div`
   z-index: 1;
 
   background-image: ${(props) => `url(` + props.bgImage + `)` || ''};
-  background-position: center bottom;
+  background-position: ${(props) =>
+    props.type === 'portfolio' ? 'center' : 'center bottom'};
   background-size: cover;
   background-repeat: no-repeat;
   animation: grayscaleAnim 1000ms;
@@ -48,7 +55,7 @@ export const ContBanner = styled.div`
       props.type === 'error'
         ? theme.t001.f
         : props.type === 'portfolio'
-        ? theme.t002.f
+        ? theme.t001.f
         : ''};
 
     opacity: ${(props) =>
@@ -56,14 +63,18 @@ export const ContBanner = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -999;
   }
 
   @media (max-width: 650px) {
-    background-position: 82.5% bottom;
+    background-position: ${(props) =>
+      props.type === 'portfolio' ? 'center' : '82.5% bottom'};
     background-size: cover;
     background-repeat: no-repeat;
-    align-items: flex-start;
+    ${(props) => (props.type === 'error' ? 'justify-content: center' : '')};
+    padding: 32px;
   }
 `;
 
@@ -87,7 +98,7 @@ export const ContFooter = styled.footer`
   min-height: calc(160px + 200px);
   height: 100vh;
   background-color: #171717;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
   background-repeat: repeat;
   padding: calc(144px - 64px) 0;
@@ -103,22 +114,5 @@ export const ContFooter = styled.footer`
     margin: 0;
     display: flex;
     flex-direction: column;
-  }
-`;
-
-export const ContH2 = styled.h2`
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 45%;
-    z-index: -1;
-    border-radius: 32px;
-
-    transform: translateX(16px);
-
-    background-color: ${(props) => props.titleBg || ''};
   }
 `;

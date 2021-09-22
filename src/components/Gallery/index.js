@@ -11,10 +11,17 @@ export function Gallery({ title, children }) {
   );
 }
 
-export function GalleryItem({ title, imgSource, imgSourceHover }) {
+export function GalleryItem({
+  title,
+  imgSource,
+  gridColumn,
+  height,
+  width,
+  ...rest
+}) {
   return (
-    <Figure>
-      <img src={imgSource} alt={title} />
+    <Figure gridColumn={gridColumn} {...rest}>
+      <img src={imgSource} alt={title} height={height} width={width} />
       <figcaption>{title}</figcaption>
     </Figure>
   );
