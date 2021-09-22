@@ -30,9 +30,9 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: calc(16px + 0.15vw);
+    font-size: calc(16px + 0.125vw);
     line-height: 155%;
-    letter-spacing: calc((16px + 0.1vw) * 0.020);
+    letter-spacing: calc((16px + 0.125vw) * 0.020);
     font-weight: 400,
   }
 
@@ -51,38 +51,23 @@ export default createGlobalStyle`
   }
 
   h1 {
-    font-size: calc(16px * 4 + 0.1vw);
-    line-height: 80%;
+    font-size: calc(14px * 4 + 0.1vw);
+    line-height: 100%;
     margin: 16px 0;
     letter-spacing: calc(68px * -0.02);
     font-weight: 600;
     position: relative;
+    hyphens: manual; 
 
     text-shadow: 0 4px 24px ${theme.t001.a};
   }
 
   h2 {
-    /* font-weight: 600; */
     font-size: calc(16px * 2.5 + 0.1vw);
     line-height: 100%;
     letter-spacing: calc((16px * 2.5 + 0.1vw) * -0.02);
     font-weight: 600;
-  }
-
-  h3,
-  .section {
-    font-size: calc(16px + 0.1vw);
-    line-height: 115%;
-    letter-spacing: calc((16px + 0.1vw) * 0.15);
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
-  h4 {
-    line-height: 120%;
-    font-size: calc(16px * 1.5 + 0.1vw);
-    letter-spacing: calc((16px * 1.5 + 0.1vw) * 0.02);
-    font-weight: 800;
+    margin: 32px 0 16px 0;
   }
 
   caption {
@@ -128,18 +113,6 @@ export default createGlobalStyle`
     margin-bottom: 16px;
   }
 
-  .abstract {
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-
-    & > p {
-      grid-column: 1 / 3;
-      margin-bottom: calc(22px + 0.1vw);
-      @media (max-width: 650px) {
-        grid-column: 1 / 4;
-      }
-    }
-  }
 
   @keyframes grayscaleAnim {
     from {
