@@ -33,10 +33,12 @@ export const ContBanner = styled.div`
   width: 100vw;
   max-width: 100%;
   height: ${(props) => (props.type === 'error' ? '100vh' : '80vh')};
-  min-height: 600px;
+  min-height: 450px;
+  max-height: 650px;
   padding: ${(props) =>
-    props.type === 'error' || props.type === 'portfolio' ? '32px 30%' : '32px'};
-  padding-top: 64px;
+    props.type === 'error' || props.type === 'portfolio'
+      ? '64px 30% 32px'
+      : '64px 32px 32px'};
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@ export const ContBanner = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     ${(props) => (props.type === 'error' ? 'justify-content: center' : '')};
-    padding: 32px;
+    padding: 64px 32px 32px;
   }
 `;
 

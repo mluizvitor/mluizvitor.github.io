@@ -3,7 +3,7 @@ import { opacify } from 'polished';
 
 export const Container = styled.ul`
   margin: 0;
-  ${(props) => (props.type === 'bullet' ? 'margin: 16px 0 16px 16px' : '')}
+  ${(props) => (props.type === 'bullet' ? 'margin: 16px 0 16px 16px' : '')};
   ${(props) =>
     props.gridColumn
       ? 'grid-column: ' + props.gridColumn

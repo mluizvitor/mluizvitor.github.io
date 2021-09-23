@@ -5,10 +5,10 @@ export const CTypoH1 = styled.h1`
   ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
   ${(props) => (props.order ? 'order: ' + props.order : '')};
 
-  font-size: calc(14px * 4 + 0.1vw);
+  font-size: calc(16px * 3 + 0.1vw);
   line-height: 100%;
   margin: 16px 0;
-  letter-spacing: calc((14px * 4 + 0.1vw) * -0.02);
+  letter-spacing: calc((16px * 3 + 0.1vw) * -0.02);
   font-weight: 600;
   position: relative;
   hyphens: manual;
@@ -16,8 +16,8 @@ export const CTypoH1 = styled.h1`
   text-shadow: 0 4px 24px ${theme.t001.a};
 
   @media (max-width: 850px) {
-    font-size: calc(12px * 4 + 0.1vw);
-    letter-spacing: calc((12px * 4 + 0.1vw) * -0.02);
+    font-size: calc(14px * 3 + 0.1vw);
+    letter-spacing: calc((14px * 3 + 0.1vw) * -0.02);
     grid-column: span 2;
   }
   @media (max-width: 450px) {
@@ -29,30 +29,15 @@ export const CTypoH2 = styled.h2`
   ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
   ${(props) => (props.order ? 'order: ' + props.order : '')};
 
-  font-size: calc(16px * 2.5 + 0.1vw);
-  letter-spacing: calc((16px * 2.5 + 0.1vw) * -0.02);
+  font-size: calc(16px * 2 + 0.1vw);
+  letter-spacing: calc((16px * 2 + 0.1vw) * -0.02);
   line-height: 100%;
   font-weight: 600;
   margin: 32px 0 16px 0;
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 45%;
-    z-index: -1;
-    border-radius: 32px;
-
-    transform: translateX(16px);
-
-    background-color: ${(props) => props.titleBg || ''};
-  }
-
   @media (max-width: 850px) {
-    font-size: calc(14px * 2.5 + 0.1vw);
-    letter-spacing: calc((14px * 2.5 + 0.1vw) * -0.02);
+    font-size: calc(14px * 2 + 0.1vw);
+    letter-spacing: calc((14px * 2 + 0.1vw) * -0.02);
     grid-column: span 2;
   }
   @media (max-width: 450px) {

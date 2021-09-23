@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { theme } from '../../styles/colors';
 
 export const Container = styled.div`
-  margin-top: 32px;
   grid-column: span 6;
 
   @media (max-width: 850px) {
@@ -20,7 +19,10 @@ export const Grid = styled.div`
   gap: 32px;
 
   @media (max-width: 850px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: ${(props) =>
+      props.gridColumnTablet
+        ? 'repeat(' + props.gridColumnTablet + ' , 1fr)'
+        : 'repeat(2, 1fr)'};
     gap: 24px;
   }
   @media (max-width: 450px) {
@@ -69,10 +71,7 @@ export const Video = styled.div`
   grid-column: span 2;
 
   & video {
-    /* width: 100%; */
-    /* object-fit: contain; */
     border-radius: 4px;
-    /* margin: 0 auto; */
     background-color: ${theme.t001.f};
   }
 

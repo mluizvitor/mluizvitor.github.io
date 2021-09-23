@@ -6,11 +6,21 @@ import { theme } from '../../styles/colors';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
-export function Gallery({ title, gridColumnMobile, children }) {
+export function Gallery({
+  title,
+  gridColumnMobile,
+  gridColumnTablet,
+  children,
+}) {
   return (
     <Container>
       <TypoH3>{title}</TypoH3>
-      <Grid gridColumnMobile={gridColumnMobile}>{children}</Grid>
+      <Grid
+        gridColumnMobile={gridColumnMobile}
+        gridColumnTablet={gridColumnTablet}
+      >
+        {children}
+      </Grid>
     </Container>
   );
 }
@@ -22,7 +32,7 @@ export function GalleryItem({ title, imgSource, gridColumn, height, ...rest }) {
         <img
           src={imgSource}
           alt={title}
-          height={height}
+          height={'100%'}
           width={'100%'}
           loading={'lazy'}
         />

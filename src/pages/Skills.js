@@ -22,14 +22,18 @@ export default function Skills({ id }) {
       <TypoH2 titleBg={theme.t002.f} gridColumn={'span 2'}>
         Habilidades
       </TypoH2>
-      <Gallery title={'Design'} gridColumnMobile={2}>
+      <Gallery title={'Design'} gridColumnMobile={2} gridColumnTablet={4}>
         <GalleryItem title={'Figma'} imgSource={imgFigma} />
         <GalleryItem title={'UXPin'} imgSource={imgUxpin} />
         <GalleryItem title={'Material Design'} imgSource={imgMaterial} />
         <GalleryItem title={'Inkscape'} imgSource={imgInkscape} />
       </Gallery>
 
-      <Gallery title={'Desenvolvimento'} gridColumnMobile={2}>
+      <Gallery
+        title={'Desenvolvimento'}
+        gridColumnMobile={2}
+        gridColumnTablet={4}
+      >
         <GalleryItem title={'HTML5'} imgSource={imgHtml} />
         <GalleryItem title={'CSS3'} imgSource={imgCss} />
         <GalleryItem title={'Javascript'} imgSource={imgJs} />
