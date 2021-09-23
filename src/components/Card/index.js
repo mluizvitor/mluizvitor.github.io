@@ -1,11 +1,11 @@
 import React from 'react';
 import { FiArrowRight, FiTool } from 'react-icons/fi';
-import { TypoH4 } from '../Typo';
 
 import {
   Container,
   CardImg,
   CardContainer,
+  CardTitle,
   CardBody,
   SeeMore,
   PseudoCardBody,
@@ -17,7 +17,7 @@ export function Card({ imageSrc, title, description, order, wip, ...rest }) {
     <CardContainer wip={wip} order={order} {...rest}>
       <CardImg imageSrc={imageSrc} />
       <CardBody>
-        <TypoH4>{title}</TypoH4>
+        <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
 
         <SeeMore>

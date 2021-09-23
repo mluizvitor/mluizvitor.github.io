@@ -66,6 +66,18 @@ export const CardBody = styled.div`
   }
 `;
 
+export const CardTitle = styled.strong`
+  font-size: calc(16px * 1.5 + 0.1vw);
+  letter-spacing: calc((16px * 1.5 + 0.1vw) * 0.02);
+  line-height: 120%;
+  margin-bottom: 8px;
+
+  @media (max-width: 850px) {
+    font-size: calc(14px * 1.5 + 0.1vw);
+    letter-spacing: calc((14px * 1.5 + 0.1vw) * 0.02);
+  }
+`;
+
 export const CardDescription = styled(TypoP)`
   font-size: calc(14px + 0.125vw);
   letter-spacing: calc((14px + 0.125vw) * 0.02);
