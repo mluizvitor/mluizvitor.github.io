@@ -30,7 +30,7 @@ export function ItemList({
   return (
     <ContItem {...rest} avatar={avatar}>
       {avatar === true ? (
-        <ItemAvatar src={avatarImg ? avatarImg : avatarFallback} />
+        <ItemAvatar src={avatarImg ? avatarImg : avatarFallback} alt={''} />
       ) : (
         ''
       )}
@@ -48,5 +48,9 @@ export function ListSeparator() {
 }
 
 export function ListGroupHeader({ children }) {
-  return <ListHRTitle>{children}</ListHRTitle>;
+  return (
+    <li style={{ listStyle: 'none' }}>
+      <ListHRTitle>{children}</ListHRTitle>
+    </li>
+  );
 }

@@ -17,7 +17,7 @@ function Home() {
       <Navbar>
         <Link to="" onClick={animateScroll.scrollToTop}>
           <Button title="Ir para o início">
-            <img src={Logo} alt="Vitor's Portfólio" />
+            <img src={Logo} alt="Vitor's Portfólio" height={24} width={48} />
           </Button>
         </Link>
         <Link

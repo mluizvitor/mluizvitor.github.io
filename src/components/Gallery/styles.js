@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/colors';
 
 export const Container = styled.div`
   margin-top: 32px;
@@ -56,5 +57,30 @@ export const Figure = styled.figure`
 
   @media (max-width: 850px) {
     grid-column: span 1;
+  }
+`;
+
+export const Video = styled.div`
+  ${(props) => (props.gridColumn ? 'grid-column:' + props.gridColumn : '')};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  grid-column: span 2;
+
+  & video {
+    /* width: 100%; */
+    /* object-fit: contain; */
+    border-radius: 4px;
+    /* margin: 0 auto; */
+    background-color: ${theme.t001.f};
+  }
+
+  & caption {
+    font-size: calc(12px + 0.15vw);
+    line-height: 145%;
+    letter-spacing: calc((12px + 0.1vw) * 0.015);
+    text-align: center;
+    margin-top: 8px;
   }
 `;

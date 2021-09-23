@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContainerEnhanced, Banner } from '../components/Container';
-import profile from '../assets/profile.jpg';
+import profile from '../assets/profile.webp';
 import bgImg from '../assets/backgroundHeader.svg';
 import { TypoH1, TypoP } from '../components/Typo';
 

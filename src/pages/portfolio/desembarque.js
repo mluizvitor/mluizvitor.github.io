@@ -9,7 +9,7 @@ import Logo from '../../assets/logo.svg';
 
 import { Button, Link } from '../../components/Button';
 import { ContainerEnhanced, Banner } from '../../components/Container';
-import { Gallery, GalleryItem } from '../../components/Gallery';
+import { Gallery, GalleryItem, GalleryVideo } from '../../components/Gallery';
 import { List, ItemList, ListGroupHeader } from '../../components/List';
 import { TypoH1, TypoH2, TypoP } from '../../components/Typo';
 import { PseudoCard } from '../../components/Card';
@@ -17,9 +17,9 @@ import { theme } from '../../styles/colors';
 
 import cover from '../../assets/portfolio/desembarque/cover.webp';
 import background from '../../assets/portfolio/desembarque/background.webp';
-import dsbVideo1 from '../../assets/portfolio/desembarque/mobilevid1.gif';
-import dsbVideo2 from '../../assets/portfolio/desembarque/mobilevid2.gif';
-import dsbVideo3 from '../../assets/portfolio/desembarque/mobilevid3.gif';
+import dsbVideo1 from '../../assets/portfolio/desembarque/mobilevid1.mp4';
+import dsbVideo2 from '../../assets/portfolio/desembarque/mobilevid2.mp4';
+import dsbVideo3 from '../../assets/portfolio/desembarque/mobilevid3.mp4';
 
 import desktop1 from '../../assets/portfolio/desembarque/desktop1.webp';
 import desktop2 from '../../assets/portfolio/desembarque/desktop2.webp';
@@ -31,7 +31,7 @@ import docs1 from '../../assets/portfolio/desembarque/docs1.webp';
 import docs2 from '../../assets/portfolio/desembarque/docs2.webp';
 import docs3 from '../../assets/portfolio/desembarque/docs3.webp';
 
-import vitorphoto from '../../assets/profile.jpg';
+import vitorphoto from '../../assets/profile.webp';
 import ScrollToTop from '../../ScrollToTop';
 
 function Desembarque() {
@@ -45,7 +45,7 @@ function Desembarque() {
           <span>Voltar</span>
         </Button>
         <Link to="/">
-          <img src={Logo} alt="Vitor's Portfólio" />
+          <img src={Logo} alt="Vitor's Portfólio" height={24} width={48} />
           <span>Ir para o Início</span>
         </Link>
       </NavBar>
@@ -205,19 +205,19 @@ function Desembarque() {
 
           <PseudoCard gridColumn={'span 2'} />
 
-          <GalleryItem
+          <GalleryVideo
             title={'Animação da Tela Inicial'}
-            imgSource={dsbVideo1}
+            vidSource={dsbVideo1}
             gridColumn={'span 2'}
           />
-          <GalleryItem
+          <GalleryVideo
             title={'Tela de detalhes da embarcação'}
-            imgSource={dsbVideo2}
+            vidSource={dsbVideo2}
             gridColumn={'span 2'}
           />
-          <GalleryItem
+          <GalleryVideo
             title={'Tela de edição de embarcação'}
-            imgSource={dsbVideo3}
+            vidSource={dsbVideo3}
             gridColumn={'span 2'}
           />
         </Gallery>

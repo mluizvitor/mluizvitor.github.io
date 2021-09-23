@@ -30,7 +30,7 @@ function Page404() {
             <span>Voltar</span>
           </Button>
           <Link btnStyle="color" to="/">
-            <img src={Logo} alt="Vitor's Portfólio" />
+            <img src={Logo} alt="Vitor's Portfólio" height={24} width={48} />
             <span>Ir para o Início</span>
           </Link>
         </div>
