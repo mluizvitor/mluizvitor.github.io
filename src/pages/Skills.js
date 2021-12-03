@@ -10,10 +10,10 @@ import imgNode from '../assets/skills/dev/node.svg';
 import imgReact from '../assets/skills/dev/react.svg';
 import imgGit from '../assets/skills/dev/git.svg';
 
-import imgFigma from '../assets/skills/design/figma.svg';
-import imgUxpin from '../assets/skills/design/uxpin.svg';
-import imgMaterial from '../assets/skills/design/material.svg';
-import imgInkscape from '../assets/skills/design/inkscape.svg';
+import imgFigma from '../assets/skills/design/figma.webp';
+import imgUxpin from '../assets/skills/design/uxpin.webp';
+import imgMaterial from '../assets/skills/design/material.webp';
+import imgInkscape from '../assets/skills/design/inkscape.webp';
 import { theme } from '../styles/colors';
 
 export default function Skills({ id }) {
@@ -23,10 +23,10 @@ export default function Skills({ id }) {
         Habilidades
       </TypoH2>
       <Gallery title={'Design'} gridColumnMobile={2} gridColumnTablet={4}>
-        <GalleryItem title={'Figma'} imgSource={imgFigma} />
-        <GalleryItem title={'UXPin'} imgSource={imgUxpin} />
-        <GalleryItem title={'Material Design'} imgSource={imgMaterial} />
-        <GalleryItem title={'Inkscape'} imgSource={imgInkscape} />
+        <GalleryItem noZoom title={'Figma'} imgSource={imgFigma} />
+        <GalleryItem noZoom title={'UXPin'} imgSource={imgUxpin} />
+        <GalleryItem noZoom title={'Material Design'} imgSource={imgMaterial} />
+        <GalleryItem noZoom title={'Inkscape'} imgSource={imgInkscape} />
       </Gallery>
 
       <Gallery
@@ -34,12 +34,16 @@ export default function Skills({ id }) {
         gridColumnMobile={2}
         gridColumnTablet={4}
       >
-        <GalleryItem title={'HTML5'} imgSource={imgHtml} />
-        <GalleryItem title={'CSS3'} imgSource={imgCss} />
-        <GalleryItem title={'Javascript'} imgSource={imgJs} />
-        <GalleryItem title={'NodeJS'} imgSource={imgNode} />
-        <GalleryItem title={'ReactJS e React Native'} imgSource={imgReact} />
-        <GalleryItem title={'Git'} imgSource={imgGit} />
+        <GalleryItem noZoom title={'HTML5'} imgSource={imgHtml} />
+        <GalleryItem noZoom title={'CSS3'} imgSource={imgCss} />
+        <GalleryItem noZoom title={'Javascript'} imgSource={imgJs} />
+        <GalleryItem noZoom title={'NodeJS'} imgSource={imgNode} />
+        <GalleryItem
+          noZoom
+          title={'ReactJS e React Native'}
+          imgSource={imgReact}
+        />
+        <GalleryItem noZoom title={'Git'} imgSource={imgGit} />
       </Gallery>
     </ContainerEnhanced>
   );

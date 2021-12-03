@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContainerEnhanced, Banner } from '../components/Container';
 import profile from '../assets/profile.webp';
-import bgImg from '../assets/backgroundHeader.svg';
+import bgImg from '../assets/backgroundHeader.webp';
 import { TypoH1, TypoP } from '../components/Typo';
 
 export default function WhoIam({ id }) {
