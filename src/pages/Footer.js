@@ -1,12 +1,12 @@
 import React from 'react';
-import { FooterContainer } from '../components/Container';
-import contactBg from '../assets/backgroundContacts.svg';
-
 import { FiExternalLink } from 'react-icons/fi';
+import footertBg from '../assets/backgroundFooter.webp';
+import { FooterContainer } from '../components/Container';
+
 
 export default function Footer({ id }) {
   return (
-    <FooterContainer id={id} bgImage={contactBg}>
+    <FooterContainer id={id} bgImage={footertBg}>
       <a href="mailto:mluizvitor@gmail.com">mluizvitor@gmail.com</a>
       <ul className={'links'}>
         <li>

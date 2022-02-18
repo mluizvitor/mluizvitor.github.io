@@ -13,7 +13,7 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: ${(props) => props.position || 'center'};
-  grid-gap: 8px;
+  gap: 8px;
   padding: 8px;
   z-index: 16;
 
@@ -28,5 +28,6 @@ export const Container = styled.nav`
 
   @media (max-width: 850px) {
     justify-content: flex-start;
+    gap: 0;
   }
 `;

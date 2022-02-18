@@ -25,10 +25,17 @@ export function Gallery({
   );
 }
 
-export function GalleryItem({ title, imgSource, gridColumn, height, ...rest }) {
+export function GalleryItem({
+  title,
+  noZoom,
+  imgSource,
+  gridColumn,
+  height,
+  ...rest
+}) {
   return (
     <Figure gridColumn={gridColumn} {...rest}>
-      <Zoom overlayBgColorEnd={theme.t001.a}>
+      {noZoom ? (
         <img
           src={imgSource}
           alt={title}
@@ -36,7 +43,17 @@ export function GalleryItem({ title, imgSource, gridColumn, height, ...rest }) {
           width={'100%'}
           loading={'lazy'}
         />
-      </Zoom>
+      ) : (
+        <Zoom overlayBgColorEnd={theme.t001.a}>
+          <img
+            src={imgSource}
+            alt={title}
+            height={'100%'}
+            width={'100%'}
+            loading={'lazy'}
+          />
+        </Zoom>
+      )}
       <figcaption>{title}</figcaption>
     </Figure>
   );

@@ -3,9 +3,7 @@ import { theme } from '../../styles/colors';
 
 export const ContContainer = styled.div`
   max-width: 1220px;
-  padding: 32px;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 64px 32px 96px;
   width: 100%;
   box-sizing: border-box;
   display: grid;
