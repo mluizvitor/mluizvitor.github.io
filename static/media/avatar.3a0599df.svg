@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="48" height="48" version="1.1" viewBox="0 0 12.7 12.7" xmlns="http://www.w3.org/2000/svg">
+ <rect width="12.7" height="12.7" fill="#1a1c28"/>
+ <circle cx="6.35" cy="5.2917" r="2.6458" fill="#ed97a6"/>
+ <path transform="scale(.26458)" d="m16.615 29.455c-5.1277 2.1611-8.6152 6.5099-8.6152 11.545v7h32v-7c0-5.035-3.4875-9.3838-8.6152-11.545a12 12 0 0 1-7.3848 2.5449 12 12 0 0 1-7.3848-2.5449z" fill="#ed97a6" stroke-linecap="square" stroke-linejoin="round" stroke-width="7.5591" style="paint-order:stroke fill markers"/>
+</svg>
