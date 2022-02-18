@@ -1,38 +1,38 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
-
-import NavBar from '../../components/Navbar';
-import Footer from '../../pages/Footer';
-
+import { useHistory } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
-
-import { Button, Link } from '../../components/Button';
-import { ContainerEnhanced, Banner } from '../../components/Container';
-import { Gallery, GalleryItem, GalleryVideo } from '../../components/Gallery';
-import { List, ItemList, ListGroupHeader } from '../../components/List';
-import { TypoH1, TypoH2, TypoP } from '../../components/Typo';
-import { PseudoCard } from '../../components/Card';
-import { theme } from '../../styles/colors';
-
-import cover from '../../assets/portfolio/desembarque/cover.webp';
 import background from '../../assets/portfolio/desembarque/background.webp';
-import dsbVideo1 from '../../assets/portfolio/desembarque/mobilevid1.mp4';
-import dsbVideo2 from '../../assets/portfolio/desembarque/mobilevid2.mp4';
-import dsbVideo3 from '../../assets/portfolio/desembarque/mobilevid3.mp4';
-
+import cover from '../../assets/portfolio/desembarque/cover.webp';
 import desktop1 from '../../assets/portfolio/desembarque/desktop1.webp';
 import desktop2 from '../../assets/portfolio/desembarque/desktop2.webp';
 import desktop3 from '../../assets/portfolio/desembarque/desktop3.webp';
-
-import mobile0 from '../../assets/portfolio/desembarque/mobile0.webp';
-
 import docs1 from '../../assets/portfolio/desembarque/docs1.webp';
 import docs2 from '../../assets/portfolio/desembarque/docs2.webp';
 import docs3 from '../../assets/portfolio/desembarque/docs3.webp';
-
+import mobile0 from '../../assets/portfolio/desembarque/mobile0.webp';
+import dsbVideo1 from '../../assets/portfolio/desembarque/mobilevid1.mp4';
+import dsbVideo2 from '../../assets/portfolio/desembarque/mobilevid2.mp4';
+import dsbVideo3 from '../../assets/portfolio/desembarque/mobilevid3.mp4';
 import vitorphoto from '../../assets/profile.webp';
+import { Button, Link } from '../../components/Button';
+import { PseudoCard } from '../../components/Card';
+import { Banner, ContainerEnhanced } from '../../components/Container';
+import { Gallery, GalleryItem, GalleryVideo } from '../../components/Gallery';
+import { ItemList, List, ListGroupHeader } from '../../components/List';
+import NavBar from '../../components/Navbar';
+import { TypoH1, TypoH2, TypoP } from '../../components/Typo';
+import Footer from '../../pages/Footer';
 import ScrollToTop from '../../ScrollToTop';
+import { theme } from '../../styles/colors';
+
+
+
+
+
+
+
+
 
 function Desembarque() {
   let history = useHistory();
@@ -274,7 +274,7 @@ function Desembarque() {
           <ListGroupHeader>Equipe Back-end</ListGroupHeader>
           <ItemList
             avatar
-            title={'Débora Cavalcanti'}
+            title={'Débora Cavalcante'}
             description={'Programadora Back-end'}
           />
 
@@ -300,17 +300,17 @@ function Desembarque() {
           <ListGroupHeader>Equipe FullStack</ListGroupHeader>
           <ItemList
             avatar
+            title={'Douglas Laurindo'}
+            description={'Programador FullStack'}
+          />
+          <ItemList
+            avatar
             title={'Alecsander Matos'}
             description={'Programador FullStack'}
           />
           <ItemList
             avatar
             title={'Wagner Wolf'}
-            description={'Programador FullStack'}
-          />
-          <ItemList
-            avatar
-            title={'Douglas Laurindo'}
             description={'Programador FullStack'}
           />
 
