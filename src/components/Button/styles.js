@@ -45,4 +45,8 @@ export const Container = styled.button.attrs((props) => ({
     background-color: ${(props) =>
       props.btnStyle === 'color' ? shade(0.25, theme.t004) : theme.t002.f};
   }
+
+  @media (max-width: 850px) {
+    height: 40px;
+  }
 `;

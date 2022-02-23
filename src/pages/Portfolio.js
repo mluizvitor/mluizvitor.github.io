@@ -20,28 +20,28 @@ export default function Portfolio({ id }) {
         <Card
           wip
           imageSrc={estore}
-          title="Es&shy;que&shy;le&shy;Sto&shy;re"
+          title="EsqueleStore"
           description='"Esqieleto" de um aplicativo para lojas, altamente escalável e personalizável'
           order={2}
         />
         <Card
           to={'/desembarque'}
           imageSrc={desembarque}
-          title="De&shy;sem&shy;bar&shy;que Di&shy;gi&shy;tal"
+          title="Desembarque Digital"
           description="Aplicação desenvolvida para coleta de dados pesqueiros em Santarém e região"
           order={0}
         />
         <Card
           wip
           imageSrc={elegumes}
-          title="e&shy;Le&shy;gu&shy;mes"
+          title="eLegumes"
           description="Projeto de Marketplace agregadora de frutarias. Deu sugimento ao EsqueleStore"
           order={1}
         />
         <Card
           wip
           imageSrc={poraque}
-          title="Po&shy;ra&shy;qué"
+          title="Poraqué"
           description="Vencedor do 2º Lugar no I Hackathon Inova Tapajós. O sistema controla, monitora e diagnostica centrais de ar remotamente"
           order={3}
         />

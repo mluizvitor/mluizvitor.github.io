@@ -19,7 +19,7 @@ export const Container = styled.nav`
 
   & > a > button,
   & > button {
-    font-size: calc(14px + 0.1vw);
+    font-size: calc(12px + 0.1vw);
 
     @media (max-width: 450px) {
       padding: 0 8px;
@@ -28,6 +28,6 @@ export const Container = styled.nav`
 
   @media (max-width: 850px) {
     justify-content: flex-start;
-    gap: 0;
+    gap: 8px;
   }
 `;

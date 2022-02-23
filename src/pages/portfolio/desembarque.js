@@ -26,14 +26,6 @@ import Footer from '../../pages/Footer';
 import ScrollToTop from '../../ScrollToTop';
 import { theme } from '../../styles/colors';
 
-
-
-
-
-
-
-
-
 function Desembarque() {
   let history = useHistory();
   return (
@@ -50,9 +42,7 @@ function Desembarque() {
         </Link>
       </NavBar>
       <Banner bgImage={cover} type={'portfolio'}>
-        <TypoH1 gridColumn={'span 4'}>
-          De&shy;sem&shy;bar&shy;que Di&shy;gi&shy;tal
-        </TypoH1>
+        <TypoH1 gridColumn={'span 4'}>Desembarque Digital</TypoH1>
         <TypoP gridColumn={'span 4'}>
           Apelidado somente de Desembarque, esta aplicação surgiu por uma
           demanda do Laboratório LAGES, da Universidade Federal do Oeste do Pará
@@ -126,7 +116,7 @@ function Desembarque() {
       </ContainerEnhanced>
       <ContainerEnhanced bgColor={theme.t002.m}>
         <TypoH2 gridColumn={'span 4'}>
-          Este é o <strong>De&shy;sem&shy;bar&shy;que Digital</strong>
+          Este é o <strong>Desembarque Digital</strong>
         </TypoH2>
 
         <Gallery title={'Versão Web'}>
