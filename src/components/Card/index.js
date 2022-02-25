@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiArrowRight, FiTool } from 'react-icons/fi';
+import { FiArrowRight, FiTool, FiExternalLink } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import {
   Container,
@@ -12,28 +13,44 @@ import {
   CardDescription,
 } from './styles';
 
-export function Card({ imageSrc, title, description, order, wip, ...rest }) {
+export function Card({
+  imageSrc,
+  title,
+  description,
+  order,
+  wip,
+  externalLink,
+  externalTo,
+  internalTo,
+  ...rest
+}) {
   return (
     <CardContainer wip={wip} order={order} {...rest}>
-      <CardImg imageSrc={imageSrc} />
+      {imageSrc && <CardImg imageSrc={imageSrc} />}
       <CardBody>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
-
-        <SeeMore>
-          {wip ? (
-            <>
-              <span>em construção</span>
-              <FiTool size={24} />
-            </>
-          ) : (
-            <>
-              <span>ver mais</span>
-              <FiArrowRight size={24} />
-            </>
-          )}
-        </SeeMore>
       </CardBody>
+      <SeeMore>
+        {wip ? (
+          <>
+            <span>em construção</span>
+            <FiTool size={16} />
+          </>
+        ) : externalLink ? (
+          <>
+            <span>ver repo</span>
+            <FiExternalLink size={16} />
+          </>
+        ) : (
+          <>
+            <span>ver mais</span>
+            <FiArrowRight size={16} />
+          </>
+        )}
+      </SeeMore>
+      {externalTo && <a href={externalTo} />}
+      {internalTo && <Link to={internalTo} />}
     </CardContainer>
   );
 }

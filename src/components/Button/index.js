@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ContLink } from './styles';
+import { Container, ContIntLink, ContExtLink } from './styles';
 
 export function Button({ type, btnStyle, children, ...rest }) {
   return (
@@ -9,12 +9,29 @@ export function Button({ type, btnStyle, children, ...rest }) {
   );
 }
 
-export function Link({ type, btnStyle, children, ...rest }) {
+export function InternalLink({ type, btnStyle, children, ...rest }) {
   return (
-    <ContLink {...rest}>
+    <ContIntLink {...rest}>
       <Container type={type} btnStyle={btnStyle} {...rest}>
         {children}
       </Container>
-    </ContLink>
+    </ContIntLink>
+  );
+}
+
+export function ExternalLink({
+  type,
+  btnStyle,
+  children,
+  gridColumn,
+  to,
+  ...rest
+}) {
+  return (
+    <ContExtLink {...rest} gridColumn={gridColumn} href={to}>
+      <Container type={type} btnStyle={btnStyle}>
+        {children}
+      </Container>
+    </ContExtLink>
   );
 }

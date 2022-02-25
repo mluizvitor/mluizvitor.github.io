@@ -3,8 +3,26 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../styles/colors';
 
-export const ContLink = styled(Link)`
+export const ContIntLink = styled(Link)`
   text-decoration: none;
+`;
+
+export const ContExtLink = styled.a`
+  text-decoration: none;
+
+  &.on-grid {
+    grid-column: ${(props) => props.gridColumn && props.gridColumn};
+    justify-self: center;
+
+    @media (max-width: 850px) {
+      grid-column: ${(props) =>
+        props.gridColumnTablet && props.gridColumnTablet};
+    }
+    @media (max-width: 450px) {
+      grid-column: ${(props) =>
+        props.gridColumnMobile && props.gridColumnMobile};
+    }
+  }
 `;
 
 export const Container = styled.button.attrs((props) => ({

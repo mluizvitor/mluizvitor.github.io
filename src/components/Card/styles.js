@@ -4,7 +4,7 @@ import { lighten } from 'polished';
 import { theme } from '../../styles/colors';
 import { TypoP } from '../Typo';
 
-export const CardContainer = styled(Link)`
+export const CardContainer = styled.div`
   text-decoration: none;
   width: 100%;
   background-color: ${lighten(0.05, theme.t001.f)};
@@ -17,17 +17,32 @@ export const CardContainer = styled(Link)`
   order: ${(props) => props.order || 0};
   overflow: hidden;
   position: relative;
+  border-radius: 4px;
+
+  grid-column: ${(props) => props.gridColumn && props.gridColumn};
+
+  @media (max-width: 850px) {
+    grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
 
   &:hover {
     ${(props) =>
-      props.wip
-        ? ''
-        : 'box-shadow: 0 16px 48px -16px' +
-          theme.t001.f +
-          ';' +
-          'transform: scale(1.05); ' +
-          'z-index: 4;' +
-          'cursor: pointer;'}
+      !props.wip &&
+      'box-shadow: 0 16px 48px -16px' +
+        theme.t001.f +
+        ';' +
+        'transform: scale(1.05); ' +
+        'z-index: 4;' +
+        'cursor: pointer;'}
   }
 
   &::after {
@@ -54,7 +69,7 @@ export const CardImg = styled.div`
 `;
 
 export const CardBody = styled.div`
-  padding: 24px;
+  padding: 32px 24px 24px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -67,10 +82,9 @@ export const CardBody = styled.div`
 `;
 
 export const CardTitle = styled.strong`
-  font-size: calc(16px * 1.5 + 0.1vw);
-  letter-spacing: calc((16px * 1.5 + 0.1vw) * 0.02);
+  font-size: calc(14px * 1.5 + 0.1vw);
+  letter-spacing: calc((14px * 1.5 + 0.1vw) * 0.02);
   line-height: 120%;
-  margin-bottom: 8px;
 
   @media (max-width: 850px) {
     font-size: calc(14px * 1.5 + 0.1vw);
@@ -82,6 +96,7 @@ export const CardDescription = styled(TypoP)`
   font-size: calc(14px + 0.125vw);
   letter-spacing: calc((14px + 0.125vw) * 0.02);
   line-height: 140%;
+  margin-top: 16px;
 `;
 
 export const PseudoCardBody = styled.div`
@@ -99,32 +114,21 @@ export const PseudoCardBody = styled.div`
 `;
 
 export const Container = styled.div`
-  margin-top: 32px;
   display: grid;
   grid-column: span 6;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   position: relative;
-
-  @media (max-width: 850px) {
-    grid-template-columns: 1fr 1fr;
-    grid-column: span 4;
-  }
-
-  @media (max-width: 450px) {
-    grid-template-columns: 1fr;
-    grid-column: span 1;
-  }
 `;
 
 export const SeeMore = styled.div`
   display: flex;
-  width: fit-content;
+  width: auto;
   align-items: center;
   justify-content: flex-end;
   color: ${theme.t005};
   gap: 16px;
-  padding-top: 16px;
-  margin-top: auto;
-  margin-left: auto;
+  padding: 8px 0 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: auto 24px 0;
 `;

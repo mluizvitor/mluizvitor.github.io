@@ -1,7 +1,7 @@
 import React from 'react';
 import { Banner } from '../components/Container';
 import bgImg from '../assets/backgroundHeader.svg';
-import { Button, Link } from '../components/Button';
+import { Button, InternalLink } from '../components/Button';
 import Logo from '../assets/logo.svg';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -29,10 +29,10 @@ function Page404() {
             <FiArrowLeft size={24} />
             <span>Voltar</span>
           </Button>
-          <Link btnStyle="color" to="/">
+          <InternalLink btnStyle="color" to="/">
             <img src={Logo} alt="Vitor's Portfólio" height={24} width={48} />
             <span>Ir para o Início</span>
-          </Link>
+          </InternalLink>
         </div>
       </Banner>
     </>
