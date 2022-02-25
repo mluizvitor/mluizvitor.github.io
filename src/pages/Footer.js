@@ -3,7 +3,6 @@ import { FiExternalLink } from 'react-icons/fi';
 import footertBg from '../assets/backgroundFooter.webp';
 import { FooterContainer } from '../components/Container';
 
-
 export default function Footer({ id }) {
   return (
     <FooterContainer id={id} bgImage={footertBg}>
@@ -16,7 +15,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Telegram
-            <FiExternalLink size={16} />
+            <FiExternalLink size={16} style={{ marginLeft: '4px' }} />
           </a>
         </li>
         <li>
@@ -26,7 +25,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Twitter
-            <FiExternalLink size={16} />
+            <FiExternalLink size={16} style={{ marginLeft: '4px' }} />
           </a>
         </li>
         <li>
@@ -36,7 +35,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Gitlab
-            <FiExternalLink size={16} />
+            <FiExternalLink size={16} style={{ marginLeft: '4px' }} />
           </a>
         </li>
         <li>
@@ -46,7 +45,7 @@ export default function Footer({ id }) {
             rel="noopener noreferrer"
           >
             Github
-            <FiExternalLink size={16} />
+            <FiExternalLink size={16} style={{ marginLeft: '4px' }} />
           </a>
         </li>
       </ul>

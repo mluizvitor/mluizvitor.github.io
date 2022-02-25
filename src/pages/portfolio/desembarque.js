@@ -15,7 +15,7 @@ import dsbVideo1 from '../../assets/portfolio/desembarque/mobilevid1.mp4';
 import dsbVideo2 from '../../assets/portfolio/desembarque/mobilevid2.mp4';
 import dsbVideo3 from '../../assets/portfolio/desembarque/mobilevid3.mp4';
 import vitorphoto from '../../assets/profile.webp';
-import { Button, Link } from '../../components/Button';
+import { Button, InternalLink } from '../../components/Button';
 import { PseudoCard } from '../../components/Card';
 import { Banner, ContainerEnhanced } from '../../components/Container';
 import { Gallery, GalleryItem, GalleryVideo } from '../../components/Gallery';
@@ -36,10 +36,10 @@ function Desembarque() {
           <FiArrowLeft size={24} />
           <span>Voltar</span>
         </Button>
-        <Link to="/">
+        <InternalLink to="/">
           <img src={Logo} alt="Vitor's Portfólio" height={24} width={48} />
           <span>Ir para o Início</span>
-        </Link>
+        </InternalLink>
       </NavBar>
       <Banner bgImage={cover} type={'portfolio'}>
         <TypoH1 gridColumn={'span 4'}>Desembarque Digital</TypoH1>
