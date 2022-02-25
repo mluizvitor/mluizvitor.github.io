@@ -33,7 +33,7 @@ export const CTypoH2 = styled.h2`
   letter-spacing: calc((16px * 2 + 0.1vw) * -0.02);
   line-height: 100%;
   font-weight: 600;
-  margin: 32px 0 16px 0;
+  margin-top: 32px;
 
   @media (max-width: 850px) {
     font-size: calc(14px * 2 + 0.1vw);
