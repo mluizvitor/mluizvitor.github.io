@@ -76,12 +76,7 @@ export default function Portfolio({ id }) {
       </CardBox>
 
       <TypoH2>Repositórios</TypoH2>
-      <CardBox
-        className="grid"
-        gridTemplate={4}
-        gridTemplateTablet={2}
-        gridTemplateMobile={1}
-      >
+      <CardBox className="grid" gridTemplate={2} gridTemplateMobile={1}>
         {repos.map((repo) => (
           <Card
             externalLink
@@ -98,8 +93,7 @@ export default function Portfolio({ id }) {
           to="https://github.com/mluizvitor?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          gridColumn={'span 4'}
-          gridColumnTablet={'span 2'}
+          gridColumn={'span 2'}
           gridColumnMobile={'span 1'}
         >
           Ver mais no Github
