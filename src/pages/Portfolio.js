@@ -16,17 +16,35 @@ export default function Portfolio({ id }) {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
+    const reponames = [
+      'dtMoney',
+      'to.do',
+      'es-theme-elementerial',
+      'saga-rs-macrorify',
+    ];
+
     fetch('https://api.github.com/users/mluizvitor/repos')
       .then((response) => response.json())
-      .then((data) => setRepos(data.slice(0, 6)));
+      .then((data) => {
+        const repositories = data;
+        let filtredRepo = [];
+
+        for (let i = 0; i < reponames.length; i++) {
+          filtredRepo.push(repositories.find((r) => r.name === reponames[i]));
+        }
+        setRepos(filtredRepo);
+      });
   }, []);
 
   return (
     <ContainerEnhanced id={id} type="container" bgColor={theme.t002.f}>
-      <TypoH2 gridColumn={'span 2'} titleBg={theme.t001.f}>
-        Portfólio
-      </TypoH2>
-      <CardBox>
+      <TypoH2 titleBg={theme.t001.f}>Portfólio</TypoH2>
+      <CardBox
+        className="grid"
+        gridTemplate={4}
+        gridTemplateTablet={2}
+        gridTemplateMobile={1}
+      >
         <Card
           wip
           imageSrc={estore}
@@ -56,16 +74,20 @@ export default function Portfolio({ id }) {
           order={3}
         />
       </CardBox>
+
       <TypoH2>Repositórios</TypoH2>
-      <CardBox>
+      <CardBox
+        className="grid"
+        gridTemplate={4}
+        gridTemplateTablet={2}
+        gridTemplateMobile={1}
+      >
         {repos.map((repo) => (
           <Card
             externalLink
             key={repo.id}
             title={repo.name}
             description={repo.description}
-            gridColumn={'span 2'}
-            gridColumnTablet={'span 1'}
             externalTo={repo.html_url}
           ></Card>
         ))}

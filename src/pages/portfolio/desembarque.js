@@ -21,7 +21,7 @@ import { Banner, ContainerEnhanced } from '../../components/Container';
 import { Gallery, GalleryItem, GalleryVideo } from '../../components/Gallery';
 import { ItemList, List, ListGroupHeader } from '../../components/List';
 import NavBar from '../../components/Navbar';
-import { TypoH1, TypoH2, TypoP } from '../../components/Typo';
+import { TypoH1, TypoH2, TypoH3, TypoP } from '../../components/Typo';
 import Footer from '../../pages/Footer';
 import ScrollToTop from '../../ScrollToTop';
 import { theme } from '../../styles/colors';
@@ -49,8 +49,12 @@ function Desembarque() {
           - UFOPA e desenvolvida no Lab Mídias.
         </TypoP>
       </Banner>
-      <ContainerEnhanced bgImage={background}>
-        <PseudoCard gridColumn={'span 3'}>
+      <ContainerEnhanced bgImage={background} className="grid">
+        <PseudoCard
+          gridColumn={'span 2'}
+          gridColumnTablet={'span 4'}
+          className="grid"
+        >
           <TypoH2>O Caso</TypoH2>
           <TypoP>
             Bolsistas e voluntários no LAGES faziam parte de um projeto de
@@ -61,7 +65,11 @@ function Desembarque() {
           </TypoP>
         </PseudoCard>
 
-        <PseudoCard gridColumn={'span 3'}>
+        <PseudoCard
+          gridColumn={'span 2'}
+          gridColumnTablet={'span 4'}
+          className="grid"
+        >
           <TypoH2>O Problema</TypoH2>
           <TypoP>
             Até então esses dados eram coletados em planilhas físicas, impressas
@@ -73,9 +81,9 @@ function Desembarque() {
           </TypoP>
         </PseudoCard>
       </ContainerEnhanced>
-      <ContainerEnhanced gridColumnTemplate={7}>
-        <TypoH2 gridColumn={'span 4'}>A Solução</TypoH2>
-        <PseudoCard gridColumn={'span 5'}>
+      <ContainerEnhanced>
+        <TypoH2>A Solução</TypoH2>
+        <PseudoCard gridColumn={'span 3'} gridColumnTablet={'span 4'}>
           <TypoP>
             A partir disso, foi proposta a criação de um sistema que pudesse ser
             utilizado pelos bolsistas e voluntários do LAGES para que as
@@ -105,149 +113,146 @@ function Desembarque() {
           </TypoP>
         </PseudoCard>
 
-        <PseudoCard gridColumn={'span 2'}>
+        <Gallery gridColumn={'span 1'} gridColumnTablet={'span 4'}>
           <GalleryItem
             title={
               'Primeira versão da tela inicial do aplicativo móvel. Antes do reboot do projeto.'
             }
             imgSource={mobile0}
+            gridColumn={'span 6'}
           />
-        </PseudoCard>
+        </Gallery>
       </ContainerEnhanced>
+
       <ContainerEnhanced bgColor={theme.t002.m}>
-        <TypoH2 gridColumn={'span 4'}>
+        <TypoH2>
           Este é o <strong>Desembarque Digital</strong>
         </TypoH2>
+        <TypoH3>Versão Web</TypoH3>
 
-        <Gallery title={'Versão Web'}>
-          <PseudoCard gridColumn={'span 4'}>
-            <TypoP>
-              A versão para web foi feita para o gerenciamento do sistema. Nela
-              é possível:
-            </TypoP>
-            <List type={'bullet'}>
-              <ItemList>Cadastrar novos desembarques pesqueiros;</ItemList>
-              <ItemList>Importar planilhas com dados pré-existentes;</ItemList>
-              <ItemList>
-                Cadastrar, editar e visualizar usuários, sejam agentes de campo
-                ou pescadores;
-              </ItemList>
-              <ItemList>
-                Cadastrar, editar e visualizar embarcações de pescadores;
-              </ItemList>
-              <ItemList>
-                Cadastrar, editar e visualizar entidades pesqueiras;
-              </ItemList>
-              <ItemList>
-                Gerar relatórios de nível regional a nível individual;
-              </ItemList>
-            </List>
-          </PseudoCard>
-          <PseudoCard gridColumn={'span 2'}></PseudoCard>
+        <PseudoCard gridColumn={'span 4'}>
+          <TypoP>
+            A versão para web foi feita para o gerenciamento do sistema. Nela é
+            possível:
+          </TypoP>
+          <List type={'bullet'}>
+            <ItemList>Cadastrar novos desembarques pesqueiros;</ItemList>
+            <ItemList>Importar planilhas com dados pré-existentes;</ItemList>
+            <ItemList>
+              Cadastrar, editar e visualizar usuários, sejam agentes de campo ou
+              pescadores;
+            </ItemList>
+            <ItemList>
+              Cadastrar, editar e visualizar embarcações de pescadores;
+            </ItemList>
+            <ItemList>
+              Cadastrar, editar e visualizar entidades pesqueiras;
+            </ItemList>
+            <ItemList>
+              Gerar relatórios de nível regional a nível individual;
+            </ItemList>
+          </List>
+          <PseudoCard
+            gridColumn={'span 2'}
+            gridColumnTablet="span 0"
+          ></PseudoCard>
+        </PseudoCard>
 
+        <Gallery gridTemplate={3} gridTemplateTablet={2} gridTemplateMobile={1}>
           <GalleryItem
             title={'Tela de Login. Painel de Controle para Web'}
             imgSource={desktop1}
-            gridColumn={'span 2'}
           />
           <GalleryItem
             title={
               'Tela inicial com as principais funções que um Administrador pode realizar'
             }
             imgSource={desktop2}
-            gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Tela de gerenciamento de entidades pesqueiras parceiras'}
             imgSource={desktop3}
-            gridColumn={'span 2'}
           />
         </Gallery>
 
-        <Gallery title={'Versão Mobile'}>
-          <PseudoCard gridColumn={'span 4'}>
-            <TypoP>
-              A versão para móvel foi pensada ser usada em campo, durante a
-              coleta de dados. Para isso foram considerados a hora do dia e
-              iluminação natural, condição climática recorrente na região,
-              tamanho da tela dos dispositivos e situações que possam necessitar
-              o uso com apenas uma das mãos. Nela é possível:
-            </TypoP>
+        <TypoH3>Versão Mobile</TypoH3>
+        <PseudoCard gridColumn={'span 4'}>
+          <TypoP>
+            A versão para móvel foi pensada ser usada em campo, durante a coleta
+            de dados. Para isso foram considerados a hora do dia e iluminação
+            natural, condição climática recorrente na região, tamanho da tela
+            dos dispositivos e situações que possam necessitar o uso com apenas
+            uma das mãos. Nela é possível:
+          </TypoP>
 
-            <List type={'bullet'}>
-              <ListGroupHeader>O pescador pode</ListGroupHeader>
-              <ItemList>Adicionar desembarques;</ItemList>
-              <ItemList>Cadastrar e editar embarcações;</ItemList>
-              <ItemList>Vizualizar sua produção diária e mensal.</ItemList>
-            </List>
+          <List type={'bullet'}>
+            <ListGroupHeader>O pescador pode</ListGroupHeader>
+            <ItemList>Adicionar desembarques;</ItemList>
+            <ItemList>Cadastrar e editar embarcações;</ItemList>
+            <ItemList>Vizualizar sua produção diária e mensal.</ItemList>
+          </List>
 
-            <List type={'bullet'}>
-              <ListGroupHeader>O Agente de campo pode</ListGroupHeader>
-              <ItemList>
-                Adicionar desembarques para pescadores já cadastrados;
-              </ItemList>
-              <ItemList>Cadastrar embarcações para pescadores;</ItemList>
-              <ItemList>
-                Auxiliar pescadores com dúvidas no uso da aplicação.
-              </ItemList>
-            </List>
-          </PseudoCard>
+          <List type={'bullet'}>
+            <ListGroupHeader>O Agente de campo pode</ListGroupHeader>
+            <ItemList>
+              Adicionar desembarques para pescadores já cadastrados;
+            </ItemList>
+            <ItemList>Cadastrar embarcações para pescadores;</ItemList>
+            <ItemList>
+              Auxiliar pescadores com dúvidas no uso da aplicação.
+            </ItemList>
+          </List>
+        </PseudoCard>
 
-          <PseudoCard gridColumn={'span 2'} />
-
+        <Gallery gridTemplate={3} gridTemplateTablet={2} gridTemplateMobile={1}>
           <GalleryVideo
             title={'Animação da Tela Inicial'}
             vidSource={dsbVideo1}
-            gridColumn={'span 2'}
           />
           <GalleryVideo
             title={'Tela de detalhes da embarcação'}
             vidSource={dsbVideo2}
-            gridColumn={'span 2'}
           />
           <GalleryVideo
             title={'Tela de edição de embarcação'}
             vidSource={dsbVideo3}
-            gridColumn={'span 2'}
           />
         </Gallery>
 
-        <Gallery title={'Documentação'}>
-          <PseudoCard gridColumn={'span 4'}>
-            <TypoP>
-              Além da documentação de casos de uso, foi feita também a
-              documentação da linguagem visual de toda a aplicação. A linguagem
-              de design principal utilizada foi o Material Design do Google, com
-              algumas mudanças estilísticas.
-            </TypoP>
-            <TypoP>
-              Foram definidas tipografias, tamanhos, espaçamentos, e todos estes
-              foram devidamente especificados como podem ver nas imagens abaixo.
-            </TypoP>
-          </PseudoCard>
+        <TypoH3>Documentação</TypoH3>
 
-          <PseudoCard gridColumn={'span 2'}></PseudoCard>
+        <PseudoCard gridColumn={'span 4'}>
+          <TypoP>
+            Além da documentação de casos de uso, foi feita também a
+            documentação da linguagem visual de toda a aplicação. A linguagem de
+            design principal utilizada foi o Material Design do Google, com
+            algumas mudanças estilísticas.
+          </TypoP>
+          <TypoP>
+            Foram definidas tipografias, tamanhos, espaçamentos, e todos estes
+            foram devidamente especificados como podem ver nas imagens abaixo.
+          </TypoP>
+        </PseudoCard>
 
+        <Gallery gridTemplate={3} gridTemplateTablet={2} gridTemplateMobile={1}>
           <GalleryItem
             title={'Definição das cores utilizadas no projeto'}
             imgSource={docs1}
-            gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Definição de tipografia e tamanhos'}
             imgSource={docs2}
-            gridColumn={'span 2'}
           />
           <GalleryItem
             title={'Definição de elementos gráficos. Campo de Texto.'}
             imgSource={docs3}
-            gridColumn={'span 2'}
           />
         </Gallery>
       </ContainerEnhanced>
-      <ContainerEnhanced bgColor={theme.t002.f}>
-        <TypoH2 gridColumn={'span 4'}>Envolvidos no Projeto</TypoH2>
-        <List gridColumn={'span 3'}>
+
+      <ContainerEnhanced bgColor={theme.t002.f} className="grid">
+        <TypoH2>Envolvidos no Projeto</TypoH2>
+        <List gridColumn={'span 2'} gridColumnTablet={'span 4'}>
           <ListGroupHeader>Equipe de Design</ListGroupHeader>
           <ItemList
             avatar
@@ -286,7 +291,7 @@ function Desembarque() {
           />
         </List>
 
-        <List gridColumn={'span 3'}>
+        <List gridColumn={'span 2'} gridColumnTablet={'span 4'}>
           <ListGroupHeader>Equipe FullStack</ListGroupHeader>
           <ItemList
             avatar

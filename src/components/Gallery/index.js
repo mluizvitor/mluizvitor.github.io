@@ -8,16 +8,25 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 export function Gallery({
   title,
+  gridTemplate,
+  gridTemplateTablet,
+  gridTemplateMobile,
+  gridColumn,
   gridColumnMobile,
   gridColumnTablet,
   children,
 }) {
   return (
-    <Container>
+    <Container
+      gridColumn={gridColumn}
+      gridColumnTablet={gridColumnTablet}
+      gridColumnMobile={gridColumnMobile}
+    >
       <TypoH3>{title}</TypoH3>
       <Grid
-        gridColumnMobile={gridColumnMobile}
-        gridColumnTablet={gridColumnTablet}
+        gridTemplate={gridTemplate}
+        gridTemplateTablet={gridTemplateTablet}
+        gridTemplateMobile={gridTemplateMobile}
       >
         {children}
       </Grid>
@@ -30,11 +39,18 @@ export function GalleryItem({
   noZoom,
   imgSource,
   gridColumn,
+  gridColumnTablet,
+  gridColumnMobile,
   height,
   ...rest
 }) {
   return (
-    <Figure gridColumn={gridColumn} {...rest}>
+    <Figure
+      gridColumn={gridColumn}
+      gridColumnTablet={gridColumnTablet}
+      gridColumnMobile={gridColumnMobile}
+      {...rest}
+    >
       {noZoom ? (
         <img
           src={imgSource}
@@ -63,16 +79,21 @@ export function GalleryVideo({
   title,
   vidSource,
   gridColumn,
+  gridColumnTablet,
+  gridColumnMobile,
   height,
   ...rest
 }) {
   return (
-    <Video>
+    <Video
+      gridColumn={gridColumn}
+      gridColumnTablet={gridColumnTablet}
+      gridColumnMobile={gridColumnMobile}
+    >
       <video
         height={window.innerHeight * 0.8}
         width={'100%'}
         controls
-        gridColumn={gridColumn}
         {...rest}
       >
         <source src={vidSource}></source>

@@ -106,4 +106,9 @@ export default createGlobalStyle`
       filter: grayscale(0);
     }
   }
+
+  .grid {
+    display: grid;
+    gap: 32px;
+  }
 `;

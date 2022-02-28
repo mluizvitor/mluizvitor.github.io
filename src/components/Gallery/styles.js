@@ -2,45 +2,63 @@ import styled from 'styled-components';
 import { theme } from '../../styles/colors';
 
 export const Container = styled.div`
-  grid-column: span 6;
+  grid-column: ${(props) => (props.gridColumn ? props.gridColumn : 'span 4')};
 
   @media (max-width: 850px) {
-    grid-column: span 2;
+    grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
+
+    figure:first-of-type:last-of-type {
+      grid-column: 2/6;
+    }
   }
+
   @media (max-width: 450px) {
-    grid-column: span 1;
+    grid-column: ${(props) => props.gridColumnMobile && props.gridColumnMobile};
+
+    figure:first-of-type:last-of-type {
+      grid-column: 1/7;
+    }
   }
 `;
 
 export const Grid = styled.div`
   margin-top: 32px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   gap: 32px;
+  grid-template-columns: ${(props) =>
+    props.gridTemplate
+      ? 'repeat(' + props.gridTemplate + ',1fr)'
+      : 'repeat(6, 1fr)'};
 
   @media (max-width: 850px) {
     grid-template-columns: ${(props) =>
-      props.gridColumnTablet
-        ? 'repeat(' + props.gridColumnTablet + ' , 1fr)'
-        : 'repeat(2, 1fr)'};
+      props.gridTemplateTablet &&
+      'repeat(' + props.gridTemplateTablet + ',1fr)'};
     gap: 24px;
   }
   @media (max-width: 450px) {
     grid-template-columns: ${(props) =>
-      props.gridColumnMobile
-        ? 'repeat(' + props.gridColumnMobile + ' , 1fr)'
-        : '1fr'};
+      props.gridTemplateMobile &&
+      'repeat(' + props.gridTemplateMobile + ',1fr)'};
     column-gap: 16px;
     row-gap: 24px;
   }
 `;
 
 export const Figure = styled.figure`
-  ${(props) => (props.gridColumn ? 'grid-column:' + props.gridColumn : '')};
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  grid-column: ${(props) => (props.gridColumn ? props.gridColumn : 'span 1')};
+
+  @media (max-width: 850px) {
+    grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
+  }
+
+  @media (max-width: 450px) {
+    grid-column: ${(props) => props.gridColumnMobile && props.gridColumnMobile};
+  }
 
   & img {
     width: 100%;
@@ -56,19 +74,23 @@ export const Figure = styled.figure`
     text-align: center;
     margin-top: 8px;
   }
-
-  @media (max-width: 850px) {
-    grid-column: span 1;
-  }
 `;
 
 export const Video = styled.div`
-  ${(props) => (props.gridColumn ? 'grid-column:' + props.gridColumn : '')};
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  grid-column: span 2;
+
+  grid-column: ${(props) => (props.gridColumn ? props.gridColumn : 'span 1')};
+
+  @media (max-width: 850px) {
+    grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
+  }
+
+  @media (max-width: 450px) {
+    grid-column: ${(props) => props.gridColumnMobile && props.gridColumnMobile};
+  }
 
   & video {
     border-radius: 4px;

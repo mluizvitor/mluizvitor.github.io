@@ -4,16 +4,14 @@ import { opacify } from 'polished';
 export const Container = styled.ul`
   margin: 0;
   ${(props) => (props.type === 'bullet' ? 'margin: 16px 0 16px 16px' : '')};
-  ${(props) =>
-    props.gridColumn
-      ? 'grid-column: ' + props.gridColumn
-      : 'grid-column: span 6'};
+  grid-column: ${(props) => (props.gridColumn ? props.gridColumn : 'span 1')};
 
   @media (max-width: 850px) {
-    grid-column: span 2;
+    grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
   }
+
   @media (max-width: 450px) {
-    grid-column: span 1;
+    grid-column: ${(props) => props.gridColumnMobile && props.gridColumnMobile};
   }
 `;
 

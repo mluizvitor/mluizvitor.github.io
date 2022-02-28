@@ -22,16 +22,28 @@ export function Card({
   externalLink,
   externalTo,
   internalTo,
+  gridColumns,
+  gridColumnsTablet,
+  gridColumnsMobile,
+  children,
   ...rest
 }) {
   return (
-    <CardContainer wip={wip} order={order} {...rest}>
+    <CardContainer
+      wip={wip}
+      order={order}
+      gridColumns={gridColumns}
+      gridColumnsTablet={gridColumnsTablet}
+      gridColumnsMobile={gridColumnsMobile}
+      {...rest}
+    >
       {imageSrc && <CardImg imageSrc={imageSrc} />}
       <CardBody>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardBody>
       <SeeMore>
+        {children}
         {wip ? (
           <>
             <span>em construção</span>
@@ -49,7 +61,16 @@ export function Card({
           </>
         )}
       </SeeMore>
-      {externalTo && <a href={externalTo} />}
+      {externalTo && (
+        <a
+          href={externalTo}
+          title={title}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {''}
+        </a>
+      )}
       {internalTo && <Link to={internalTo} />}
     </CardContainer>
   );
@@ -61,16 +82,39 @@ export function PseudoCard({
   description,
   order,
   gridColumn,
+  gridColumnTablet,
+  gridColumnMobile,
   children,
   ...rest
 }) {
   return (
-    <PseudoCardBody order={order} gridColumn={gridColumn} {...rest}>
+    <PseudoCardBody
+      order={order}
+      gridColumn={gridColumn}
+      gridColumnTablet={gridColumnTablet}
+      gridColumnMobile={gridColumnMobile}
+      {...rest}
+    >
       {children}
     </PseudoCardBody>
   );
 }
 
-export function CardBox({ children }) {
-  return <Container>{children}</Container>;
+export function CardBox({
+  gridTemplate,
+  gridTemplateTablet,
+  gridTemplateMobile,
+  children,
+  ...rest
+}) {
+  return (
+    <Container
+      gridTemplate={gridTemplate}
+      gridTemplateTablet={gridTemplateTablet}
+      gridTemplateMobile={gridTemplateMobile}
+      {...rest}
+    >
+      {children}
+    </Container>
+  );
 }

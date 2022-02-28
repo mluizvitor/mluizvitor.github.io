@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { lighten } from 'polished';
 import { theme } from '../../styles/colors';
 import { TypoP } from '../Typo';
@@ -8,21 +7,27 @@ export const CardContainer = styled.div`
   text-decoration: none;
   width: 100%;
   background-color: ${lighten(0.05, theme.t001.f)};
+  border-radius: 4px;
   box-shadow: 0 2px 8px -8px ${theme.t001.f};
   display: flex;
   flex-direction: column;
-  transition: 500ms;
-  cursor: default;
-  z-index: 1;
-  order: ${(props) => props.order || 0};
   overflow: hidden;
   position: relative;
-  border-radius: 4px;
+
+  order: ${(props) => props.order || 0};
+  z-index: 1;
+  cursor: default;
+
+  transition: 500ms;
 
   grid-column: ${(props) => props.gridColumn && props.gridColumn};
 
   @media (max-width: 850px) {
     grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
+  }
+
+  @media (max-width: 450px) {
+    grid-column: ${(props) => props.gridColumnMobile && props.gridColumnMobile};
   }
 
   a {
@@ -103,22 +108,36 @@ export const PseudoCardBody = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;
-  ${(props) => (props.gridColumn ? 'grid-column: ' + props.gridColumn : '')};
+  grid-column: ${(props) => props.gridColumn && props.gridColumn};
 
   @media (max-width: 850px) {
-    grid-column: span 2;
+    grid-column: ${(props) => props.gridColumnTablet && props.gridColumnTablet};
   }
   @media (max-width: 450px) {
-    grid-column: span 1;
+    grid-column: ${(props) => props.gridColumnMobile && props.gridColumnMobile};
   }
 `;
 
 export const Container = styled.div`
-  display: grid;
-  grid-column: span 6;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
   position: relative;
+  grid-column: span 4;
+
+  grid-template-columns: ${(props) =>
+    props.gridTemplate
+      ? 'repeat(' + props.gridTemplate + ',1fr)'
+      : 'repeat(4, 1fr)'};
+
+  @media (max-width: 850px) {
+    grid-template-columns: ${(props) =>
+      props.gridTemplateTablet &&
+      'repeat(' + props.gridTemplateTablet + ',1fr)'};
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: ${(props) =>
+      props.gridTemplateMobile &&
+      'repeat(' + props.gridTemplateMobile + ',1fr)'};
+  }
 `;
 
 export const SeeMore = styled.div`

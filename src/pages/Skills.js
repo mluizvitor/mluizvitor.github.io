@@ -14,15 +14,12 @@ import { Gallery, GalleryItem } from '../components/Gallery';
 import { TypoH2 } from '../components/Typo';
 import { theme } from '../styles/colors';
 
-
-
 export default function Skills({ id }) {
   return (
     <ContainerEnhanced id={id} type={'container'}>
-      <TypoH2 titleBg={theme.t002.f} gridColumn={'span 2'}>
-        Habilidades
-      </TypoH2>
-      <Gallery title={'Design'} gridColumnMobile={2} gridColumnTablet={4}>
+      <TypoH2 titleBg={theme.t002.f}>Habilidades</TypoH2>
+
+      <Gallery title={'Design'} gridTemplateTablet={4} gridTemplateMobile={2}>
         <GalleryItem noZoom title={'Figma'} imgSource={imgFigma} />
         <GalleryItem noZoom title={'UXPin'} imgSource={imgUxpin} />
         <GalleryItem noZoom title={'Material Design'} imgSource={imgMaterial} />
@@ -31,8 +28,8 @@ export default function Skills({ id }) {
 
       <Gallery
         title={'Desenvolvimento'}
-        gridColumnMobile={2}
-        gridColumnTablet={4}
+        gridTemplateTablet={4}
+        gridTemplateMobile={2}
       >
         <GalleryItem noZoom title={'HTML5'} imgSource={imgHtml} />
         <GalleryItem noZoom title={'CSS3'} imgSource={imgCss} />
