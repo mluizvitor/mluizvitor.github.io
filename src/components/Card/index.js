@@ -37,7 +37,7 @@ export function Card({
       gridColumnsMobile={gridColumnsMobile}
       {...rest}
     >
-      {imageSrc && <CardImg imageSrc={imageSrc} />}
+      {imageSrc && <CardImg src={imageSrc} title={title} />}
       <CardBody>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>

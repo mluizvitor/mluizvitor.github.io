@@ -17,8 +17,8 @@ export default function Portfolio({ id }) {
 
   useEffect(() => {
     const reponames = [
+      'tasks',
       'dtMoney',
-      'to.do',
       'es-theme-elementerial',
       'saga-rs-macrorify',
     ];
@@ -39,12 +39,7 @@ export default function Portfolio({ id }) {
   return (
     <ContainerEnhanced id={id} type="container" bgColor={theme.t002.f}>
       <TypoH2 titleBg={theme.t001.f}>Portfólio</TypoH2>
-      <CardBox
-        className="grid"
-        gridTemplate={4}
-        gridTemplateTablet={2}
-        gridTemplateMobile={1}
-      >
+      <CardBox className="grid" gridTemplate={2} gridTemplateMobile={1}>
         <Card
           wip
           imageSrc={estore}
@@ -63,7 +58,7 @@ export default function Portfolio({ id }) {
           wip
           imageSrc={elegumes}
           title="eLegumes"
-          description="Projeto de Marketplace agregadora de frutarias. Deu sugimento ao EsqueleStore"
+          description="Projeto de Marketplace agregadora de frutarias. Deu origem ao EsqueleStore"
           order={1}
         />
         <Card

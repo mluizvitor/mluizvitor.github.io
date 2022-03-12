@@ -63,14 +63,8 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardImg = styled.div`
+export const CardImg = styled.img`
   width: 100%;
-  height: auto;
-  padding-bottom: calc(100% / 3 * 2);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: ${(props) => `url(` + props.imageSrc + `)` || ''};
 `;
 
 export const CardBody = styled.div`
