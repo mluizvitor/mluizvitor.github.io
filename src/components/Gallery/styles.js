@@ -62,7 +62,7 @@ export const Figure = styled.figure`
 
   & img {
     width: 100%;
-    object-fit: contain;
+    height: auto;
     border-radius: 4px;
     margin: 0 auto;
   }
