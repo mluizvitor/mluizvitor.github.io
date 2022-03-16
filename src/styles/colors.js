@@ -13,5 +13,5 @@ export const theme = {
   t003: '#cc3d94',
   t004: '#DE6896',
   t005: '#ED97A6',
-  t006: lighten(0.2, '#ED97A6'),
+  t006: '#fff4f6',
 };

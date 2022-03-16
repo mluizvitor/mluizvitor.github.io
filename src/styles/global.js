@@ -2,47 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import { theme } from '../styles/colors';
 
 export default createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    font-feature-settings: "ss04"
-  }
-
-  #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  html,
-  body {
-    color: ${theme.t006};
-    background-color: ${theme.t001.f};
-  }
-
-  ::-moz-focus-outer,
-  ::-moz-focus-inner {
-    outline: 0;
-    border: 0;
-  }
-
-  body {
-    font-size: calc(16px + 0.125vw);
-    line-height: 155%;
-    letter-spacing: calc((16px + 0.125vw) * 0.020);
-    font-weight: 400,
-  }
-
-  a,
-  a:visited {
-    color: ${theme.t006};
-    background-color: transparent;
-    transition: background-color 500ms;
-    border-radius: 4px;
-  }
 
   h2, h3 {
     position: relative;
