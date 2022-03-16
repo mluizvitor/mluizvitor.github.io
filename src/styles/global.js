@@ -9,10 +9,6 @@ export default createGlobalStyle`
     z-index: 4;
   }
 
-  h2 {
-    
-  }
-
   caption {
     font-size: calc(12px + 0.1vw);
     line-height: calc(16px + 0.1vw);

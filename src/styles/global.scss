@@ -32,3 +32,16 @@ body {
   line-height: 150%;
   font-weight: regular;
 }
+
+h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+p + p {
+  margin-top: 2rem;
+}
+
+.profilePhoto {
+  border-radius: 50%;
+}

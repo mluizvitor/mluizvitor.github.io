@@ -1,0 +1,31 @@
+.sectionContainer {
+  width: 100%;
+
+  section {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+}
+
+.banner {
+  height: 100%;
+  min-height: 70vh;
+
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: grayscaleAnim 1000ms;
+
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    p:first-of-type {
+      margin-top: 2rem;
+    }
+  }
+}
