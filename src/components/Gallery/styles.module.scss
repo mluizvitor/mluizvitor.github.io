@@ -1,0 +1,35 @@
+.galleryContainer {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.figureContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+  }
+
+  & figcaption {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-align: center;
+  }
+}
+
+.skillsGrid {
+  grid-template-columns: repeat(6, 1fr);
+
+  @media (max-width: 850px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
