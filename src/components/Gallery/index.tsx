@@ -3,6 +3,7 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import styles from './styles.module.scss';
 import { ReactNode } from 'react';
+import { Grid } from '../Grid';
 
 interface GalleryProps {
   type: 'skills' | 'portfolio';
@@ -16,18 +17,18 @@ interface ItemProps {
 }
 
 export function Gallery({ type, children }: GalleryProps) {
-  let containerStyle = styles.galleryContainer;
+  let containerStyle = '';
 
   switch (type) {
     case 'skills':
-      containerStyle = containerStyle + ' ' + styles.skillsGrid;
+      containerStyle = styles.skillsGrid;
       break;
     case 'portfolio':
       // TODO
       break;
   }
 
-  return <div className={containerStyle}>{children}</div>;
+  return <Grid className={containerStyle}>{children}</Grid>;
 }
 
 export function GalleryItem({ title, noZoom, src, ...rest }: ItemProps) {
