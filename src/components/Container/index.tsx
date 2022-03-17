@@ -29,7 +29,7 @@ export function Container({
       break;
 
     case 'error':
-      // TO DO
+      compClass = compClass.concat(' ' + styles.error + ' ' + styles.banner);
       break;
   }
 
