@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { animateScroll, Link } from 'react-scroll';
+import { Link } from 'react-scroll';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -31,7 +31,6 @@ export function Header() {
             activeClass={styles.activeButton}
             spy={true}
             smooth={true}
-            offset={-64}
             duration={500}
           >
             Vitor?
@@ -44,7 +43,6 @@ export function Header() {
             activeClass={styles.activeButton}
             spy={true}
             smooth={true}
-            offset={-64}
             duration={500}
           >
             Skills
@@ -57,7 +55,6 @@ export function Header() {
             activeClass={styles.activeButton}
             spy={true}
             smooth={true}
-            offset={-64}
             duration={500}
           >
             Portfólio
@@ -70,7 +67,6 @@ export function Header() {
             activeClass={styles.activeButton}
             spy={true}
             smooth={true}
-            offset={-64}
             duration={500}
           >
             Contato
