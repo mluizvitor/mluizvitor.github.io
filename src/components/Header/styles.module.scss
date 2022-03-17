@@ -4,30 +4,36 @@
   left: 0;
   width: 100%;
   height: 4rem;
+
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   overflow: auto;
   background: linear-gradient(180deg, #1a1c28ff 0%, #1a1c2888 75%);
 
   z-index: 16;
+
+  @media (max-width: 850px) {
+    justify-content: flex-start;
+  }
 }
 
 .navContainer {
-  padding: 0 2rem;
-  margin: 0.5rem auto;
+  padding: 0 1.5rem;
 
   display: flex;
   gap: 0.5rem;
 
   a {
-    background: transparent;
     border-radius: 0.25rem;
 
     height: 3rem;
 
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 800;
     text-transform: uppercase;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
 
     display: flex;
     flex-direction: row;
@@ -36,11 +42,19 @@
     transition: background 0.2s ease-in;
     cursor: pointer;
 
+    @media (max-width: 720px) {
+      font-size: 0.875rem;
+    }
+
     &:hover {
-      background: #cc3d94;
+      background: var(--purple);
     }
     &:focus {
       outline: 2px solid var(--white);
     }
   }
+}
+
+.activeButton {
+  background: var(--magenta);
 }

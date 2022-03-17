@@ -28,7 +28,7 @@ export function Header() {
             to="whoIsVitor"
             role="button"
             tabIndex={0}
-            activeClass="activeBtn"
+            activeClass={styles.activeButton}
             spy={true}
             smooth={true}
             offset={-64}
@@ -41,7 +41,7 @@ export function Header() {
             to="skills"
             role="button"
             tabIndex={0}
-            activeClass="activeBtn"
+            activeClass={styles.activeButton}
             spy={true}
             smooth={true}
             offset={-64}
@@ -54,7 +54,7 @@ export function Header() {
             to="portfolio"
             role="button"
             tabIndex={0}
-            activeClass="activeBtn"
+            activeClass={styles.activeButton}
             spy={true}
             smooth={true}
             offset={-64}
@@ -67,7 +67,7 @@ export function Header() {
             to="contacts"
             role="button"
             tabIndex={0}
-            activeClass="activeBtn"
+            activeClass={styles.activeButton}
             spy={true}
             smooth={true}
             offset={-64}
