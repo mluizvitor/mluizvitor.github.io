@@ -33,8 +33,6 @@ export function Container({
       break;
   }
 
-  console.log(compClass);
-
   return (
     <div
       id={id}

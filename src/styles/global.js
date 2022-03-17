@@ -3,18 +3,6 @@ import { theme } from '../styles/colors';
 
 export default createGlobalStyle`
 
-  h2, h3 {
-    position: relative;
-    display: inline;
-    z-index: 4;
-  }
-
-  caption {
-    font-size: calc(12px + 0.1vw);
-    line-height: calc(16px + 0.1vw);
-    letter-spacing: calc((12px + 0.1vw) * 0.02);
-  }
-
   .subtitle {
     font-size: calc(16px + 0.1vw);
     letter-spacing: calc((16px + 0.1vw) * -0.02);

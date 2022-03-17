@@ -35,16 +35,32 @@ button {
 }
 
 body {
-  color: #fff4f6;
-  background-color: #1a1c28;
+  color: var(--white);
+  background-color: var(--black);
   font-size: 1.125rem;
   line-height: 150%;
-  font-weight: regular;
+  font-weight: 400;
 }
 
 h1 {
   font-size: 4rem;
   line-height: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 3rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: calc(1.25rem * 0.15);
+
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 p + p {
