@@ -1,0 +1,70 @@
+.portfolioGrid {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 512px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardContainer {
+  text-decoration: none;
+  color: var(--white);
+
+  width: 100%;
+  background: var(--black);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px -8px var(--black);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  cursor: default;
+
+  transition: 500ms;
+
+  // This hack prevents opacity blinking bug in Chromium browsers
+  backface-visibility: hidden;
+
+  &:hover {
+    box-shadow: 0 16px 48px -16px var(--black);
+    transform: scale(1.05);
+    z-index: 4;
+    cursor: pointer;
+  }
+
+  div {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    strong {
+      flex: 1;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+    }
+  }
+
+  footer {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--candy);
+    gap: 16px;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin: auto 24px 0;
+  }
+}
+
+.wip {
+  filter: opacity(0.4);
+  pointer-events: none;
+
+  > img {
+    opacity: 1;
+  }
+}
