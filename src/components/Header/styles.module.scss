@@ -39,5 +39,8 @@
     &:hover {
       background: #cc3d94;
     }
+    &:focus {
+      outline: 2px solid var(--white);
+    }
   }
 }

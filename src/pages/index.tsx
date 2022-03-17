@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
@@ -5,9 +6,17 @@ import { Header } from '../components/Header';
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Vitor's Portfolio</title>
+      </Head>
+
       <Header />
 
-      <Container bgImage="/assets/backgroundHeader.webp" type="banner">
+      <Container
+        id="homeBanner"
+        bgImage="/assets/backgroundHeader.webp"
+        type="banner"
+      >
         <Image
           width={192}
           height={192}

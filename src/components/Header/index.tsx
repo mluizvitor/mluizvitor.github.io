@@ -7,7 +7,13 @@ export function Header() {
     <>
       <header className={styles.headerContainer}>
         <nav className={styles.navContainer}>
-          <Link to="" onClick={() => animateScroll.animateTopScroll}>
+          <Link
+            to="homeBanner"
+            role="button"
+            tabIndex={0}
+            smooth={true}
+            duration={500}
+          >
             <div style={{ width: 32, height: 32, position: 'relative' }}>
               <Image
                 width={32}
@@ -18,13 +24,57 @@ export function Header() {
             </div>
           </Link>
 
-          <Link to="whoIsVitor">Vitor?</Link>
+          <Link
+            to="whoIsVitor"
+            role="button"
+            tabIndex={0}
+            activeClass="activeBtn"
+            spy={true}
+            smooth={true}
+            offset={-64}
+            duration={500}
+          >
+            Vitor?
+          </Link>
 
-          <Link to="skills">Skills</Link>
+          <Link
+            to="skills"
+            role="button"
+            tabIndex={0}
+            activeClass="activeBtn"
+            spy={true}
+            smooth={true}
+            offset={-64}
+            duration={500}
+          >
+            Skills
+          </Link>
 
-          <Link to="portfolio">Portfólio</Link>
+          <Link
+            to="portfolio"
+            role="button"
+            tabIndex={0}
+            activeClass="activeBtn"
+            spy={true}
+            smooth={true}
+            offset={-64}
+            duration={500}
+          >
+            Portfólio
+          </Link>
 
-          <Link to="contacts">Contato</Link>
+          <Link
+            to="contacts"
+            role="button"
+            tabIndex={0}
+            activeClass="activeBtn"
+            spy={true}
+            smooth={true}
+            offset={-64}
+            duration={500}
+          >
+            Contato
+          </Link>
         </nav>
       </header>
     </>
