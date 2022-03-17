@@ -29,7 +29,7 @@ export default function Custom404() {
             <FiArrowLeft size={24} aria-hidden />
             <span>Voltar</span>
           </Button>
-          <Button>
+          <Button onClick={() => (window.location.href = '/')}>
             <img src="/assets/favicon.svg" height={24} width={24} aria-hidden />
             <span>Ir para o Início</span>
           </Button>
