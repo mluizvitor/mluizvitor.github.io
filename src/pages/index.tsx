@@ -1,10 +1,49 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { Card, CardBox } from '../components/Card';
 import { Container } from '../components/Container';
 import { Gallery, GalleryItem } from '../components/Gallery';
 import { Header } from '../components/Header';
 
-export default function Home() {
+interface RepoProps {
+  id: string;
+  name: string;
+  description: string;
+  html_url: string;
+}
+
+interface HomeProps {
+  repos: RepoProps[];
+}
+
+export default function Home({ repos }: HomeProps) {
+  // const [repos, setRepos] = useState<RepoProps[]>([]);
+
+  // useEffect(() => {
+  //   const reponames = [
+  //     'tasks',
+  //     'dtMoney',
+  //     'es-theme-elementerial',
+  //     'saga-rs-macrorify',
+  //   ];
+
+  //   fetch('https://api.github.com/users/mluizvitor/repos')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const repositories = data;
+  //       let filtredRepo = [];
+
+  //       for (let i = 0; i < reponames.length; i++) {
+  //         filtredRepo.push(repositories.find((r) => r.name === reponames[i]));
+  //       }
+  //       setRepos(filtredRepo);
+  //     });
+
+  //   console.log(repos);
+  // }, []);
+
   return (
     <>
       <Head>
@@ -126,6 +165,80 @@ export default function Home() {
           />
         </Gallery>
       </Container>
+
+      <Container id="portfolio" bgColor="#5c3472">
+        <h2>Portfólio</h2>
+        <CardBox>
+          <Card
+            href="/desembarque"
+            wip
+            imageSrc="/assets/portfolio/desembarque/cover.webp"
+            title="Desembarque Digital"
+            description="Aplicação desenvolvida para coleta de dados pesqueiros em Santarém e região"
+          />
+          <Card
+            href=""
+            wip
+            imageSrc="/assets/portfolio/elegumes.jpg"
+            title="eLegumes"
+            description="Projeto de Marketplace agregadora de frutarias. Deu origem ao EsqueleStore"
+          />
+          <Card
+            href=""
+            wip={true}
+            imageSrc="/assets/portfolio/esquelestore.jpg"
+            title="EsqueleStore"
+            description='"Esqieleto" de um aplicativo para lojas, altamente escalável e personalizável'
+          />
+          <Card
+            wip
+            href=""
+            imageSrc="/assets/portfolio/poraque.jpg"
+            title="Poraqué"
+            description="Vencedor do 2º Lugar no I Hackathon Inova Tapajós. O sistema controla, monitora e diagnostica centrais de ar remotamente"
+          />
+        </CardBox>
+        <br />
+        <h2>Repositórios</h2>
+        <CardBox>
+          {repos.length !== 0 &&
+            repos.map((repo) => {
+              <Card
+                key={repo.id}
+                href={repo.html_url}
+                title={repo.name}
+                description={repo.description}
+              />;
+            })}
+        </CardBox>
+      </Container>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const reponames = [
+    'tasks',
+    'dtMoney',
+    'es-theme-elementerial',
+    'saga-rs-macrorify',
+  ];
+
+  const repos = await fetch('https://api.github.com/users/mluizvitor/repos')
+    .then((response) => response.json())
+    .then((data) => {
+      const repositories = data;
+      let filtredRepo = [];
+
+      for (let i = 0; i < reponames.length; i++) {
+        filtredRepo.push(repositories.find((r) => r.name === reponames[i]));
+      }
+      return filtredRepo;
+    });
+
+  return {
+    props: {
+      repos,
+    },
+  };
+};
