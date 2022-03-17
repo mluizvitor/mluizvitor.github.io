@@ -1,0 +1,27 @@
+.button {
+  height: 3rem;
+
+  color: var(--white);
+  background: var(--magenta);
+
+  font-weight: 800;
+  text-transform: uppercase;
+
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 0.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  transition: filter 0.2s ease-in;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:focus {
+    outline: 2px solid var(--white);
+  }
+}
