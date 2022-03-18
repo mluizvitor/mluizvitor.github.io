@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { Card, CardBox } from '../components/Card';
 import { Container } from '../components/Container';
 import { Gallery, GalleryItem } from '../components/Gallery';
@@ -19,31 +18,6 @@ interface HomeProps {
 }
 
 export default function Home({ repos }: HomeProps) {
-  // const [repos, setRepos] = useState<RepoProps[]>([]);
-
-  // useEffect(() => {
-  //   const reponames = [
-  //     'tasks',
-  //     'dtMoney',
-  //     'es-theme-elementerial',
-  //     'saga-rs-macrorify',
-  //   ];
-
-  //   fetch('https://api.github.com/users/mluizvitor/repos')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       const repositories = data;
-  //       let filtredRepo = [];
-
-  //       for (let i = 0; i < reponames.length; i++) {
-  //         filtredRepo.push(repositories.find((r) => r.name === reponames[i]));
-  //       }
-  //       setRepos(filtredRepo);
-  //     });
-
-  //   console.log(repos);
-  // }, []);
-
   return (
     <>
       <Head>
@@ -202,14 +176,14 @@ export default function Home({ repos }: HomeProps) {
         <h2>Repositórios</h2>
         <CardBox>
           {repos.length !== 0 &&
-            repos.map((repo) => {
+            repos.map((repo) => (
               <Card
                 key={repo.id}
                 href={repo.html_url}
                 title={repo.name}
                 description={repo.description}
-              />;
-            })}
+              />
+            ))}
         </CardBox>
       </Container>
     </>
